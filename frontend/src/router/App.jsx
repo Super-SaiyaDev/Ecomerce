@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "../home/system/login/components/login";
-// import Principal from "../components/dashboard";
 // import Table from "../components/table";
 import Principal from "../home/system/page/components/dashboard";
 
