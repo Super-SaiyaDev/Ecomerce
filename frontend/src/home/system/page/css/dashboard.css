@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(https://th.bing.com/th/id/R.156d387df56bf2fcbb71acc9e9613851?rik=tR6xVXNpkMzyrA&riu=http%3a%2f%2f1.bp.blogspot.com%2f-ozefb0WDrxY%2fUkVZeZQsdiI%2fAAAAAAAAVOE%2f4gagmrIklvQ%2fs1600%2fDescargar%2bPack%2bEspectaculares%2bfondos%2bde%2bpantalla%2bnaturales%2b%252528148%252529.jpg&ehk=e4mmxAERH%2bVIT0pKP5GgMX081uNZfvRWvZMsyo1RICc%3d&risl=&pid=ImgRaw&r=0)
+    center / cover;
+}
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar li.active {
+  background-color: cadetblue;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.content .content-table {
+  padding: 10px 40px 40px;
+  background-color: rgba(149, 194, 231, 0.301);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  border-radius: 0.8rem;
+}
+
+table {
+  background-color: rgba(149, 194, 231, 0.233);
+  border-collapse: collapse;
+  border-spacing: 12px;
+}
+
+tr th {
+  text-align: left;
+}
+
+td img {
+  width: 40px;
+  height: 45px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+table,
+th,
+td {
+  padding: 15px;
+}
+
+table tr:nth-child(even) {
+  background-color: #24da8525;
+}
+
+.navigate-table button {
+  background-color: rgb(56, 207, 81);
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px;
+  width: 120px;
+  height: 40px;
+  margin: 15px;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.navigate-table button:hover {
+  transform: scale(1.025);
+  background-color: rgba(77, 77, 228, 0.651);
+}
+
+
+.navigate-table label{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    font-size: 15px;
+    top: 5px;
+    left: 20px;
+    padding: 5px;
+
+}
+.navigate-table input {
+  border: none;
+  border-radius: 5px;
+  padding: 9px;
+  background-color: white;
+  outline: none;
+}
+
+tr:hover td {
+  background-color: rgba(255, 255, 255, 0.363);
+  border-color: #000;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { FaFacebook, FaInstagram, FaGoogle } from "react-icons/fa";
-// import { BiCoffeeTogo } from "react-icons/bi";
+import { FaFacebook, FaInstagram, FaGoogle } from "react-icons/fa";
+import { BiCoffeeTogo } from "react-icons/bi";
 import "../css/login.css";
 import axios from "axios";
 
@@ -23,7 +23,7 @@ const Login = () => {
       .then((res) => {
         if (value.clave != "" && value.user != "") {
           if (res.data.Status === "Success") {
-            navigate("/table");
+            navigate("/home");
           } else {
             navigate("/login");
             alert("Contraseña o usuario incorrectos");
@@ -41,23 +41,26 @@ const Login = () => {
         <form action="" onSubmit={handleSumit}>
           <div className="input-group">
             <span className="icon">
-              {/* <BiCoffeeTogo /> */}
-              <span className="logo">Json Coffe</span>
+              <BiCoffeeTogo />
+              <span className="logo-name">Json Coffe</span>
             </span>
 
-            <h1>Login in the system</h1>
+            <h1>Log in in the system</h1>
 
             <div className="other-logins">
               <a className="google" href="#">
-                {/* <FaGoogle /> */}
+                <span>
+                  {" "}
+                  <FaGoogle />
+                </span>
                 <span className="logo-span">Continue with Google</span>
               </a>
               <a className="instagram" href="#">
-                {/* <FaInstagram /> */}
+                <FaInstagram />
                 <span className="logo-span">Continue with Instagram</span>
               </a>
               <a className="facebook" href="#">
-                {/* <FaFacebook /> */}
+                <FaFacebook />
                 <span className="logo-span">Continue with Facebook</span>
               </a>
             </div>
@@ -88,17 +91,13 @@ const Login = () => {
               <label htmlFor="">Password</label>
             </div>
 
-            <div className="button">
-              <button>Login</button>
+            <div className="link-router">
+              <Link to="/register">Don't you Have an account? </Link>
+             <Link to="/">Forgot your password.</Link>
             </div>
 
-            <div className="link-router">
-            <Link  to="/register">
-                Create Account
-              </Link>
-              <Link  to="/forget">
-                forget you password 
-              </Link>
+            <div className="button">
+              <button>Login</button>
             </div>
           </div>
         </form>

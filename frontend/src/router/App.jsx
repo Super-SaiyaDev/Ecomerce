@@ -1,15 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
-import Login from "../home/page/login/components/login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "../home/system/login/components/login";
+// import Principal from "../components/dashboard";
+// import Table from "../components/table";
+import Principal from "../home/system/page/components/dashboard";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/login" element={<Login />} />
+        {/* <Route path="/table" element={<Table/>} />
+        <Route path="/" element={<Principal />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Principal/>}/>
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
