@@ -1,0 +1,17 @@
+.frameplayer {
+	display: table;
+	text-align: center;
+	background-color: #d0d0d0;
+}
+.frameplayer .left {
+	float: left;
+}
+.frameplayer .right {
+	float: right;
+}
+.frameplayer .center {
+	display: inline-block;
+}
+.frameplayer .clear {
+	clear: both;
+}
