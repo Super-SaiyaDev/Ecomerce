@@ -12,8 +12,10 @@ const app = express();
 //? config
 app.set("port", config.app.port);
 
-//? middlwares 
+//? middlwares
 app.use(morgan("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //? Rutas
 app.use("/api/clientes", clientes);

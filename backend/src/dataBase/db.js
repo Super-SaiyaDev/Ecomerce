@@ -29,22 +29,53 @@ Database.on("error", (err) => {
 const list = (table) => {
   return new Promise((resolve, reject) => {
     Database.query(`SELECT * FROM ${table}`, (err, res) => {
-      if (err) return reject(err);
-      resolve(res);
+      err ? reject(err) : resolve(res);
     });
   });
 };
 
 const search = (table, id) => {
-  return "listing value";
+  return new Promise((resolve, reject) => {
+    Database.query(
+      `SELECT * FROM ${table} WHERE ID_cliente = ${id}`,
+      (err, res) => {
+        err ? reject(err) : resolve(res);
+      }
+    );
+  });
 };
 
-const add = (table, id) => {
-  return "add value";
+const add = (table, data) => {
+  return new Promise((resolve, reject) => {
+    Database.query(
+      `INSERT INTO ${table} ( nombre, apellido,telefono,email,presupuesto) Values (?,?,?,?,?);`, [data],
+      (err, res) => {
+        err ? reject(err) : resolve(res);
+      }
+    );
+  });
+};
+
+const update = (table, data,  id) => {
+  return new Promise((resolve, reject) => {
+    Database.query(
+      `UPDATE ${table} SET ID_cliente=[value-1],nombre=[value-2],apellido=[value-3],telefono=[value-4],email=[value-5],presupuesto=[value-6] WHERE ID_cliente =  1;`,
+      (err, res) => {
+        err ? reject(err) : resolve(res);
+      }
+    );
+  });
 };
 
 const delet = (table, id) => {
-  return "delete value";
+  return new Promise((resolve, reject) => {
+    Database.query(
+      `DELETE FROM ${table} WHERE  ID_cliente = ${id} ;`,
+      (err, res) => {
+        err ? reject(err) : resolve(res);
+      }
+    );
+  });
 };
 
 module.exports = {
@@ -52,4 +83,5 @@ module.exports = {
   list,
   add,
   delet,
+  update
 };
