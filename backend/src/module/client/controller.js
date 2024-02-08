@@ -1,5 +1,5 @@
 const db = require("../../dataBase/db");
-const table = "cliente";
+const table = "usuario";
 
 const list = () => {
   return db.list(table);
@@ -18,13 +18,18 @@ const delet = (data) => {
 };
 
 const update = (data, id) => {
-    return db.update(table, data, id);
-  };
+  return db.update(table, data, id);
+};
+
+const login = (data) => {
+  return db.login(table, data);
+};
 
 module.exports = {
   list,
   search,
   add,
   delet,
-  update
+  update,
+  login
 };

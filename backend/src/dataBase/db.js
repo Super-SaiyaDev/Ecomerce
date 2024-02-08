@@ -9,7 +9,7 @@ const Database = db.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "json-house",
+  database: "Inventario2",
 });
 
 Database.connect((err) => {
@@ -37,7 +37,7 @@ const list = (table) => {
 const search = (table, id) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `SELECT * FROM ${table} WHERE ID_cliente = ${id}`,
+      `SELECT * FROM ${table} WHERE idUser = ${id}`,
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
@@ -48,7 +48,8 @@ const search = (table, id) => {
 const add = (table, data) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `INSERT INTO ${table} ( nombre, apellido,telefono,email,presupuesto) Values (?,?,?,?,?);`, [data],
+      `INSERT INTO ${table} ( nombre, apellido,telefono,email,presupuesto) Values (?,?,?,?,?);`,
+      [data],
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
@@ -56,7 +57,7 @@ const add = (table, data) => {
   });
 };
 
-const update = (table, data,  id) => {
+const update = (table, data, id) => {
   return new Promise((resolve, reject) => {
     Database.query(
       `UPDATE ${table} SET ID_cliente=[value-1],nombre=[value-2],apellido=[value-3],telefono=[value-4],email=[value-5],presupuesto=[value-6] WHERE ID_cliente =  1;`,
@@ -78,10 +79,20 @@ const delet = (table, id) => {
   });
 };
 
+const login = (table, data) => {
+  db.query(
+    `"SELECT * FROM ${table} WHERE nombre = ${data.user} ";`,
+    (err, res) => {
+      err ? reject(err) : resolve(res);
+    }
+  );
+};
+
 module.exports = {
   search,
   list,
   add,
   delet,
-  update
+  update,
+  login
 };

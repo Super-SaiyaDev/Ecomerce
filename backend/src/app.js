@@ -5,7 +5,8 @@ const morgan = require("morgan");
 const config = require("./config");
 
 //! modulo cliente
-const clientes = require("./modulos/client/router");
+const clientes = require("./module/client/router");
+const login = require("./module/login/router");
 
 const app = express();
 
@@ -19,5 +20,6 @@ app.use(express.urlencoded({ extended: true }));
 
 //? Rutas
 app.use("/api/clientes", clientes);
+app.use("login/", login);
 
 module.exports = app;

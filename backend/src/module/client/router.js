@@ -43,7 +43,17 @@ router.put("/", async (req, res) => {
 //! actualizar
 router.put("/:id", async (req, res) => {
   try {
-    const items = await controlador.delet(req.body, req.params.id);
+    const items = await controlador.update(req.body, req.params.id);
+    respuesta.success(req, res, items, 200);
+  } catch (err) {
+    respuesta.error(req, res, err, 500);
+  }
+});
+
+//! Login
+router.post("login/", async (req, res) => {
+  try {
+    const items = await controlador.login(req.params.name);
     respuesta.success(req, res, items, 200);
   } catch (err) {
     respuesta.error(req, res, err, 500);
