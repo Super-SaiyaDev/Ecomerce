@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdPersonAdd } from "react-icons/io";
-import "../css/dashboard.css";
+// import "../css/dashboard.css";
 
 const Principal = () => {
   const [activeMenu, setActiveMenu] = useState("Inicio");
