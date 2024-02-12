@@ -50,14 +50,5 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-//! Login
-router.post("login/", async (req, res) => {
-  try {
-    const items = await controlador.login(req.params.name);
-    respuesta.success(req, res, items, 200);
-  } catch (err) {
-    respuesta.error(req, res, err, 500);
-  }
-});
 
 module.exports = router;

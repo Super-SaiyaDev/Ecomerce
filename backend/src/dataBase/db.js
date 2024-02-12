@@ -9,7 +9,7 @@ const Database = db.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "Inventario2",
+  database: "json-house",
 });
 
 Database.connect((err) => {
@@ -37,7 +37,7 @@ const list = (table) => {
 const search = (table, id) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `SELECT * FROM ${table} WHERE idUser = ${id}`,
+      `SELECT * FROM ${table} WHERE ID_cliente = ${id}`,
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
@@ -48,8 +48,7 @@ const search = (table, id) => {
 const add = (table, data) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `INSERT INTO ${table} ( nombre, apellido,telefono,email,presupuesto) Values (?,?,?,?,?);`,
-      [data],
+      `INSERT INTO ${table} SET ?;`, [data],
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
@@ -71,7 +70,7 @@ const update = (table, data, id) => {
 const delet = (table, id) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `DELETE FROM ${table} WHERE  ID_cliente = ${id} ;`,
+      `DELETE FROM ${table} WHERE  ID_cliente = ? ;`, [id],
       (err, res) => {
         err ? reject(err) : resolve(res);
       }

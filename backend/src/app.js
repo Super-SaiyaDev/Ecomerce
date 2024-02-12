@@ -20,6 +20,6 @@ app.use(express.urlencoded({ extended: true }));
 
 //? Rutas
 app.use("/api/clientes", clientes);
-app.use("login/", login);
+app.use("/login", login);
 
 module.exports = app;
