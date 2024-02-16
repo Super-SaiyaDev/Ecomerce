@@ -1,0 +1,49 @@
+.input-feild input {
+  background-color: aliceblue;
+  padding: 8px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  border: 1px solid rgba(0, 0, 0, 0.438);
+  border-radius: 10px;
+  outline: none;
+}
+
+.input-feild label {
+  background-color: aliceblue;
+  position: relative;
+  display: inline-block;
+  top: -45px;
+  left: 0px;
+  color: black;
+  margin: 12px;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+input:focus ~ label {
+  transform: translateY(-20px);
+  font-size: 13px;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  width: 50px;
+}
+
+input:focus ~ .password {
+  transform: translateY(-21px);
+  font-size: 13px;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 120px;
+}
+
+input:focus {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+input:checked {
+  background-color: cadetblue;
+}

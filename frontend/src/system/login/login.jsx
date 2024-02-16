@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaGoogle } from "react-icons/fa";
 import { BiCoffeeTogo } from "react-icons/bi";
-// import "../css/login.css";
+import "./css/login.css";
 import axios from "axios";
 
-const Login = () => {
+const LoginUser = () => {
   //? creating the usestate
   const [value, stateValues] = useState({
     user: "",
@@ -39,7 +39,7 @@ const Login = () => {
     <>
       <section>
         <div className="container">
-          <form action="" onSubmit={handleSumit}>
+          <form action="" onSubmit={handleSumit} className="frm">
             <div className="input-group">
               <span className="icon">
                 <BiCoffeeTogo />
@@ -98,7 +98,7 @@ const Login = () => {
               </div>
 
               <div className="button">
-                <button>Login</button>
+                <button className="btn-lgn">Login</button>
               </div>
             </div>
           </form>
@@ -108,4 +108,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginUser;

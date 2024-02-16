@@ -1,6 +1,7 @@
 /* Login.css */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-body {
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -16,7 +17,7 @@ body {
   background-color: #f5f5f5;
 }
 
-form {
+.frm {
   width: 380px;
   padding: 30px 25px 30px;
   border: 1px solid #ddd;
@@ -27,7 +28,7 @@ form {
   transition: all 0.5s ease-in;
 }
 
-form:hover {
+frm:hover {
   box-shadow: 0px 0px 15px #8baeee;
 }
 
@@ -57,7 +58,6 @@ form:hover {
 
 .input-feild input {
   width: 90%;
-  margin: 0px 10px 14px 5px;
   padding: 10px;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -66,8 +66,8 @@ form:hover {
 
 .input-feild label {
   position: absolute;
-  top: 9px;
-  left: 15px;
+  top: 15px;
+  left: 10px;
   background-color: #fff;
   padding: 0 5px;
   color: #3a3636;
@@ -85,6 +85,7 @@ form:hover {
   top: -12px;
   color: #9ecaed;
 }
+
 
 hr {
   opacity: 1% #9ecaed;
@@ -110,7 +111,7 @@ hr {
   text-align: center;
 }
 
-.button button {
+.button .btn-lgn {
   background-color: #35a8f5; /* Green */
   border: none;
   color: white;
@@ -124,11 +125,12 @@ hr {
   display: inline-block;
   font-size: 15px;
   cursor: pointer;
-  transition: transform 0.5s, background-color 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.5s,
+    background-color 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.button button:hover {
-  transform: scale(1.0) rotateY(360deg);
+.button .btn-lgn:hover {
+  transform: scale(1) rotateY(360deg);
   background-color: #96cee0; /* Blue */
 }
 
@@ -171,7 +173,7 @@ hr {
   );
 }
 
-.logo-span {  
+.logo-span {
   margin-left: 12px;
   font-size: 15px;
   font-weight: 500;
@@ -180,12 +182,11 @@ hr {
 
 .link-router {
   display: grid;
-  grid-template-columns: repeat(1fr,1fr);
-  margin: 5px 0px 11px 12px ;
-
+  grid-template-columns: repeat(1fr, 1fr);
+  margin: 5px 0px 11px 12px;
 }
 
-.link-router Link{
+.link-router Link {
   color: white;
   font-size: 15px;
   text-transform: uppercase;
