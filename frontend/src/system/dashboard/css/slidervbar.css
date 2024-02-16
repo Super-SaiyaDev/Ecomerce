@@ -1,0 +1,26 @@
+/*? sliderbar */
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .sidebar li.active {
+    background-color: cadetblue;
+  }
+  
