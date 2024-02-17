@@ -1,0 +1,9 @@
+section{
+    background: rgb(13, 35, 98);
+    background: linear-gradient(
+      90deg,
+      rgba(13, 35, 98, 1) 0%,
+      rgba(55, 91, 96, 1) 35%,
+      rgba(20, 25, 75, 1) 100%
+    );
+}

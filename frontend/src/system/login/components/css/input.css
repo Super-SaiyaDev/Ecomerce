@@ -1,0 +1,29 @@
+.input-feild input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.input-feild label {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background-color: #fff;
+  padding: 0 5px;
+  color: #3a3636;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.input-feild input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.input-feild input:focus + label {
+  top: -12px;
+  color: #9ecaed;
+}

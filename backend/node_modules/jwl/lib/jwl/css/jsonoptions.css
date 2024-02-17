@@ -1,0 +1,27 @@
+.jsonoptions a {
+	margin: 0 2px;
+	padding: 2px 3px;
+	border: 1px solid grey;
+	text-decoration: none;
+	color: darkred !important;
+}
+
+.jsonoptions-opts-wrap {
+	position: relative;
+}
+
+.jsonoptions-opts {
+	position: absolute;
+	display: none;
+	padding: 3px 4px;
+	background-color: #d0d0d0;
+	border: 1px solid #ccc;
+}
+
+.jsonoptions-opts.shown {
+	display: block;
+}
+.jsonoptions-buttons {
+	text-align: right;
+	margin-top: 2px;
+}

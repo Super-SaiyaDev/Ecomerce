@@ -1,0 +1,63 @@
+const express = require("express");
+const router = express.Router();
+const respuesta = require("../../red/respuesta");
+const controlador = require("./controller");
+
+//! listar
+router.get("/", async (req, res) => {
+  const items = await controlador.list();
+  respuesta.success(req, res, items, 200);
+});
+
+//! buscar
+router.get("/:id", async (req, res) => {
+  try {
+    const items = await controlador.search(req.params.id);
+    respuesta.success(req, res, items, 200);
+  } catch (err) {
+    respuesta.error(req, res, err, 500);
+  }
+});
+
+//! crear
+
+router.post("/", async (req, res) => {
+  try {
+    const items = await controlador.add(req.body);
+    respuesta.success(req, res, items, 200);
+  } catch (err) {
+    respuesta.error(req, res, err, 500);
+  }
+});
+
+//! eliminar
+router.put("/", async (req, res) => {
+  try {
+    const items = await controlador.delet(req.body);
+    respuesta.success(req, res, "datos eliminados correctamente", 200);
+  } catch (err) {
+    respuesta.error(req, res, err, 500);
+  }
+});
+
+//! actualizar
+router.put("/:id", async (req, res) => {
+  try {
+    const items = await controlador.update(req.body, req.params.id);
+    respuesta.success(req, res, items, 200);
+  } catch (err) {
+    respuesta.error(req, res, err, 500);
+  }
+});
+
+//! Login
+router.post("login/", async (req, res) => {
+  try {
+    const items = await controlador.login(req.params.name);
+    respuesta.success(req, res, items, 200);
+  } catch (err) {
+    respuesta.error(req, res, err, 500);
+  }
+});
+
+module.exports = router;

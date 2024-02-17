@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  border-radius: 10px 0 0 10px;
+}
+
+.container-img {
+  display: flex;
+  justify-content: space-evenly;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
+    url("../../../assets/R.jpeg");
+  background-position: center;
+  background-size: 720px, 680px;
+  background-repeat: no-repeat;
+  height: 540px;
+  width: 600px;
+}
+
+.container-img .title {
+  color: #fff;
+  top: 120px;
+  position: relative;
+  font-size: 90px;
+  text-align: left;
+  margin: 20px;
+  font-weight: 100px;
+  font-family: "Lobster";
+}
+
+.container-img .social-icon {
+  position: relative;
+}
+
+.container-img .texto {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+.container-img .social-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  top: 430px;
+  right: 300px;
+}
+
+.social-icon .img {
+  margin-top: 18px;
+  margin-left: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.social-icon .insta {
+  display: flex;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background: rgb(36, 66, 154);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 66, 154, 1) 0%,
+    rgba(99, 9, 121, 1) 35%,
+    rgba(255, 0, 116, 1) 100%
+  );
+  color: white;
+  border-radius: 50px;
+  border: none;
+}
+
+.social-icon .face {
+  display: flex;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  background-color: #194c99;
+}
+
+.social-icon .twi {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  background-color: #00b5ec;
+}
+
+.input-groupt {
+  background-color:aliceblue;
+  padding: 40px;
+  height: 600px;
+  width: 495px;
+  border-radius: 0 10px 10px 0;
+}
+
+.register-link {
+  margin: 40px;
+}
+
+.register-link a {
+  color: #3d5dee;
+}
+
+.fol {
+  color: #3d5dee;
+}
+
+.input-groupt h1 {
+  margin: 10px;
+  padding: 12px;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.input-feild {
+  margin: 0 auto;
+  height: 80px;
+}
+
+
+.remenber {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.remenber .ramen {
+  padding-left: 12px;
+}
+
+.remenber.remenber-1 input[type="checkbox"]:checked {
+  margin: 12px;
+}
+
+.lnk-login {
+  position: absolute;
+  color: #fff;
+  background-color: #194c99;
+  font-size: 16px;
+  font-weight: 500;
+  right: 30px;
+  top: 20px;
+  padding: 10px;
+  margin: 15px;
+  width: 100px;
+  border: none;
+  border-radius: 12px;
+}
+
+.lnk-login:hover {
+  border-color: #646cff;
+  cursor: pointer;
+}
