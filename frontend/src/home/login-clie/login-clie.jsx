@@ -7,28 +7,27 @@ import Input from "./components/input-feild";
 import { Link } from "react-router-dom";
 
 const LoginClie = () => {
-  const [value, setValue] = useState({
-    name: "",
+  const [values, setValue] = useState({
+    user: "",
     email: "",
-    password: "",
+    clave: "",
   });
 
-  const onSumit = (e) => {
-    const [value, name] = e.target;
-    setValue({ ...value, [name]: value });
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setValue({ ...values, [name]: value });
   };
 
   const handlerSumit = (e) => {
-    e.prevenDefault();
-    console.log(value);
+    e.preventDefault();
+    console.log(values);
   };
+
   return (
     <>
       <div className="container">
         <div className="container-img">
-          <img src="" alt="" />
-
-          <div className="content">
+          <div className="content-text">
             {/* Hola mundo */}
             <h1 className="title">Welcome</h1>
 
@@ -52,32 +51,44 @@ const LoginClie = () => {
           </div>
         </div>
 
-        <form onChange={handlerSumit}>
+        <form onSubmit={handlerSumit}>
           <div className="input-groupt">
             <h1>Login</h1>
 
             <div className="register-link">
-              <p>
-                Don't have account?
-                <a href=""> Create account</a>
-              </p>
+              <span className="Forgot-span">
+                Forgot
+                <Link to="/" className="forgot">
+                  you password ?
+                </Link>
+              </span>
             </div>
 
             <div className="input-feild">
               <Input
-                onSumit={onSumit}
-                val={value.name}
+                onChange={onChange}
                 type={"text"}
+                name={"user"}
                 lblName={"name"}
-              ></Input>
+              />
             </div>
 
             <div className="input-feild">
-              <Input type={"email"} lblName={"email"}></Input>
+              <Input
+                onChange={onChange}
+                type={"email"}
+                name={"email"}
+                lblName={"email"}
+              />{" "}
             </div>
 
             <div className="input-feild">
-              <Input type={"password"} lblName={"password"}></Input>
+              <Input
+                onChange={onChange}
+                type={"password"}
+                name={"clave"}
+                lblName={"Clave"}
+              />{" "}
             </div>
 
             <div className="remenber">
@@ -86,10 +97,11 @@ const LoginClie = () => {
                 <span className="ramen">Remenber me </span>
               </label>
 
-              <span>
-                <a href="#" className="fol">
-                  Forgot you password ?
-                </a>
+              <span className="fol-span">
+                Forgot
+                <Link to="/" className="fol">
+                  you password ?
+                </Link>
               </span>
             </div>
 

@@ -1,22 +1,23 @@
 import React, { useState } from "react";
-import "./css/input.css";
+import "./css/inputs.css";
 
-const Input = ({ onChange, type, lblName, name }) => {
+const UserInput = ({ onChange, type, lblName, name }) => {
   return (
     <>
       <input
-        className="inputs"
+        className="input"
         onChange={onChange}
         type={type}
         name={name}
         required
         autoComplete="off"
       />
-      <label htmlFor={lblName} className="labels" required>
+
+      <label className="label" htmlFor={lblName} required>
         {lblName}
       </label>
     </>
   );
 };
 
-export default Input;
+export default UserInput;

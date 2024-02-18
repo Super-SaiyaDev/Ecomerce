@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import '../css/slidervbar.css'
+import './css/slidervbar.css'
 
 function Sliderbar() {
   const [activeMenu, setActiveMenu] = useState("Inicio");

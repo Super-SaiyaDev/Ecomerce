@@ -1,9 +1,10 @@
-import React from "react";
-import "../css/table.css";
+import React, { useState } from "react";
+import "./css/table.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdPersonAdd } from "react-icons/io";
 
 function Table() {
+  const [isInputFocused, setInputFocused] = useState(false);
   return (
     <div className="content">
       <div className="content-T">
@@ -16,10 +17,17 @@ function Table() {
             <button to="/">
               <IoMdPersonAdd /> New User
             </button>
-            <label htmlFor="search">
-              <IoSearchOutline />
-            </label>
-            <input type="text" />
+
+            <div className="search">
+            <i className={`lbl-search ${isInputFocused ? 'desactived' : ''}`}><IoSearchOutline /></i>
+              <input
+                type="text"
+                onFocus={() => setInputFocused(true)}
+                onBlur={() => setInputFocused(false)}
+              />
+             
+
+            </div>
           </div>
         </div>
 

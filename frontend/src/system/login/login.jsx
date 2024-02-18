@@ -1,27 +1,41 @@
+//! librar
+//? to use react hooks and axios api
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaGoogle } from "react-icons/fa";
-import { BiCoffeeTogo } from "react-icons/bi";
-import "./css/login.css";
 import axios from "axios";
+//? to styles
+import { Link, useNavigate } from "react-router-dom";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import { BiCoffeeTogo } from "react-icons/bi";
+//? to import components and styles
+import UserInput from "./components/input";
+import "./css/login.css";
 
 const LoginUser = () => {
   //? creating the usestate
-  const [value, stateValues] = useState({
+  const [values, setValue] = useState({
     user: "",
     clave: "",
   });
+
+  //? creating the handler change the of inputs components
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setValue({ ...values, [name]: value });
+  };
+
   //? creating the usenavigate
   const navigate = useNavigate();
 
   //? this is the handleSumit or manager of menssage.
   const handleSumit = (e) => {
-    e.preventDefault();
-    console.log(value);
+    e.preventDefault(); //* to when the form be activated o send
+    console.log(values); //* printing the values of the useState
+    //! i'am send the value of the inputs
     axios
-      .post("http://localhost:3000/login", value)
+      .post("http://localhost:3000/login", values)
       .then((res) => {
-        if (value.clave != "" && value.user != "") {
+        if (values.clave != "" && values.user != "") {
           if (res.data.Status === "Success") {
             navigate("/home");
           } else {
@@ -37,73 +51,92 @@ const LoginUser = () => {
 
   return (
     <>
-      <section>
-        <div className="container">
-          <form action="" onSubmit={handleSumit} className="frm">
-            <div className="input-group">
-              <span className="icon">
-                <BiCoffeeTogo />
-                <span className="logo-name">Json Coffe</span>
-              </span>
+      {/*contenedor */}
+      <div className="container-1">
+        {/* form */}
+        <form action="" onSubmit={handleSumit} className="frm">
+          {/* container of the all content */}
+          <div className="input-group">
+            {/* Logo */}
 
-              <h1>Log in in the system</h1>
+            <span className="icon">
+              <BiCoffeeTogo />
+              <span className="logo-name">Json Coffe</span>
+            </span>
 
-              <div className="other-logins">
-                <a className="google" href="#">
-                  <span>
-                    {" "}
-                    <FaGoogle />
-                  </span>
-                  <span className="logo-span">Continue with Google</span>
-                </a>
-                <a className="instagram" href="#">
-                  <FaInstagram />
-                  <span className="logo-span">Continue with Instagram</span>
-                </a>
-                <a className="facebook" href="#">
-                  <FaFacebook />
-                  <span className="logo-span">Continue with Facebook</span>
-                </a>
-              </div>
-              <hr />
-              <div className="or">
-                <span>or</span>
-              </div>
+            <h1>Log in in the system</h1>
 
-              <div className="input-feild">
-                <input
-                  type="text"
-                  name="username"
-                  onChange={(e) =>
-                    stateValues({ ...value, user: e.target.value })
-                  }
-                />
-                <label htmlFor="">username</label>
-              </div>
+            {/* icons to login */}
 
-              <div className="input-feild">
-                <input
-                  type="password"
-                  name="password"
-                  onChange={(e) =>
-                    stateValues({ ...value, clave: e.target.value })
-                  }
-                />
-                <label htmlFor="">Password</label>
-              </div>
-
-              <div className="link-router">
-                <Link to="/register">Don't you Have an account? </Link>
-                <Link to="/">Forgot your password.</Link>
-              </div>
-
-              <div className="button">
-                <button className="btn-lgn">Login</button>
-              </div>
+            <div className="other-logins">
+              <a className="google" href="#">
+                <span>
+                  {" "}
+                  <FcGoogle />
+                </span>
+                <span className="logo-span">Continue with Google</span>
+              </a>
+              <a className="instagram" href="#">
+                <FaInstagram />
+                <span className="logo-span">Continue with Instagram</span>
+              </a>
+              <a className="facebook" href="#">
+                <FaFacebook />
+                <span className="logo-span">Continue with Facebook</span>
+              </a>
             </div>
-          </form>
-        </div>
-      </section>
+            {/* line of the or */}
+
+            <hr />
+            <div className="or">
+              <span>or</span>
+            </div>
+
+            {/* container the inputs */}
+
+            <div className="input-feild">
+              {/* importing the component input */}
+              <UserInput
+                onChange={onChange}
+                type={"text"}
+                lblName={"Username"}
+                name={"user"}
+              />
+            </div>
+
+            <div className="input-feild">
+              {/* importing the component input */}
+              <UserInput
+                onChange={onChange}
+                type={"password"}
+                lblName={"Password"}
+                name={"clave"}
+              />
+            </div>
+
+            {/* links router */}
+            <div className="link-router">
+              <span>
+                Don't you Have an
+                <Link className="link" to="/register">
+                  account?
+                </Link>
+              </span>
+              <span>
+                Forgot
+                <Link className="link" to="/">
+                  your password.
+                </Link>
+              </span>
+            </div>
+
+            {/* btn for help to the handler submit of the form */}
+            <div className="button">
+              <button className="btn-lgn">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </>
   );
 };
