@@ -5,50 +5,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  border-radius: 10px 0 0 10px;
+  min-height: 100vh;
 }
 
 .container-img {
   display: flex;
   justify-content: space-evenly;
+  border-radius: 10px 0 0 10px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
-    url("../../../assets/R.jpeg");
+    url("../components/R.jpeg");
   background-position: center;
   background-size: 720px, 680px;
   background-repeat: no-repeat;
-  height: 540px;
-  width: 600px;
+  height: 560px;
+  width: 680px;
+  box-shadow: -10px 10px 60px rgb(0, 0, 0);
+
 }
 
-.container-img .title {
-  color: #fff;
-  top: 120px;
-  position: relative;
+.content-text {
+  display: flex;
+  flex-direction: column;
+  margin: 120px 0px 0px 50px;
+}
+
+.content-text .title {
+  color: wheat;
   font-size: 90px;
-  text-align: left;
-  margin: 20px;
+  text-align: center;
   font-weight: 100px;
   font-family: "Lobster";
 }
 
-.container-img .social-icon {
-  position: relative;
-}
+/* @keyframes gradient {
+  0%{background-position: 0%}
+  100%{background-position: 100%}
+} */
 
 .container-img .texto {
-  margin-top: 40px;
-  margin-left: 20px;
   font-size: 18px;
   text-align: center;
   color: #fff;
 }
 
 .container-img .social-icon {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  top: 430px;
-  right: 300px;
+  top: 400px;
+  left: -315px;
 }
 
 .social-icon .img {
@@ -100,38 +105,54 @@
   background-color: #00b5ec;
 }
 
+/* ! [ Form of the singin ] */
+
 .input-groupt {
-  background-color:aliceblue;
-  padding: 40px;
-  height: 600px;
-  width: 495px;
+  box-shadow: 10px 10px 60px rgb(0, 0, 0);
+  background-color: rgba(100, 97, 94, 0.815);
   border-radius: 0 10px 10px 0;
+  padding: 20px;
+  height: 560px;
+  width: 495px;
 }
 
-.register-link {
-  margin: 40px;
-}
-
-.register-link a {
-  color: #3d5dee;
-}
-
-.fol {
-  color: #3d5dee;
-}
-
+/* ? Title of form */
 .input-groupt h1 {
-  margin: 10px;
-  padding: 12px;
+  font-family: "Lobster";
+  color: wheat;
+  margin: 10px 0px 20px 40px;
   font-size: 60px;
   font-weight: 900;
 }
 
-.input-feild {
-  margin: 0 auto;
-  height: 80px;
+/*? links to register */
+.register-link {
+  margin: 10px 0px 40px 15px;
 }
 
+.register-link .fol,
+.forgot {
+  color: wheat;
+}
+
+.forgot {
+  margin: 5px;
+}
+
+.Forgot-span {
+  color: whitesmoke;
+}
+
+.fol-span {
+  color: whitesmoke;
+}
+
+.fol {
+  margin: 5px;
+  color: wheat;
+}
+
+/*? Links to remenber and forget password */
 
 .remenber {
   display: grid;
@@ -140,6 +161,7 @@
 }
 
 .remenber .ramen {
+  color: whitesmoke;
   padding-left: 12px;
 }
 
@@ -147,9 +169,11 @@
   margin: 12px;
 }
 
+/* ? btn to login with router */
+
 .lnk-login {
   position: absolute;
-  color: #fff;
+  color: wheat;
   background-color: #194c99;
   font-size: 16px;
   font-weight: 500;
@@ -160,9 +184,11 @@
   width: 100px;
   border: none;
   border-radius: 12px;
+  transition: background-color 1s cubic-bezier(0.19, 1, 0.22, 1) ;
 }
 
 .lnk-login:hover {
-  border-color: #646cff;
+  background-color: #8183d1;
+  box-shadow: 5px 5px 30px #8183d1;
   cursor: pointer;
 }
