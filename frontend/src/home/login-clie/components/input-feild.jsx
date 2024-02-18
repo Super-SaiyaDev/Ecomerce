@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import "./css/input.css";
 
 const Input = ({ onChange, type, lblName, name }) => {
-
-
   return (
     <>
       <input
+        className="inputs"
         onChange={onChange}
         type={type}
         name={name}
         required
         autoComplete="off"
       />
-      <label htmlFor={lblName} required>
+      <label htmlFor={lblName} className="labels" required>
         {lblName}
       </label>
     </>

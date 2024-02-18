@@ -46,3 +46,34 @@ input:focus {
   
 }
 
+.input-feild .inputs {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 40px;
+  border: 1px solid #9ecaed;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.788);
+  color: black;
+}
+
+.input-feild .labels {
+  position: absolute;
+  top: -40px;
+  left: 5px;
+  margin: 12px;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+  font-size: 17px;
+}
+
+.input-feild .inputs:focus {
+  outline: none;
+  border-color: #5b99cc;
+  box-shadow: 0 0 10px #88e1fc;
+}
+
+/* .input-feild .inputs:focus + .labels {
+  top: -20px;
+  width: 90px;
+  color : rgba(100, 97, 94, 0.815);
+} */

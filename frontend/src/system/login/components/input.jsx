@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./css/input.css";
+import "./css/inputs.css";
 
 const UserInput = ({ onChange, type, lblName, name }) => {
   return (
@@ -13,7 +14,7 @@ const UserInput = ({ onChange, type, lblName, name }) => {
         autoComplete="off"
       />
 
-      <label className="input" htmlFor={lblName} required>
+      <label className="label" htmlFor={lblName} required>
         {lblName}
       </label>
     </>

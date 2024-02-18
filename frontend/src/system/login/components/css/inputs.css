@@ -1,0 +1,32 @@
+.input-feild .input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #adcbe7;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.685);
+  color: black;
+}
+
+.input-feild .label {
+  position: absolute;
+  top: -5px;
+  left: 2px;
+  background-color: #fff;
+  padding: 5px;
+  color: #3a3636;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.input-feild .input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.input-feild .input:focus + .label {
+  top: 25px;
+  width: 90px;
+  color: #9ecaed;
+}
