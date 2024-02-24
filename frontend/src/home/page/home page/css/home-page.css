@@ -1,0 +1,80 @@
+/* Menu 1 */
+
+:root {
+  --bgcolor: rgba(31, 14, 77, 0.74);
+  --bgcolor2: rgba(25, 11, 63, 0.829);
+  --input : rgba(80, 78, 99, 0.87);
+  --color: wheat;
+}
+
+.container-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-superior {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--bgcolor);
+  width: 100%;
+  padding: 10px;
+}
+
+.right ul li,
+.left ul,
+li {
+  display: inline;
+  padding: 12px;
+  margin: 5px;
+}
+
+.right ul li select {
+  color: var(--color);
+  background-color: transparent;
+  border: none;
+}
+
+.right ul li select option {
+  color: var(--color);
+  background-color: var(--bgcolor);
+}
+
+.left ul li a,
+i {
+  color: var(--color);
+  margin: 5px;
+}
+
+/* Menu 2*/
+.container-menu2 {
+  display: flex;
+  align-items: center;
+  margin: 12px;
+  padding: 12px;
+}
+
+.container-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.input-feild .inpu {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input);
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.input-feild .inpu:focus {
+  outline: none;
+}
+
+
+.contanctos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
