@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginUser from "../system/login/login";
 import Principal from "../system/dashboard/dashboard";
 import LoginClie from "../home/login-clie/login-clie";
+import PageHome from "../home/page/home page/home-page";
 
 const Path = () => {
   return (
@@ -11,6 +12,7 @@ const Path = () => {
       <Routes>
         <Route path="/login" element={<LoginUser />} />
         <Route path="/home" element={<Principal />} />
+        <Route path="/" element={<PageHome/>}/>
         <Route path="/login-clie" element={<LoginClie />} />
       </Routes>
     </Router>

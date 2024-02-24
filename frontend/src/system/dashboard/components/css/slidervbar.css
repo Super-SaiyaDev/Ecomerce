@@ -1,26 +1,25 @@
 /*? sliderbar */
 .sidebar {
-    position: fixed;
-    width: 200px;
-    height: 100%;
-    color: #fff;
-    padding: 20px;
-    background-color: rgba(71, 75, 122, 0.479);
-    backdrop-filter: blur(12px);
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .sidebar li.active {
-    background-color: cadetblue;
-  }
-  
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  color: #fff;
+  padding: 20px;
+  background-color: rgba(71, 75, 122, 0.479);
+  backdrop-filter: blur(12px);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar li.active {
+  background-color: cadetblue;
+}

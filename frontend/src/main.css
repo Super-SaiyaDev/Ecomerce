@@ -4,8 +4,9 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: Poppins;
+  list-style: none;
 }
 
 .root{
-    background-color: red;
+    background-color: aliceblue;
 }
