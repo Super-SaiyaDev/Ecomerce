@@ -9,11 +9,11 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "./css/sliderbar.css"
 
-import slide_image_1 from "../../assets/imagen-1.jpeg";
-import slide_image_2 from "../../assets/imagen-2.jpeg";
-import slide_image_3 from "../../assets/imagen-3.jpeg";
-import slide_image_4 from "../../assets/imagen-4.jpeg";
-import slide_image_5 from "../../assets/R.jpeg";
+import slide_image_1 from "../assets/image-1.jpg";
+import slide_image_2 from "../assets/image-2.jpeg";
+import slide_image_3 from "../assets/image-3.jpeg";
+import slide_image_4 from "../assets/image-4.jpg";
+import slide_image_5 from "../assets/R.jpeg";
 
 const Sliderbar = () => {
   return (
@@ -30,7 +30,7 @@ const Sliderbar = () => {
             rotate: 15,
             stretch: 12.5,
             depth: 100,
-            modifier: 5.5,
+            modifier: 1.5,
             slideShadows: true,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
@@ -43,19 +43,19 @@ const Sliderbar = () => {
           className="swiper_container"
         >
           <SwiperSlide>
-            <img src={slide_image_1} alt="slide_image_1" />
+            <img className="s-img" src={slide_image_1} alt="slide_image_1" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_2} alt="slide_image_2" />
+            <img className="s-img" src={slide_image_2} alt="slide_image_2" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_3} alt="slide_image_3" />
+            <img className="s-img" src={slide_image_3} alt="slide_image_3" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_4} alt="slide_image_4" />
+            <img className="s-img" src={slide_image_4} alt="slide_image_4" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_5} alt="slide_image_5" />
+            <img className="s-img" src={slide_image_5} alt="slide_image_5" />
           </SwiperSlide>
         </Swiper>
         <div className="slider-controler">
