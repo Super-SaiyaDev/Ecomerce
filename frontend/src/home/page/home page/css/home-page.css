@@ -1,11 +1,16 @@
-/* Menu 1 */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --bgcolor: rgba(31, 14, 77, 0.74);
   --bgcolor2: rgba(25, 11, 63, 0.829);
-  --input : rgba(80, 78, 99, 0.87);
+  --bgcolor3: rgba(236, 181, 78, 0.74);
+  --input: rgba(80, 78, 99, 0.87);
   --color: wheat;
+  --icon: black;
+  --font:"Comfortaa", sans-serif;
 }
+
+/* Menu 1 */
 
 .container-menu {
   display: flex;
@@ -29,6 +34,7 @@ li {
 }
 
 .right ul li select {
+  font-family: var(--font);
   color: var(--color);
   background-color: transparent;
   border: none;
@@ -46,35 +52,194 @@ i {
 }
 
 /* Menu 2*/
+
 .container-menu2 {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 12px;
-  padding: 12px;
+  background-color: var(--bgcolor2);
+}
+
+.container-rigth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-rigth h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.container-rigth .icon {
+  color: var(--bgcolor3);
+  font-size: 30px;
 }
 
 .container-left {
   display: flex;
-  justify-content: space-evenly;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-feild .inpu {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--input);
-  border-radius: 10px;
-  background-color: whitesmoke;
+  width: 70%;
+  padding: 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 0px 12px 12px 0px;
   color: black;
+}
+
+.search {
+  position: absolute;
+  left: 350px ;
+  top: 6px;
+  font-size: 35px;
+  color: var(--bgcolor3);
+}
+
+
+.input-feild .icon-input1 {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  padding: 17px;
+  color: whitesmoke;
+  font-size: 15px;
+  background-color: var(--bgcolor3);
+  border: none;
+  border-radius: 12px 0px 0px 12px;
 }
 
 .input-feild .inpu:focus {
   outline: none;
 }
 
-
 .contanctos {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contactos-items {
+  margin: 0px 5px 0px 50px;
+  padding: 12px;
+}
+
+.contactos-items h4,
+p {
+  color: var(--color);
+  text-align: center;
+}
+
+.contactos-items .icons {
+  position: relative;
+  left: 40px;
+  font-size: 25px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/*? Header */
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 80vh;
+  background-color: rgba(17, 11, 26, 0.808);
+}
+
+.container-h-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 520px;
+  padding: 20px 40px 60px;
+  background-color: rgba(159, 101, 184, 0.267);
+  border-radius: 12px;
+}
+
+.header-title {
+  z-index: 3;
+}
+
+.header-title h1 {
+  text-align: center;
+  font-size: 65px;
+  margin: 0px 40px 40px 0px;
+  color: var(--bgcolor3);
+}
+
+.header-title p {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-family: var(--font);
+  color: whitesmoke;
+}
+
+.h-img {
+  background-image: url("../src/assets/R.jpeg");
+  background-position: center;
+  background-size: 720px, 680px;
+  background-repeat: no-repeat;
+  height: 520px;
+  width: 555px;
+  border-radius: 60% 60% 0px 0px;
+  box-shadow: 15px 10px 90px rgba(133, 72, 190, 0.664);
+}
+
+.h-circule .cr-1 {
+  position: absolute;
+  top: 150px;
+  left: 90px;
+  z-index: 2;
+  background-color: rgb(117, 11, 255);
+  box-shadow: 1px 10px 100px rgb(117, 11, 255);
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.h-circule .cr-2 {
+  position: absolute;
+  top: 130px;
+  left: 180px;
+  z-index: 2;
+  filter: blur(1px);
+  box-shadow: 1px 5px 100px rgb(153, 170, 226);
+  background-color: rgba(175, 152, 204, 0.541);
+  padding: 60px;
+  width: 30px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.container-h-left .btn-compra .btn {
+  position: absolute;
+  left: 540px;
+  bottom: 70px;
+  width: 140px;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: whitesmoke;
+  background-color: var(--bgcolor3);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn-compra .btn:hover {
+  background-color: #8183d1;
+  box-shadow: 5px 5px 30px #8183d1;
+  color: wheat;
+  transform: scale(1.1);
+  cursor: pointer;
 }

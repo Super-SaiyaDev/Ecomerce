@@ -1,10 +1,9 @@
 // React Component
-import React, { useState } from "react";
+import React from "react";
+
 import "../../css/home-page.css";
-import { LiaFlagUsaSolid } from "react-icons/lia";
-import { MdFavorite } from "react-icons/md";
-import { FaUserCog } from "react-icons/fa";
-const Navbar = () => {
+
+const Navbar3 = () => {
   return (
     <>
       <nav className="container-menu">
@@ -13,31 +12,16 @@ const Navbar = () => {
             <ul>
               <li>
                 <select name="idiomas" id="idiomas">
-                  <option value="spanish">
-                    <span>icon</span>spanish
-                  </option>
-                  <option value="english">
-                    <span>icon</span>english
-                  </option>
-                  <option value="france">
-                    <span>icon</span>france
-                  </option>
+                  <option value="spanish"><span>icon</span>spanish</option>
+                  <option value="english"><span>icon</span>english</option>
+                  <option value="france"><span>icon</span>france</option>
                 </select>
               </li>
               <li>
                 <select name="country" id="country">
-                  <option value="Dominican-Republic">
-                    <i>icon</i>Dominican Republic
-                  </option>
-                  <option value="Espana">
-                    <i>icon</i>España
-                  </option>
-                  <option value="USA">
-                    <i>
-                      icon
-                    </i>
-                    Estados Unidos
-                  </option>
+                  <option value="Dominican-Republic"><i>icon</i>Dominican Republic</option>
+                  <option value="Espana"><i>icon</i>España</option>
+                  <option value="USA"><i>icon</i>Estados Unidos</option>
                 </select>
               </li>
             </ul>
@@ -47,9 +31,7 @@ const Navbar = () => {
             <ul>
               <li>
                 <span>
-                  <i>
-                    <FaUserCog />
-                  </i>
+                  <i>ico</i>
                   <a href="http://" target="_blank" rel="noopener noreferrer">
                     perfil
                   </a>
@@ -57,9 +39,7 @@ const Navbar = () => {
               </li>
               <li>
                 <span>
-                  <i>
-                    <MdFavorite />
-                  </i>
+                  <i>ico</i>
                   <a href="http://" target="_blank" rel="noopener noreferrer">
                     favoritos
                   </a>
@@ -77,7 +57,7 @@ const Navbar = () => {
                 <span>
                   <i>ico</i>
                   <a href="http://" target="_blank" rel="noopener noreferrer">
-                    sigin
+                    sigin out
                   </a>
                 </span>
               </li>
@@ -89,4 +69,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar3;

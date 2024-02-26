@@ -39,13 +39,13 @@ const LoginClie = () => {
           </div>
 
           <div className="social-icon">
-            <button className="insta">
+            <button className="btn-img insta">
               <FaInstagram className="img" />
             </button>
-            <button className="face">
+            <button className="btn-img face">
               <FaFacebookF className="img" />
             </button>
-            <button className="twi">
+            <button className="btn-img twi">
               <FaTwitter className="img" />
             </button>
           </div>
@@ -93,7 +93,7 @@ const LoginClie = () => {
 
             <div className="remenber">
               <label className="remenber-1">
-                <input className="cuadrito" type="checkbox" />
+                <input className="checkbox" type="checkbox" />
                 <span className="ramen">Remenber me </span>
               </label>
 
