@@ -183,12 +183,12 @@ p {
 }
 
 .h-img {
-  background-image: url("../src/assets/R.jpeg");
+  background-image: url("../components/assets/image-2.jpeg");
   background-position: center;
-  background-size: 720px, 680px;
+  background-size: 720px 720px;
   background-repeat: no-repeat;
-  height: 520px;
-  width: 555px;
+  height: 550px;
+  width: 560px;
   border-radius: 60% 60% 0px 0px;
   box-shadow: 15px 10px 90px rgba(133, 72, 190, 0.664);
 }

@@ -1,4 +1,4 @@
-img{
+.s-img{
     width: 200px;
     height: 200px;
     margin: 0;
@@ -9,5 +9,5 @@ img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: 40px;
 }

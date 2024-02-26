@@ -7,7 +7,6 @@ const Header = () => {
     <>
       <div className="header-container">
         <div className="container-h-left">
-
           <div className="h-circule">
             <div className="circule cr-1"></div>
             <div className="circule cr-2"></div>
@@ -25,13 +24,15 @@ const Header = () => {
           </div>
 
           <div className="btn-compra">
-            <Link className="btn" to={"/"}>Hola mundo</Link>
+            <Link className="btn" to={"/"}>
+              Hola mundo
+            </Link>
           </div>
         </div>
 
         <div className="container-hright">
-          <div className="content-img">
-            <img src="../src/assets/R.jpeg" alt="img" className="h-img" />
+          <div className="content-img ">
+            <img src="../assets/image-4.jpg" className="h-img"/>
           </div>
         </div>
       </div>
