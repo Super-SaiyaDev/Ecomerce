@@ -57,37 +57,6 @@ const LoginClie = () => {
               <h1>Login</h1>
 
               <div className="register-link">
-                <p>
-                  Don't have account?
-                  <a href=""> Create account</a>
-                </p>
-              </div>
-
-              <div className="input-feild">
-                <Input
-                  onChange={onChange}
-                  type={"text"}
-                  name={"user"}
-                  lblName={"name"}
-                />
-              </div>
-
-              <div className="input-feild">
-                <Input
-                  onChange={onChange}
-                  type={"email"}
-                  name={"email"}
-                  lblName={"email"}
-                />{" "}
-              </div>
-
-              <div className="input-feild">
-                <Input
-                  onChange={onChange}
-                  type={"password"}
-                  name={"clave"}
-                  lblName={"Clave"}
-                />{" "}
                 <span className="Forgot-span">
                   Forgot
                   <Link to="/" className="forgot">
@@ -125,15 +94,9 @@ const LoginClie = () => {
 
               <div className="remenber">
                 <label className="remenber-1">
-                  <input className="cuadrito" type="checkbox" />
+                  <input className="checkbox" type="checkbox" />
                   <span className="ramen">Remenber me </span>
                 </label>
-
-                <span>
-                  <a href="#" className="fol">
-                    Forgot you password ?
-                  </a>
-                </span>
 
                 <span className="fol-span">
                   Forgot

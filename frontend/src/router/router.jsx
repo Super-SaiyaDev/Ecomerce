@@ -14,6 +14,7 @@ const Path = () => {
         <Route path="/home" element={<Principal />} />
         <Route path="/" element={<PageHome/>}/>
         <Route path="/login-clie" element={<LoginClie />} />
+        <Route path="*" element={<><h1>not found this path  </h1></>}></Route>
       </Routes>
     </Router>
   );

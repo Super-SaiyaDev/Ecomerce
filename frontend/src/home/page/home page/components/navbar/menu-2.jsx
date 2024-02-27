@@ -1,35 +1,47 @@
 import React from "react";
-import '../../css/home-page.css'
+import "../../css/home-page.css";
+import { FaWhatsapp } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+import { BsFillHouseHeartFill } from "react-icons/bs";
 const Navbar2 = () => {
   return (
     <>
-      <div className="container-menu2">
-        <div className="container-rigth">logo</div>
+      <nav className="container-menu2">
+        <div className="container-rigth">
+          <i>
+            <BsFillHouseHeartFill className="icon" />
+          </i>
+          <h1>Json House</h1>
+        </div>
 
         <div className="container-left">
-
           <div className="input-feild">
-            <input type="text" className="inpu" />
-            <i>icon</i>
+            <span className="icon-input1">Categoria</span>
+            <input type="text" placeholder="Search"
+            className="inpu" />
+            <i ><CiSearch className="search" /></i>
           </div>
 
           <div className="contanctos">
-
-            <div className="whasapp">
-              <i>icon</i>
+            <div className="contactos-items whasapp">
+              <i>
+                <FaWhatsapp className="icons" />
+              </i>
               <h4 className="title">whasapp</h4>
               <p className="paragraph">447-433-5690</p>
             </div>
 
-            <div className="instagram">
-              <i>icon</i>
-              <h4 className="title">whasapp</h4>
+            <div className="contactos-items instagram">
+              <i>
+                <FaInstagram className="icons" />
+              </i>
+              <h4 className="title">Instagram</h4>
               <p className="paragraph">447-433-5690</p>
             </div>
-
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
