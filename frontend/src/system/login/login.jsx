@@ -2,9 +2,7 @@
 //? to use react hooks and axios api
 import React, { useState } from "react";
 import axios from "axios";
-//? to styles
 import { Link, useNavigate } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaGoogle } from "react-icons/fa";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { BiCoffeeTogo } from "react-icons/bi";
