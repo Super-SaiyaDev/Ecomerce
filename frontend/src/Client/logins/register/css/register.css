@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
+
+.container-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* .container-img {
+  display: flex;
+  justify-content: space-evenly;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
+    url("../../../assets/R.jpeg");
+  background-position: center;
+  background-size: 720px, 680px;
+  background-repeat: no-repeat;
+  height: 540px;
+  width: 600px;
+} */
+
+.container-img  {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
+    url("../components/R.jpeg");
+  background-position: center;
+  background-size: 720px, 680px;
+  background-repeat: no-repeat;
+  height: 560px;
+  width: 680px;
+  box-shadow: -10px 10px 60px rgb(0, 0, 0);
+  border-radius: 10px 0 0 10px;
+
+} 
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0px 0px 30px;
+}
+
+.content-text .title {
+  color: wheat;
+  font-size: 60px;
+  margin-bottom: 22px;
+  text-align: center;
+  font-weight: 100px;
+  font-family: "Lobster";
+}
+
+.container-img .texto {
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+.container-img .social-icon {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  top: 470px;
+  left: -20px;
+}
+
+.btn-img{
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.social-icon .btn-img:hover {
+  transform: scale(1.3);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.social-icon .img {
+  margin-top: 18px;
+  margin-left: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.social-icon .insta {
+  display: flex;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background: rgb(36, 66, 154);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 66, 154, 1) 0%,
+    rgba(99, 9, 121, 1) 35%,
+    rgba(255, 0, 116, 1) 100%
+  );
+  color: white;
+  border-radius: 50px;
+  border: none;
+}
+
+.social-icon .face {
+  display: flex;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  background-color: #194c99;
+}
+
+.social-icon .twi {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  background-color: #00b5ec;
+}
+
+/* ! [ Form of the singin ] */
+
+.input-groupt {
+  box-shadow: 10px 10px 60px rgb(0, 0, 0);
+  background-color: rgba(100, 97, 94, 0.815);
+  border-radius: 0 10px 10px 0;
+  padding: 20px;
+  height: 560px;
+  width: 495px;
+}
+
+/* ? Title of form */
+.input-groupt h1 {
+  font-family: "Lobster";
+  color: wheat;
+  margin: 10px 0px 20px 40px;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+/*? links to register */
+.register-link {
+  margin: 10px 0px 40px 15px;
+}
+
+.register-link .fol,
+.forgot {
+  color: wheat;
+}
+
+.forgot {
+  margin: 5px;
+}
+
+.Forgot-span {
+  color: whitesmoke;
+}
+
+.fol-span {
+  color: whitesmoke;
+}
+
+.fol {
+  margin: 5px;
+  color: wheat;
+}
+
+/*? Links to remenber and forget password */
+
+.remenber {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+
+
+.remenber .ramen {
+  color: whitesmoke;
+  padding-left: 12px;
+}
+
+.remenber.remenber-1 input[type="checkbox"]{
+  border: none;
+  border-radius: 12px;
+  background-color: red;
+  width: 200px;
+}
+
+.remenber.remenber-1 input[type="checkbox"]:checked {
+  padding: 12px;
+  margin: 12px;
+  
+}
+
+/* ? btn to login with router */
+
+.lnk-register {
+  position: absolute;
+  color: wheat;
+  background-color: #194c99;
+  font-size: 16px;
+  font-weight: 500;
+  right: 30px;
+  top: 70px;
+  padding: 10px;
+  margin: 15px;
+  width: 100px;
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.lnk-register:hover {
+  background-color: #8183d1;
+  box-shadow: 5px 5px 30px #8183d1;
+  transform: scale(1.2);
+  cursor: pointer;
+}

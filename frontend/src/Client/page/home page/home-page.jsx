@@ -17,7 +17,7 @@ const PageHome = () => {
       </header>
 
       <section>
-        <Sliderbar></Sliderbar>
+        {/* <Sliderbar></Sliderbar> */}
       </section>
       
     </>

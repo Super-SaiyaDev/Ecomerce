@@ -1,9 +1,0 @@
-este les corresponde a el 
-
-frontend
-Edelson
-Rinaldi
-
-backend
-Edelson
-Dylan

@@ -8,20 +8,21 @@ const Navbar2 = () => {
   return (
     <>
       <nav className="container-menu2">
-        <div className="container-rigth">
+        <div className="container-logo">
           <i>
             <BsFillHouseHeartFill className="icon" />
           </i>
           <h1>Json House</h1>
         </div>
 
-        <div className="container-left">
+        <div className="container-input">
           <div className="input-feild">
             <span className="icon-input1">Categoria</span>
             <input type="text" placeholder="Search"
             className="inpu" />
             <i ><CiSearch className="search" /></i>
           </div>
+        </div>
 
           <div className="contanctos">
             <div className="contactos-items whasapp">
@@ -40,7 +41,6 @@ const Navbar2 = () => {
               <p className="paragraph">447-433-5690</p>
             </div>
           </div>
-        </div>
       </nav>
     </>
   );
