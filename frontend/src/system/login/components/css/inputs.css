@@ -1,4 +1,5 @@
 .input-feild .input {
+  position: relative;
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -10,8 +11,8 @@
 
 .input-feild .label {
   position: absolute;
-  top: -5px;
-  left: 2px;
+  top: 10px;
+  left: 8px;
   background-color: #fff;
   padding: 5px;
   color: #3a3636;
@@ -26,7 +27,8 @@
 }
 
 .input-feild .input:focus + .label {
-  top: 25px;
+  transform: translateY(-30px);
   width: 90px;
   color: #9ecaed;
 }
+

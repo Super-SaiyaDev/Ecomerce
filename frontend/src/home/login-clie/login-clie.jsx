@@ -25,7 +25,7 @@ const LoginClie = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container-login">
         <div className="container-img">
           <div className="content-text">
             {/* Hola mundo */}

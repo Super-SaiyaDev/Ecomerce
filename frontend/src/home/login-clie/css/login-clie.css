@@ -1,17 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
 
-.container {
+.container-login{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-.container-img {
+/* .container-img {
   display: flex;
   justify-content: space-evenly;
-  border-radius: 10px 0 0 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
+    url("../../../assets/R.jpeg");
+  background-position: center;
+  background-size: 720px, 680px;
+  background-repeat: no-repeat;
+  height: 540px;
+  width: 600px;
+} */
+
+.container-img  {
+  display: flex;
+  justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
     url("../components/R.jpeg");
   background-position: center;
@@ -20,7 +31,9 @@
   height: 560px;
   width: 680px;
   box-shadow: -10px 10px 60px rgb(0, 0, 0);
-}
+  border-radius: 10px 0 0 10px;
+
+} 
 
 .content-text {
   display: flex;
@@ -35,11 +48,6 @@
   font-weight: 100px;
   font-family: "Lobster";
 }
-
-/* @keyframes gradient {
-  0%{background-position: 0%}
-  100%{background-position: 100%}
-} */
 
 .container-img .texto {
   font-size: 18px;

@@ -1,3 +1,4 @@
+
 .input-feild .inputs {
   width: 100%;
   padding: 12px;
@@ -23,9 +24,3 @@
   border-color: #5b99cc;
   box-shadow: 0 0 10px #88e1fc;
 }
-
-/* .input-feild .inputs:focus + .labels {
-  top: -20px;
-  width: 90px;
-  color : rgba(100, 97, 94, 0.815);
-} */
