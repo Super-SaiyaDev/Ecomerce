@@ -186,13 +186,13 @@ p {
   height: 550px;
   width: 560px;
   border-radius: 60% 60% 0px 0px;
-  box-shadow: 15px 10px 40px rgba(144, 139, 150, 0.664);
+  box-shadow: 10px 10px 40px rgba(144, 139, 150, 0.664);
 }
 
 .h-circule .cr-1 {
   position: absolute;
-  top: 150px;
-  left: 90px;
+  top: 190px;
+  left: 100px;
   background-color: rgba(214, 215, 221, 0.651);
   box-shadow: 1px 10px 120px rgba(149, 144, 155, 0.493);
   padding: 40px;
@@ -205,7 +205,7 @@ p {
 
 .h-circule .cr-2 {
   position: absolute;
-  top: 130px;
+  top: 160px;
   left: 180px;
   filter: blur(2px);
   box-shadow: 1px 5px 120px rgb(141, 107, 62);
@@ -219,7 +219,7 @@ p {
 .container-h-left .btn-compra .btn {
   position: absolute;
   left: 540px;
-  bottom: 120px;
+  bottom: 200px;
   width: 140px;
   padding: 20px;
   border: none;

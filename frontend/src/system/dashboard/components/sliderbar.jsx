@@ -12,7 +12,7 @@ function Sliderbar() {
     <div className="dashboard">
       <div className="sidebar">
         <h3>Menú</h3>
-        <ul>
+        <ul className="ul">
           <li
             className={activeMenu === "Inicio" ? "active" : ""}
             onClick={() => handleMenuClick("Inicio")}
@@ -20,13 +20,13 @@ function Sliderbar() {
             Inicio
           </li>
           <li
-            className={activeMenu === "Perfil" ? "active" : ""}
+            className={activeMenu === "Perfil" ? "active" : ""} 
             onClick={() => handleMenuClick("Perfil")}
           >
             Perfil
           </li>
           <li
-            className={activeMenu === "Configuración" ? "active" : ""}
+            className={activeMenu === "Configuración" ? "active" : "" }
             onClick={() => handleMenuClick("Configuración")}
           >
             Configuración

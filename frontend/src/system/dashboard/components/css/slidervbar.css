@@ -9,7 +9,10 @@
   backdrop-filter: blur(12px);
 }
 
-.sidebar ul {
+.sidebar .ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   list-style-type: none;
   padding: 0;
 }

@@ -10,7 +10,9 @@
 html{
   scroll-behavior: smooth;
 }
-
+body{
+  background-color: rgba(86, 85, 92, 0.616);
+}
 .root{
-    background-color: aliceblue;
+    background-color: rgb(162, 166, 168);
 }

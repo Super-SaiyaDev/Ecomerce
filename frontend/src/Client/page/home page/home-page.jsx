@@ -8,6 +8,10 @@ import "./css/home-page.css";
 const PageHome = () => {
   return (
     <>
+    
+    <section>
+
+      </section>
       <header>
         <nav>
           <Navbar></Navbar>
@@ -16,9 +20,6 @@ const PageHome = () => {
         <Header></Header>
       </header>
 
-      <section>
-        {/* <Sliderbar></Sliderbar> */}
-      </section>
       
     </>
   );

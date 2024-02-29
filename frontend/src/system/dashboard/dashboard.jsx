@@ -7,7 +7,10 @@ const Principal = () => {
   return (
     <>
       <header>
+        <nav>
         <Sliderbar />
+
+        </nav>
       </header>
 
       <section>
