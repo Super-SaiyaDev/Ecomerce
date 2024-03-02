@@ -44,16 +44,26 @@ app.post("/register", (req, res) => {
   const sql =
     "INSERT INTO usuario (nombre,usuario,clave,id_rol) Values (?,?,?,1);"; //? consult sql
   //! creating an hash to password
+
   bcrypt.genSalt(10, function (err, salt) {
+
     bcrypt.hash(clave.toString(), salt, (err, hash) => {
-      if (err) return res.json({ Error: "Error in the hash password" }); //? validate the erros
+
+      if (err) return res.json({ Error: "Error in the 
+      hash password" }); //? validate the erros
+
       const values = [name, user, hash]; //! creating the new values
+
       console.log(values);
+
       db.query(sql, values, (err, data) => {
+
         //? inyeccion sql
         if (err) return res.json({ Error: "Error in the consult" });
+
         if (data.affectedRows > 0) {
           return res.json({ Status: "Success" });
+          
         } else {
           return res.json({ Error: "ERROR in the consult" });
         }

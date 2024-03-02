@@ -31,9 +31,9 @@ router.post("/", async (req, res) => {
 });
 
 //! eliminar
-router.put("/", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
-    const items = await controlador.delet(req.body);
+    const items = await controlador.delet(req.params.id);
     respuesta.success(req, res, "datos eliminados correctamente", 200);
   } catch (err) {
     respuesta.error(req, res, err, 500);

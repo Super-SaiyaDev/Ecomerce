@@ -8,8 +8,8 @@ const config = require("../config");
 const Database = db.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
-  database: "json-house",
+  password: "Edel_Son_1520_Arias",
+  database: "login",
 });
 
 Database.connect((err) => {
@@ -28,7 +28,7 @@ Database.on("error", (err) => {
 
 const list = (table) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table}`, (err, res) => {
+    Database.query(`SELECT * FROM ${table} Where activo = 'activo'`, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
@@ -36,56 +36,47 @@ const list = (table) => {
 
 const search = (table, id) => {
   return new Promise((resolve, reject) => {
-    Database.query(
-      `SELECT * FROM ${table} WHERE ID_cliente = ${id}`,
-      (err, res) => {
-        err ? reject(err) : resolve(res);
-      }
-    );
+    Database.query(`SELECT * FROM ${table} WHERE id = ${id}`, (err, res) => {
+      err ? reject(err) : resolve(res);
+    });
   });
 };
 
 const add = (table, data) => {
   return new Promise((resolve, reject) => {
-    Database.query(
-      `INSERT INTO ${table} SET ?;`, [data],
-      (err, res) => {
-        err ? reject(err) : resolve(res);
-      }
-    );
+    Database.query(`INSERT INTO ${table} SET ?;`, [data], (err, res) => {
+      err ? reject(err) : resolve(res);
+    });
   });
 };
 
 const update = (table, data, id) => {
   return new Promise((resolve, reject) => {
-    Database.query(
-      `UPDATE ${table} SET ID_cliente=[value-1],nombre=[value-2],apellido=[value-3],telefono=[value-4],email=[value-5],presupuesto=[value-6] WHERE ID_cliente =  1;`,
-      (err, res) => {
-        err ? reject(err) : resolve(res);
-      }
-    );
+    const sql = `UPDATE ${table} SET ? where id = ${id};`;
+    Database.query(sql, [data], (err, res) => {
+      err ? reject(err) : resolve(res);
+    });
   });
 };
 
 const delet = (table, id) => {
   return new Promise((resolve, reject) => {
-    Database.query(
-      `DELETE FROM ${table} WHERE  ID_cliente = ? ;`, [id],
-      (err, res) => {
-        err ? reject(err) : resolve(res);
-      }
-    );
+    const sql = `UPDATE ${table} SET
+     activo   =  "inactivo" where id = ${id};`;
+    Database.query(sql, (err, res) => {
+      err ? reject(err) : resolve(res);
+    });
   });
 };
 
-const login = (table, data) => {
-  db.query(
-    `"SELECT * FROM ${table} WHERE nombre = ${data.user} ";`,
-    (err, res) => {
+const login = (table,data) => {
+  return new Promise((resolve, reject) => {
+    Database.query(`SELECT * FROM ${table} WHERE usuario = "${data.user}" and clave = "${data.clave}"`, (err, res) => {
       err ? reject(err) : resolve(res);
-    }
-  );
+    });
+  });
 };
+
 
 module.exports = {
   search,
@@ -93,5 +84,5 @@ module.exports = {
   add,
   delet,
   update,
-  login
+  login,
 };
