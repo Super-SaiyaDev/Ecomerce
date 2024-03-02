@@ -11,6 +11,7 @@ import { BiCoffeeTogo } from "react-icons/bi";
 import UserInput from "./components/input";
 import "./css/login.css";
 
+//! Create the Login that is the component principal
 const LoginUser = () => {
   //? creating the usestate
   const [values, setValue] = useState({
@@ -24,23 +25,27 @@ const LoginUser = () => {
     setValue({ ...values, [name]: value });
   };
 
-  //? creating the usenavigate
+  //? using the usenavigate
   const navigate = useNavigate();
 
-  //? this is the handleSumit or manager of menssage.
+  axios.defaults.withCredentials = true;
+  //? this is the handleSumit of menssage.
   const handleSumit = (e) => {
     e.preventDefault(); //* to when the form be activated o send
-    console.log(values); //* printing the values of the useState
+    console.log(values); //* printing the value of the useState
+
     //! i'am send the value of the inputs
     axios
-      .post("http://localhost:3000/login", values)
+      .post("http://localhost:3000/api/users/login", values)
       .then((res) => {
         if (values.clave != "" && values.user != "") {
-          if (res.data.Status === "Success") {
+          console.log(res.data);
+          if (res.data.status === "Success") {
             navigate("/home");
           } else {
-            navigate("/login");
             alert("Contraseña o usuario incorrectos");
+            navigate("/login");
+            
           }
         } else {
           alert("rellene todos los campos");
