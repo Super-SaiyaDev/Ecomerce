@@ -12,7 +12,7 @@ router.post("/login", async (req, res) => {
       respuesta.handleLogin(req, res, items);
       return;
   } catch (err) {
-    respuesta.errorLogin(req, res, err,500);
+    respuesta.error(req, res, err,500);
   }
 });
 

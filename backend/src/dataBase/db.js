@@ -8,8 +8,8 @@ const config = require("../config");
 const Database = db.createConnection({
   host: "localhost",
   user: "root",
-  password: "Edel_Son_1520_Arias",
-  database: "login",
+  password: "",
+  database: "json-house",
 });
 
 Database.connect((err) => {
@@ -28,7 +28,7 @@ Database.on("error", (err) => {
 
 const list = (table) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table} Where activo = 'activo'`, (err, res) => {
+    Database.query(`SELECT * FROM ${table} `, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
@@ -52,7 +52,7 @@ const add = (table, data) => {
 
 const update = (table, data, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `UPDATE ${table} SET ? where id = ${id};`;
+    const sql = `UPDATE cliente SET ? where ID_cliente = ${id};`;
     Database.query(sql, [data], (err, res) => {
       err ? reject(err) : resolve(res);
     });
@@ -61,8 +61,7 @@ const update = (table, data, id) => {
 
 const delet = (table, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `UPDATE ${table} SET
-     activo   =  "inactivo" where id = ${id};`;
+    const sql = `DELETE FROM cliente WHERE ID_cliente =  ${id};`;
     Database.query(sql, (err, res) => {
       err ? reject(err) : resolve(res);
     });
@@ -71,7 +70,7 @@ const delet = (table, id) => {
 
 const login = (table,data) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table} WHERE usuario = "${data.user}" and clave = "${data.clave}"`, (err, res) => {
+    Database.query(`SELECT * FROM ${table} WHERE user = "${data.user}" and clave = "${data.clave}"`, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
