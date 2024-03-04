@@ -7,6 +7,7 @@ import LoginClie from "../Client/logins/login-clie/login-clie";
 import PageHome from "../Client/page/home page/home-page";
 import Register from "../Client/logins/register/register";
 import Create from "../system/dashboard/components/table/create";
+import Update from "../system/dashboard/components/table/update";
 
 const Path = () => {
   return (
@@ -16,8 +17,7 @@ const Path = () => {
         <Route path="/home" element={<Principal />} />
         <Route path="/table" element={<Table />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/update/:id" />
-        <Route path="/delete/:id" />
+        <Route path="/update/:id" element={<Update/>} />
         <Route path="/" element={<PageHome />} />
         <Route path="/login-clie" element={<LoginClie />} />
         <Route path="/register" element={<Register />} />

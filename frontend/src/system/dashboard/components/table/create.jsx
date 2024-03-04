@@ -7,17 +7,19 @@ const Create = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     nombre: "",
-    usuario: "",
-    clave: "",
+    apellido: "",
+    telefono: "",
+    email: "",
+    presupuesto: "",
   });
 
   const handlerSubmit = (e) => {
-    e.preventdefault();
+    e.preventDefault();
     axios
       .post("http://localhost:3000/api/clientes", values)
       .then((data) => {
         console.log(data);
-        useNavigate("/table");
+        navigate("/table");
       })
       .catch((err) => {
         console.log(err);
@@ -29,8 +31,9 @@ const Create = () => {
       <div className="container">
         <form onSubmit={handlerSubmit} action="">
           <div className="input-groupt">
+
             <div className="input-feild">
-              <label htmlFor="">name</label>
+              <label htmlFor="">nombre</label>
               <input
                 className="inputs"
                 type="text"
@@ -39,26 +42,51 @@ const Create = () => {
                 }
               />
             </div>
+
             <div className="input-feild">
-              <label htmlFor="">username</label>
+              <label htmlFor="">apellido</label>
               <input
                 className="inputs"
                 type="text"
                 onChange={(e) =>
-                  setValues({ ...values, usuario: e.target.value })
+                  setValues({ ...values, apellido: e.target.value })
                 }
               />
             </div>
+
             <div className="input-feild">
-              <label htmlFor="">password</label>
+              <label htmlFor="">telefono</label>
               <input
                 className="inputs"
                 type="text"
                 onChange={(e) =>
-                  setValues({ ...values, password: e.target.value })
+                  setValues({ ...values, telefono: e.target.value })
                 }
               />
             </div>
+
+            <div className="input-feild">
+              <label htmlFor="">email</label>
+              <input
+                className="inputs"
+                type="text"
+                onChange={(e) =>
+                  setValues({ ...values, email: e.target.value })
+                }
+              />
+            </div>
+
+            <div className="input-feild">
+              <label htmlFor="">presupuesto</label>
+              <input
+                className="inputs"
+                type="text"
+                onChange={(e) =>
+                  setValues({ ...values, presupuesto: e.target.value })
+                }
+              />
+            </div>
+
             <div className="btn-create">
               <button>create</button>
             </div>

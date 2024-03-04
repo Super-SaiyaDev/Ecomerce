@@ -25,6 +25,18 @@ function Table() {
       });
   }, []);
 
+  const handlerDelete = (id) => {
+    axios
+      .delete(`http://localhost:3000/api/clientes/${id}`)
+      .then((response) => {
+        location.reload();
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="content">
       <div className="content-T">
@@ -59,33 +71,32 @@ function Table() {
             <tr>
               <th>id</th>
               <th>Nombre</th>
-              <th>usuario</th>
-              <th>clave</th>
-              <th>activo</th>
-              <th>Acciones</th>
+              <th>Apellido</th>
+              <th>telefono</th>
+              <th>email</th>
+              <th>presupuesto</th>
             </tr>
           </thead>
           <tbody>
             {datos.map((items, key) => (
               <tr key={key}>
-                <td>{items.id}</td>
+                <td>{items.ID_cliente}</td>
                 <td>{items.nombre}</td>
-                <td>{items.usuario}</td>
-                <td>{items.clave}</td>
-                <td>{items.activo}</td>
+                <td>{items.apellido}</td>
+                <td>{items.telefono}</td>
+                <td>{items.email}</td>
+                <td>{items.presupuesto}</td>
                 <td>
-                  <Link to={`/actualizar/${items.id}`}>
+                  <Link to={`/update/${items.ID_cliente}`}>
                     <button>
                       <RiEdit2Fill />
                     </button>
                   </Link>
                 </td>
                 <td>
-                  <Link to={`/eliminar/${items.id}`}>
-                    <button>
-                      <MdDelete />
-                    </button>
-                  </Link>
+                  <button onClick={() => handlerDelete(items.ID_cliente)}>
+                    <MdDelete />
+                  </button>
                 </td>
               </tr>
             ))}
