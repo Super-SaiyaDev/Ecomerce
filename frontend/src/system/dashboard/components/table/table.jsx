@@ -1,10 +1,30 @@
 import React, { useState } from "react";
-import "./css/table.css";
+import { useEffect } from "react";
+import axios from "axios";
+import "../css/table.css";
 import { IoSearchOutline } from "react-icons/io5";
+import { RiEdit2Fill } from "react-icons/ri";
 import { IoMdPersonAdd } from "react-icons/io";
+import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Table() {
   const [isInputFocused, setInputFocused] = useState(false);
+
+  const [datos, setData] = useState([{}]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/clientes")
+      .then((response) => {
+        console.log(response.data.body);
+        setData(response.data.body);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="content">
       <div className="content-T">
@@ -14,19 +34,22 @@ function Table() {
           </div>
 
           <div className="navigate-table">
-            <button to="/">
-              <IoMdPersonAdd /> New User
-            </button>
+            <Link to="/create">
+              <button>
+                <IoMdPersonAdd /> New User
+              </button>
+            </Link>
 
             <div className="search">
-            <i className={`lbl-search ${isInputFocused ? 'desactived' : ''}`}><IoSearchOutline /></i>
+              <i className={`lbl-search ${isInputFocused ? "desactived" : ""}`}>
+                <IoSearchOutline />
+              </i>
               <input
+                className="input-search"
                 type="text"
                 onFocus={() => setInputFocused(true)}
                 onBlur={() => setInputFocused(false)}
               />
-             
-
             </div>
           </div>
         </div>
@@ -36,53 +59,36 @@ function Table() {
             <tr>
               <th>id</th>
               <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Email</th>
-              <th>estado</th>
+              <th>usuario</th>
+              <th>clave</th>
+              <th>activo</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>
-                <img
-                  src="https://th.bing.com/th/id/OIP.MhCeRSMugeDNOj-n2SbToQHaHa?pid=ImgDet&w=182&h=182&c=7"
-                  alt=""
-                />
-                Juan
-              </td>
-              <td>Pére Nuñez</td>
-              <td>juanperez@example.com</td>
-              <td>activo</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>
-                <img
-                  src="https://th.bing.com/th/id/OIP.DqQp2MTPz9G8kcWeHoAj8gAAAA?rs=1&pid=ImgDetMain"
-                  alt=""
-                />
-                Maria
-              </td>
-              <td>González</td>
-              <td>mariagonzalez@example.com</td>
-              <td>activo</td>
-            </tr>
-
-            <tr>
-              <td>3 </td>
-              <td>
-                <img
-                  src="https://th.bing.com/th/id/OIP.j5liSvLK18lsGRTja6ZR0QHaJQ?rs=1&pid=ImgDetMain"
-                  alt=""
-                />
-                Maria
-              </td>
-              <td>González</td>
-              <td>mariagonzalez@example.com</td>
-              <td>activo</td>
-            </tr>
+            {datos.map((items, key) => (
+              <tr key={key}>
+                <td>{items.id}</td>
+                <td>{items.nombre}</td>
+                <td>{items.usuario}</td>
+                <td>{items.clave}</td>
+                <td>{items.activo}</td>
+                <td>
+                  <Link to={`/actualizar/${items.id}`}>
+                    <button>
+                      <RiEdit2Fill />
+                    </button>
+                  </Link>
+                </td>
+                <td>
+                  <Link to={`/eliminar/${items.id}`}>
+                    <button>
+                      <MdDelete />
+                    </button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

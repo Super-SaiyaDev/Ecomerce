@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Table from "../components/table";
+import Table from "../system/dashboard/components/table/table";
 import LoginUser from "../system/login/login";
-import Principal from "../system/dashboard/system";
+import Principal from "../system/dashboard/dashboard";
 import LoginClie from "../Client/logins/login-clie/login-clie";
-import PageHome from "../Client/page/home page/home-page"
+import PageHome from "../Client/page/home page/home-page";
 import Register from "../Client/logins/register/register";
+import Create from "../system/dashboard/components/table/create";
 
 const Path = () => {
   return (
@@ -13,10 +14,21 @@ const Path = () => {
       <Routes>
         <Route path="/login" element={<LoginUser />} />
         <Route path="/home" element={<Principal />} />
-        <Route path="/" element={<PageHome/>}/>
+        <Route path="/table" element={<Table />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/update/:id" />
+        <Route path="/delete/:id" />
+        <Route path="/" element={<PageHome />} />
         <Route path="/login-clie" element={<LoginClie />} />
-        <Route path="/register" element={<Register/>}/>
-        <Route path="*" element={<><h1>not found this path  </h1></>}></Route>
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="*"
+          element={
+            <>
+              <h1>not found this path </h1>
+            </>
+          }
+        ></Route>
       </Routes>
     </Router>
   );
