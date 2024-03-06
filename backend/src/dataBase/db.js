@@ -8,8 +8,8 @@ const config = require("../config");
 const Database = db.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
-  database: "json-house",
+  password: "Edel_Son_1520_Arias",
+  database: "login",
 });
 
 Database.connect((err) => {
@@ -52,7 +52,7 @@ const add = (table, data) => {
 
 const update = (table, data, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `UPDATE cliente SET ? where ID_cliente = ${id};`;
+    const sql = `UPDATE ${table} SET ? where id = ${id};`;
     Database.query(sql, [data], (err, res) => {
       err ? reject(err) : resolve(res);
     });
@@ -61,7 +61,7 @@ const update = (table, data, id) => {
 
 const delet = (table, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `DELETE FROM cliente WHERE ID_cliente =  ${id};`;
+    const sql = `DELETE FROM ${table} WHERE id =  ${id};`;
     Database.query(sql, (err, res) => {
       err ? reject(err) : resolve(res);
     });

@@ -4,27 +4,43 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 
-const Create = () => {
+const Update = () => {
   const navigate = useNavigate();
-  const [datos, setData] = useState([{}]);
+  const [values, setValues] = useState({
+    nombre: "",
+    usuario: "",
+    clave: "",
+    activo: "",
+  });
   const { id } = useParams();
 
   useEffect(() => {
-    axios
-      .put("http://localhost:3000/api/clientes/" + id)
-      .then((response) => {
-        console.log(response.data.body);
-        setData(response.data.body);
-      })
-      .catch((error) => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3000/api/clientes/" + id
+        );
+        const data = response.data.body[0]; // Asegúrate de que la API devuelve un array y tomas el primer elemento
+        console.log(data);
+        setValues({
+          ...values,
+          nombre: data.nombre,
+          usuario: data.usuario,
+          clave: data.clave,
+          activo: data.activo,
+        });
+      } catch (error) {
         console.log(error);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   const handlerSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/api/clientes/", values)
+      .put("http://localhost:3000/api/clientes/" + id, values)
       .then((data) => {
         console.log(data);
         navigate("/table");
@@ -34,13 +50,6 @@ const Create = () => {
       });
   };
 
-  const [values, setValues] = useState({
-    nombre: "",
-    apellido: "",
-    telefono: "",
-    email: "",
-    presupuesto: "",
-  });
   return (
     <>
       <div className="container">
@@ -51,7 +60,7 @@ const Create = () => {
               <input
                 className="inputs"
                 type="text"
-                value={datos.nombre}
+                value={values.nombre}
                 onChange={(e) =>
                   setValues({ ...values, nombre: e.target.value })
                 }
@@ -59,55 +68,44 @@ const Create = () => {
             </div>
 
             <div className="input-feild">
-              <label htmlFor="">apellido</label>
+              <label htmlFor="">usuario</label>
               <input
                 className="inputs"
                 type="text"
-                value={datos.apellido}
+                value={values.usuario}
                 onChange={(e) =>
-                  setValues({ ...values, apellido: e.target.value })
+                  setValues({ ...values, usuario: e.target.value })
                 }
               />
             </div>
 
             <div className="input-feild">
-              <label htmlFor="">telefono</label>
+              <label htmlFor="">clave</label>
               <input
                 className="inputs"
                 type="text"
-                value={datos.telefono}
+                value={values.clave}
                 onChange={(e) =>
-                  setValues({ ...values, telefono: e.target.value })
+                  setValues({ ...values, clave: e.target.value })
                 }
               />
             </div>
 
             <div className="input-feild">
-              <label htmlFor="">email</label>
+              <label htmlFor="">activo</label>
               <input
                 className="inputs"
                 type="text"
-                value={datos.email}
+                value={values.activo}
                 onChange={(e) =>
-                  setValues({ ...values, email: e.target.value })
-                }
-              />
-            </div>
-
-            <div className="input-feild">
-              <label htmlFor="">presupuesto</label>
-              <input
-                className="inputs"
-                type="text"
-                value={datos.presupuesto}
-                onChange={(e) =>
-                  setValues({ ...values, presupuesto: e.target.value })
+                  setValues({ ...values, activo: e.target.value })
                 }
               />
             </div>
 
             <div className="btn-create">
-              <button>create</button>
+              <button>update</button>
+              <Link to={"/table"}>Atras</Link>
             </div>
           </div>
         </form>
@@ -116,4 +114,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default Update;

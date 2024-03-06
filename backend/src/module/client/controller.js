@@ -1,5 +1,5 @@
 const db = require("../../dataBase/db");
-const table = "cliente";
+const table = "usuario";
 
 const list = () => {
   return db.list(table);

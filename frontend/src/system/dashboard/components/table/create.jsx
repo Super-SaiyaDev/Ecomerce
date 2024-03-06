@@ -7,10 +7,8 @@ const Create = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     nombre: "",
-    apellido: "",
-    telefono: "",
-    email: "",
-    presupuesto: "",
+    usuario: "",
+    clave: "",
   });
 
   const handlerSubmit = (e) => {
@@ -31,7 +29,6 @@ const Create = () => {
       <div className="container">
         <form onSubmit={handlerSubmit} action="">
           <div className="input-groupt">
-
             <div className="input-feild">
               <label htmlFor="">nombre</label>
               <input
@@ -44,48 +41,28 @@ const Create = () => {
             </div>
 
             <div className="input-feild">
-              <label htmlFor="">apellido</label>
+              <label htmlFor="">usuario</label>
               <input
                 className="inputs"
                 type="text"
                 onChange={(e) =>
-                  setValues({ ...values, apellido: e.target.value })
+                  setValues({ ...values, usuario: e.target.value })
                 }
               />
             </div>
 
             <div className="input-feild">
-              <label htmlFor="">telefono</label>
+              <label htmlFor="">clave</label>
               <input
                 className="inputs"
                 type="text"
                 onChange={(e) =>
-                  setValues({ ...values, telefono: e.target.value })
+                  setValues({ ...values, clave: e.target.value })
                 }
               />
             </div>
 
-            <div className="input-feild">
-              <label htmlFor="">email</label>
-              <input
-                className="inputs"
-                type="text"
-                onChange={(e) =>
-                  setValues({ ...values, email: e.target.value })
-                }
-              />
-            </div>
 
-            <div className="input-feild">
-              <label htmlFor="">presupuesto</label>
-              <input
-                className="inputs"
-                type="text"
-                onChange={(e) =>
-                  setValues({ ...values, presupuesto: e.target.value })
-                }
-              />
-            </div>
 
             <div className="btn-create">
               <button>create</button>

@@ -80,21 +80,20 @@ function Table() {
           <tbody>
             {datos.map((items, key) => (
               <tr key={key}>
-                <td>{items.ID_cliente}</td>
+                <td>{items.id}</td>
                 <td>{items.nombre}</td>
-                <td>{items.apellido}</td>
-                <td>{items.telefono}</td>
-                <td>{items.email}</td>
-                <td>{items.presupuesto}</td>
+                <td>{items.usuario}</td>
+                <td>{items.clave}</td>
+                <td>{items.activo}</td>
                 <td>
-                  <Link to={`/update/${items.ID_cliente}`}>
+                  <Link to={`/update/${items.id}`}>
                     <button>
                       <RiEdit2Fill />
                     </button>
                   </Link>
                 </td>
                 <td>
-                  <button onClick={() => handlerDelete(items.ID_cliente)}>
+                  <button onClick={() => handlerDelete(items.id)}>
                     <MdDelete />
                   </button>
                 </td>
