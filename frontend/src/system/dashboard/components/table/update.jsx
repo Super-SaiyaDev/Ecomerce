@@ -20,7 +20,7 @@ const Update = () => {
         const response = await axios.get(
           "http://localhost:3000/api/clientes/" + id
         );
-        const data = response.data.body[0]; // Asegúrate de que la API devuelve un array y tomas el primer elemento
+        const data = response.data.body[0];
         console.log(data);
         setValues({
           ...values,

@@ -17,19 +17,49 @@ function Sliderbar() {
             className={activeMenu === "Inicio" ? "active" : ""}
             onClick={() => handleMenuClick("Inicio")}
           >
-            Inicio
+            Dashboard
           </li>
           <li
             className={activeMenu === "Perfil" ? "active" : ""} 
             onClick={() => handleMenuClick("Perfil")}
           >
-            Perfil
+            Usuario
           </li>
           <li
             className={activeMenu === "Configuración" ? "active" : "" }
             onClick={() => handleMenuClick("Configuración")}
           >
-            Configuración
+            Propiedad
+          </li>
+          <li
+            className={activeMenu === "Configuración" ? "active" : "" }
+            onClick={() => handleMenuClick("Configuración")}
+          >
+            visitas
+          </li>
+          <li
+            className={activeMenu === "Configuración" ? "active" : "" }
+            onClick={() => handleMenuClick("Configuración")}
+          >
+            ventas
+          </li>
+          <li
+            className={activeMenu === "Configuración" ? "active" : "" }
+            onClick={() => handleMenuClick("Configuración")}
+          >
+            Compra
+          </li>
+          <li
+            className={activeMenu === "Configuración" ? "active" : "" }
+            onClick={() => handleMenuClick("Configuración")}
+          >
+            Postventa
+          </li>
+          <li
+            className={activeMenu === "Configuración" ? "active" : "" }
+            onClick={() => handleMenuClick("Configuración")}
+          >
+            Reportes
           </li>
         </ul>
       </div>

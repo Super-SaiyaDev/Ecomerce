@@ -1,0 +1,5 @@
+.container-menu2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
