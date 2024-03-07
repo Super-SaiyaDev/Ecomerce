@@ -1,0 +1,109 @@
+.container-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.input-groupt-cr {
+  width: 600px;
+  padding: 30px;
+  background-color: #07194681;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.input-feild-cr {
+  margin: 12px;
+}
+
+.input-feild-cr .label-cr {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-cr,
+.inputs {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+.input-cr:focus,
+.inputs:focus {
+  border-color: #009688;
+  outline: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 150, 136, 0.1);
+}
+
+.btn-create {
+  text-align: center;
+}
+
+.btn-create button {
+  padding: 10px;
+  width: 100px;
+  border: none;
+  color: white;
+  background-color: #009688;
+  box-shadow: 5px 5px 30px #009688;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  position: relative;
+  top: 12px;
+  left:5%;
+  margin: 12px;
+}
+
+.btn-create button:hover {
+    background-color: #00695c;
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 30px #00695c;
+    transition:  all .5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+
+.btn-create button:active {
+  transform: scale(0.95);
+}
+
+
+.btn-create .btn-redirect{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    color: white;
+    background-color: #af5d52d3;
+    box-shadow: 5px 5px 30px #91523f;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    position: relative;
+    top: 12px;
+    left:5%;
+    margin: 12px;
+
+}
+
+.btn-create .btn-redirect:hover {
+    background-color: #91493f;
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 30px #4b1403;
+    transition:  all .5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.lnk-redirect {
+  color: whitesmoke;
+}
+
