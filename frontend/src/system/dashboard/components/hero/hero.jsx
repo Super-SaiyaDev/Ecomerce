@@ -1,21 +1,42 @@
 import React from "react";
-import Panels from "./panels/panels";
+import './css/hero.css'
+import Panel from "./compo/Panel";
 
 const HeroSystem = () => {
   return (
     <>
+      <div className="content-panel">
+        <div className="content-panel-group">
 
-    <div className="container-panel">
+          <Panel titulo='LAlALAlA' 
+          info='24%' 
+          price='$20,000'
+          taks='+ 1.20 today'
+          />
 
-    <Panels titulo='lalalal'  cant='$20,505' subtitulo='24%' ear='212' />
-    <Panels titulo='lalalal'  cant='$20,505' subtitulo='26%' ear='212' />
-    <Panels titulo='lalalal'  cant='$20,505' subtitulo='25%' ear='212' />
+          <Panel titulo='LAlALAlA' 
+          info='27%' 
+          price='$20,000'
+          taks='+ 0.20 today'
+          />
 
-    </div>
+          <Panel titulo='LAlALAlA' 
+          info='25%' 
+          price='$20,000'
+          taks='+ 0.34 today'
+          />
 
+          <Panel titulo='LAlALAlA' 
+          info='26% ' 
+          price='$20,000'
+          taks='+ 1.00 today'
+          />
+
+        </div>
+        
+      </div>
     </>
-      
-  )
+  );
 };
 
 export default HeroSystem;

@@ -1,0 +1,47 @@
+.content-panel{
+    display: flex; 
+    justify-content:center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+.content-panel-group{
+    display: flex;
+}
+
+.content-panel-feild {
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.content-card .card-title{
+    font-size: 15px;
+    color: rgb(14, 41, 221);
+}
+
+.content-card .card-price {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+}
+
+.content-card .icon{
+    font-size: 20px;
+    background-color: rgba(14, 42, 221, 0.317);
+    border-radius: 50px;
+}
+.card-info{
+    text-align: left;
+}
+
+.increment{
+    font-size: 15px;
+    color: rgba(0, 239, 239, 0.558);
+}
+
+.card-info .values {
+    font-size: 15px;
+    color: rgb(82, 82, 82);
+}
