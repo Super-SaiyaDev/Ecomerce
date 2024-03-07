@@ -1,6 +1,7 @@
 import React from "react";
 import './css/hero.css'
 import Panel from "./compo/Panel";
+import ExampleBarChart from "./compo/grafico";
 
 const HeroSystem = () => {
   return (
@@ -31,6 +32,8 @@ const HeroSystem = () => {
           price='$20,000'
           taks='+ 1.00 today'
           />
+
+          <ExampleBarChart />
 
         </div>
         

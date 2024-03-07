@@ -2,6 +2,7 @@ import React from 'react'
 import { MdEmojiObjects } from "react-icons/md";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
+
 const Panel = (props) => {
   return (
     <>
