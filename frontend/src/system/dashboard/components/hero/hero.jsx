@@ -14,8 +14,11 @@ const HeroSystem = () => {
             <button className="btn-hero-export">export</button>
           </div>
         </div>
+
         <div className="container-panel">
+
           <div className="panel-groupt">
+
             <div className="panel-feild">
               <div className="panel-info">
                 <h1>producto</h1>
@@ -24,6 +27,7 @@ const HeroSystem = () => {
                 </div>
               </div>
             </div>
+            
             <div className="panel-feild">
               <div className="panel-info">
                 <h1>producto</h1>

@@ -8,18 +8,18 @@ import { BsFillHouseHeartFill } from "react-icons/bs";
 const Navbar2 = () => {
   return (
     <>
-      <nav className="container-menu2">
+      <nav className="container-nav-menu2">
         <div className="container-nav-right">
-          <div className="container-logo">
+          <div className="container-nav-logo">
             <i>
-              <BsFillHouseHeartFill className="icon" />
+              <BsFillHouseHeartFill className="icon-nav" />
             </i>
-            <h1>Json House</h1>
+            <h1 className="title-nav">Json House</h1>
           </div>
 
           <div className="input-groupt-nav">
             <div className="input-feild-nav">
-              <select name="op-user" id="select">
+              <select name="op-user" className="nav-select">
                 <option value="op1" className="op-user1">
                   hola mundo
                 </option>
@@ -69,31 +69,32 @@ const Navbar2 = () => {
               </select>
             </div>
 
-            <div className="btn-contact">
-              <button className="btn"></button>
+            <div className="btn-contact-nav">
+              <button className="btn-nav">hola</button>
             </div>
           </div>
         </div>
 
         <div className="conteiner-nav-left">
+
           <div className="input-felid-nav">
-            <input type="text" className="input-search" />
-            <span className="conteiner-icon-search">
-              <CiSearch className="icon-search" />
+            <input type="text" className="input-nav-search" />
+            <span className="nav-span-search">
+              <CiSearch className="nav-icon-search" />
             </span>
           </div>
 
-          <div className="icons-system">
+          <div className="nv-icons-system">
             <i>
-              <FaWhatsapp className="icon-menssage" />
+              <FaWhatsapp className="icon-menssage icon-nav" />
             </i>
 
             <i>
-              <FaInstagram className="icon-notification" />
+              <FaInstagram className="icon-notification icon-nav" />
             </i>
 
             <i>
-              <CiSearch className="icon-alert" />
+              <CiSearch className="icon-alert icon-nav"  />
             </i>
           </div>
           <div className="profile-user">
@@ -102,7 +103,7 @@ const Navbar2 = () => {
                 <FaUserCog />
               </i>
             </Link>
-            <label htmlFor="">Nombre del usuario </label>
+            <label className="title-user" htmlFor="">Nombre del usuario </label>
           </div>
         </div>
       </nav>

@@ -20,44 +20,44 @@ function Sliderbar() {
             Dashboard
           </li>
           <li
-            className={activeMenu === "Perfil" ? "active" : ""} 
-            onClick={() => handleMenuClick("Perfil")}
+            className={activeMenu === "usuario" ? "active" : ""} 
+            onClick={() => handleMenuClick("usuario")}
           >
             Usuario
           </li>
           <li
-            className={activeMenu === "Configuración" ? "active" : "" }
-            onClick={() => handleMenuClick("Configuración")}
+            className={activeMenu === "propiedad" ? "active" : "" }
+            onClick={() => handleMenuClick("propiedad")}
           >
             Propiedad
           </li>
           <li
-            className={activeMenu === "Configuración" ? "active" : "" }
-            onClick={() => handleMenuClick("Configuración")}
+            className={activeMenu === "visitas" ? "active" : "" }
+            onClick={() => handleMenuClick("visitas")}
           >
             visitas
           </li>
           <li
-            className={activeMenu === "Configuración" ? "active" : "" }
-            onClick={() => handleMenuClick("Configuración")}
+            className={activeMenu === "ventas" ? "active" : "" }
+            onClick={() => handleMenuClick("ventas")}
           >
             ventas
           </li>
           <li
-            className={activeMenu === "Configuración" ? "active" : "" }
-            onClick={() => handleMenuClick("Configuración")}
+            className={activeMenu === "compra" ? "active" : "" }
+            onClick={() => handleMenuClick("compra")}
           >
             Compra
           </li>
           <li
-            className={activeMenu === "Configuración" ? "active" : "" }
-            onClick={() => handleMenuClick("Configuración")}
+            className={activeMenu === "postventa" ? "active" : "" }
+            onClick={() => handleMenuClick("postventa")}
           >
             Postventa
           </li>
           <li
-            className={activeMenu === "Configuración" ? "active" : "" }
-            onClick={() => handleMenuClick("Configuración")}
+            className={activeMenu === "Reportes" ? "active" : "" }
+            onClick={() => handleMenuClick("Reportes")}
           >
             Reportes
           </li>

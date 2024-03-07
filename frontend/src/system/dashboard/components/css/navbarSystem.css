@@ -1,5 +1,119 @@
-.container-menu2{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.container-nav-menu2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  margin: 0px;
+}
+
+.container-nav-right,
+.conteiner-nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container-nav-right .input-groupt-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px;
+}
+
+.container-nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px;
+}
+
+.container-nav-logo .title-nav {
+  font-size: 30px;
+  font-weight: 550;
+  color: rgb(243, 238, 238);
+}
+
+.container-nav-logo .icon-nav {
+  font-size: 25px;
+  font-weight: 550;
+  color: wheat;
+}
+
+.input-groupt-nav .input-feild-nav {
+  margin-right: 20px;
+}
+
+.input-feild-nav > * {
+  outline: none;
+  border: none;
+  border-left: 1px solid rgb(218, 207, 207);
+  height: 40px;
+  font-size: 14px;
+  color: white;
+  padding-left: 20px;
+  background-color: transparent;
+}
+
+.input-feild-nav > *:focus {
+  outline: none;
+}
+
+.btn-contact-nav .btn-nav {
+  background-color: rgb(20, 69, 175);
+  box-shadow: 10px 10px 30px rgba(26, 6, 85, 0.685);
+  color: rgb(255, 242, 242);
+  padding: 10px;
+  width: 120px;
+  margin: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn-contact-nav .btn-nav:hover {
+  cursor: pointer;
+  background-color: rgb(40, 67, 145);
+  box-shadow: -10px 10px 30px rgba(7, 6, 85, 0.829);
+  transform: scale(1.1);
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.container-nav-menu2 .conteiner-nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.input-nav-search {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid rgb(20, 27, 104);
+  border-radius: 12px;
+  background-color: rgba(130, 146, 209, 0.849);
+  box-shadow: 1px 1px 20px rgb(67, 74, 153);
+}
+
+.nav-span-search{
+    position: absolute;
+    right:  405px;
+    top: 30px;
+    color: white;
+    font-size: 25px;
+
+}   
+
+
+.icon-nav{
+    margin: 12px;
+    font-size: 20px;
+}
+.profile-user{
+    margin: 12px;
+}
+
+.title-user{
+    color: white;
 }
