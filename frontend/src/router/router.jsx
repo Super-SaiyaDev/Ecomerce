@@ -6,9 +6,8 @@ import Principal from "../system/dashboard/dashboard";
 import LoginClie from "../Client/logins/login-clie/login-clie";
 import PageHome from "../Client/page/home page/home-page";
 import Register from "../Client/logins/register/register";
-import Create from "../system/dashboard/components/table/create";
-import Update from "../system/dashboard/components/table/update";
-
+import Create  from "../system/dashboard/components/table/components/create/create"
+import Update from "../system/dashboard/components/table/components/update/update";
 const Path = () => {
   return (
     <Router>

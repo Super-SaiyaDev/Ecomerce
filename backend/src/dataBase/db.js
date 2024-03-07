@@ -8,7 +8,7 @@ const config = require("../config");
 const Database = db.createConnection({
   host: "localhost",
   user: "root",
-  password: "Edel_Son_1520_Arias",
+  password: "",
   database: "login",
 });
 
@@ -36,7 +36,7 @@ const list = (table) => {
 
 const search = (table, id) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table} WHERE id = ${id}`, (err, res) => {
+    Database.query(`SELECT * FROM ${table} WHERE id_usuario = ${id}`, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
@@ -52,7 +52,7 @@ const add = (table, data) => {
 
 const update = (table, data, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `UPDATE ${table} SET ? where id = ${id};`;
+    const sql = `UPDATE ${table} SET ? where id_usuario = ${id};`;
     Database.query(sql, [data], (err, res) => {
       err ? reject(err) : resolve(res);
     });
@@ -61,7 +61,7 @@ const update = (table, data, id) => {
 
 const delet = (table, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `DELETE FROM ${table} WHERE id =  ${id};`;
+    const sql = `DELETE FROM ${table} WHERE id_usuario =  ${id};`;
     Database.query(sql, (err, res) => {
       err ? reject(err) : resolve(res);
     });

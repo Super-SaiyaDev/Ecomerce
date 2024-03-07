@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import DataTable from "./components/dataTable/dataTable";
 import "../css/table.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { RiEdit2Fill } from "react-icons/ri";
@@ -8,7 +9,7 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function Table() {
+function Table({}) {
   const [isInputFocused, setInputFocused] = useState(false);
 
   const [datos, setData] = useState([{}]);
@@ -25,17 +26,7 @@ function Table() {
       });
   }, []);
 
-  const handlerDelete = (id) => {
-    axios
-      .delete(`http://localhost:3000/api/clientes/${id}`)
-      .then((response) => {
-        location.reload();
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  const columns = ["id_usuario", "nombre", "usuario", "clave", "estado"];
 
   return (
     <div className="content">
@@ -66,7 +57,14 @@ function Table() {
           </div>
         </div>
 
-        <table>
+        <div className="content">
+          <DataTable
+            data={datos}
+            columns={columns}
+          />
+        </div>
+
+        {/* <table>
           <thead>
             <tr>
               <th>id</th>
@@ -100,7 +98,7 @@ function Table() {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
       </div>
       {/* Aquí va el contenido principal */}
     </div>
