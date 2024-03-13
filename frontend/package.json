@@ -19,7 +19,7 @@
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.21.3",
     "recharts": "^2.12.2",
-    "swiper": "^11.0.6"
+    "swiper": "^6.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

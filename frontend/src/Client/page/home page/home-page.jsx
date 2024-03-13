@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/navbar/menu-1";
 import Navbar2 from "./components/navbar/menu-2";
 import Header from "./components/header/header";
-import Sliderbar from "./components/sliderbar/sliderbar";
+import Products from "./components/product/products";
 import "./css/home-page.css";
 
 const PageHome = () => {
@@ -15,7 +15,9 @@ const PageHome = () => {
         </nav>
         <Header></Header>
       </header>
-      <section></section>
+      <section>
+        <Products></Products>
+      </section>
     </>
   );
 };
