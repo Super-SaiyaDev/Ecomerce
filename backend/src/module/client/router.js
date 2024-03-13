@@ -9,6 +9,12 @@ router.get("/", async (req, res) => {
   respuesta.success(req, res, items, 200);
 });
 
+//! listar inactivos
+router.get("/reactivar", async (req, res) => {
+  const items = await controlador.list_inactive();
+  respuesta.success(req, res, items, 200);
+});
+
 //! buscar
 router.get("/:id", async (req, res) => {
   try {
@@ -24,6 +30,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const items = await controlador.add(req.body);
+    console.log(items);
     respuesta.success(req, res, items, 200);
   } catch (err) {
     respuesta.error(req, res, err, 500);
@@ -44,6 +51,15 @@ router.delete("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const items = await controlador.update(req.body, req.params.id);
+    respuesta.success(req, res, items, 200);
+  } catch (err) {
+    respuesta.error(req, res, err, 500);
+  }
+});
+
+router.put('/reactivar/:id', async (req, res) => {
+  try {
+    const items = await controlador.reactivated(req.params.id);
     respuesta.success(req, res, items, 200);
   } catch (err) {
     respuesta.error(req, res, err, 500);

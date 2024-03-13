@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --bgcolor: rgba(18, 17, 20, 0.808);
-  --bgcolor2: rgba(15, 14, 17, 0.904);
+  --bgcolor2: rgba(24, 24, 26, 0.904);
   --bgcolor3: rgba(236, 181, 78, 0.74);
   --input: rgba(80, 78, 99, 0.87);
   --color: wheat;
+  --color-title: rgba(177, 176, 221, 0.952);
   --icon: black;
-  --font:"Comfortaa", sans-serif;
+  --font: "Comfortaa", sans-serif;
 }
 
-/* Menu 1 */
+/*! Menu 1 */
 
 .container-menu {
   display: flex;
@@ -51,13 +52,14 @@ i {
   margin: 5px;
 }
 
-/* Menu 2*/
+/*! Menu 2*/
 
 .container-menu2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--bgcolor2);
+  padding: 12px;
 }
 
 .container-logo {
@@ -76,11 +78,9 @@ i {
   font-size: 30px;
 }
 
-
 .input-feild .inpu {
-  width: 100%;
-  left: 12px;
-  padding: 14px;
+  width: 320px;
+  padding: 15px;
   font-size: 15px;
   border: none;
   border-radius: 0px 12px 12px 0px;
@@ -89,16 +89,15 @@ i {
 
 .search {
   position: absolute;
-  right: 20px ;
-  top: 30px;
+  right: 20px;
+  top: 5px;
   font-size: 35px;
   color: var(--bgcolor3);
 }
 
-
 .input-feild .icon-input1 {
-  position: relative;
-  bottom:  -37px;
+  position: absolute;
+  bottom: -1px;
   left: -105px;
   padding: 15px;
   color: whitesmoke;
@@ -112,7 +111,7 @@ i {
   outline: none;
 }
 
-.contanctos {
+/* .contanctos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,49 +134,105 @@ p {
   font-size: 25px;
   color: whitesmoke;
   text-align: center;
-}
+} */
 
-/*? Header */
+/*! Header */
 
 .header-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: var(--bgcolor2);
 }
 
 .container-h-left {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 600px;
   height: 520px;
   padding: 20px 40px 60px;
-  background-color: rgba(213, 203, 218, 0.11);
-  border-radius: 12px;
+  margin-right: 20px;
 }
 
-.header-title {
-  z-index: 1;
-}
-
-.header-title h1 {
-  text-align: center;
-  font-size: 65px;
-  margin: 0px 40px 40px 0px;
-  color: var(--bgcolor3);
-}
-
-.header-title p {
+.header-title .hr-title {
   text-align: left;
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 50px;
+  margin: 0px 40px 20px 0px;
+  color: var(--color-title);
+  z-index: 2;
+}
+
+.header-title .hr-text {
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 25px;
   font-family: var(--font);
   color: whitesmoke;
 }
 
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  margin: 2px;
+  width: 90%;
+}
+
+.input-feild-hr .input-hr {
+  position: relative;
+  padding: 15px;
+  width: 320px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-family: var(--font);
+  font-size: 15px;
+  outline: none;
+}
+
+.icon-location .icon-location-hr {
+  color: var(--font);
+  font-size: 25px;
+}
+
+.btn-location {
+  background-color: var(--bgcolor2);
+  padding: 12px;
+  width: 120px;
+}
+
+.btn{
+  color: var(--bgcolor3);
+  text-align: center;
+  font-size: 14px;
+}
+
+.container-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.promo-view-hr{
+  margin: 10px;
+  padding: 12px;
+
+}
+
+.promo-title{
+  text-align: center;
+  color: var(--bgcolor3);
+}
+
+.promo-text{
+  text-align: center;
+  color: var(--color-title);
+}
+/* ! container right */
 .h-img {
   background-image: url("../components/assets/image-2.jpeg");
   background-position: center;
@@ -185,25 +240,26 @@ p {
   background-repeat: no-repeat;
   height: 550px;
   width: 560px;
+  border:  8px solid rgb(53, 50, 50);
   border-radius: 60% 60% 0px 0px;
   box-shadow: 10px 10px 40px rgba(144, 139, 150, 0.664);
 }
 
 .h-circule .cr-1 {
   position: absolute;
-  top: 190px;
-  left: 100px;
-  background-color: rgba(214, 215, 221, 0.651);
-  box-shadow: 1px 10px 120px rgba(149, 144, 155, 0.493);
+  top: 135px;
+  left: 230px;
+  width: 90px;
+  height: 90px;
+  z-index: 1;
+  background-color: rgba(156, 108, 5, 0.671);
+  box-shadow: 1px 10px 40px rgba(150, 107, 29, 0.747);
   padding: 40px;
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
-  filter: blur(2px);
-
+  filter: blur(3px); 
 }
 
-.h-circule .cr-2 {
+/* .h-circule .cr-2 {
   position: absolute;
   top: 160px;
   left: 180px;
@@ -214,12 +270,12 @@ p {
   width: 30px;
   height: 10px;
   border-radius: 50%;
-}
+} */
 
 .container-h-left .btn-compra .btn {
   position: absolute;
-  left: 540px;
-  bottom: 200px;
+  left: 180px;
+  bottom: 100px;
   width: 140px;
   padding: 20px;
   border: none;

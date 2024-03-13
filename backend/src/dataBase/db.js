@@ -8,7 +8,7 @@ const config = require("../config");
 const Database = db.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "Edel_Son_1520_Arias",
   database: "login",
 });
 
@@ -28,15 +28,31 @@ Database.on("error", (err) => {
 
 const list = (table) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table} `, (err, res) => {
+    Database.query(`SELECT * FROM ${table} WHERE activo = 'activo'`, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
 };
 
+const list_inactive = (table) => {
+  return new Promise((resolve, reject) => {
+    Database.query(`SELECT * FROM ${table} WHERE activo = 'inactivo'`, (err, res) => {
+      err ? reject(err) : resolve(res);
+    });
+  });
+}
+
+const reactivated = (table, id) => {
+  return new Promise((resolve, reject) => {
+    Database.query(`update ${table} set activo = 'activo' WHERE id = ${id};`, (err, res) => {
+      err ? reject(err) : resolve(res);
+    });
+  });
+}
+
 const search = (table, id) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table} WHERE id_usuario = ${id}`, (err, res) => {
+    Database.query(`SELECT * FROM ${table} WHERE id = ${id}`, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
@@ -52,7 +68,7 @@ const add = (table, data) => {
 
 const update = (table, data, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `UPDATE ${table} SET ? where id_usuario = ${id};`;
+    const sql = `UPDATE ${table} SET ? where id = ${id};`;
     Database.query(sql, [data], (err, res) => {
       err ? reject(err) : resolve(res);
     });
@@ -61,7 +77,7 @@ const update = (table, data, id) => {
 
 const delet = (table, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `DELETE FROM ${table} WHERE id_usuario =  ${id};`;
+    const sql = `update ${table} set activo = 'inactivo' WHERE id =  ${id};`;
     Database.query(sql, (err, res) => {
       err ? reject(err) : resolve(res);
     });
@@ -80,6 +96,8 @@ const login = (table,data) => {
 module.exports = {
   search,
   list,
+  list_inactive,
+  reactivated,
   add,
   delet,
   update,

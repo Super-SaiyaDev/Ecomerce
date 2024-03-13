@@ -24,7 +24,7 @@ const Navbar2 = () => {
           </div>
         </div>
 
-          <div className="contanctos">
+          {/* <div className="contanctos">
             <div className="contactos-items whasapp">
               <i>
                 <FaWhatsapp className="icons" />
@@ -40,7 +40,7 @@ const Navbar2 = () => {
               <h4 className="title">Instagram</h4>
               <p className="paragraph">447-433-5690</p>
             </div>
-          </div>
+          </div> */}
       </nav>
     </>
   );

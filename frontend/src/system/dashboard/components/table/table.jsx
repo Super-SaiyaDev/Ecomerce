@@ -4,29 +4,25 @@ import axios from "axios";
 import DataTable from "./components/dataTable/dataTable";
 import "../css/table.css";
 import { IoSearchOutline } from "react-icons/io5";
-import { RiEdit2Fill } from "react-icons/ri";
 import { IoMdPersonAdd } from "react-icons/io";
-import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function Table({}) {
+const Table = ({}) => {
   const [isInputFocused, setInputFocused] = useState(false);
 
   const [datos, setData] = useState([{}]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/clientes")
-      .then((response) => {
-        console.log(response.data.body);
-        setData(response.data.body);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const fechData = async () => {
+      const response = await axios.get(`http://localhost:3000/api/clientes/`);
+      const data = response.data.body;
+      setData(data);
+    };
+
+    fechData();
   }, []);
 
-  const columns = ["id_usuario", "nombre", "usuario", "clave", "estado"];
+  const columns = ["id", "nombre", "usuario", "clave", "activo"];
 
   return (
     <div className="content">
@@ -37,13 +33,21 @@ function Table({}) {
           </div>
 
           <div className="navigate-table">
-            <Link to="/create">
+            <div className="btn-navigate">
               <button>
-                <IoMdPersonAdd /> New User
+                <Link to="/create">
+                  <IoMdPersonAdd /> New User
+                </Link>
               </button>
-            </Link>
 
-            <div className="search">
+              <button>
+                <Link to="/history">
+                  <IoMdPersonAdd /> Historial
+                </Link>
+              </button>
+            </div>
+
+            <div className="input-feild-s">
               <i className={`lbl-search ${isInputFocused ? "desactived" : ""}`}>
                 <IoSearchOutline />
               </i>
@@ -57,11 +61,8 @@ function Table({}) {
           </div>
         </div>
 
-        <div className="content">
-          <DataTable
-            data={datos}
-            columns={columns}
-          />
+        <div className="table-responsive">
+          <DataTable data={datos} columns={columns} />
         </div>
 
         {/* <table>
@@ -103,6 +104,6 @@ function Table({}) {
       {/* Aquí va el contenido principal */}
     </div>
   );
-}
+};
 
 export default Table;

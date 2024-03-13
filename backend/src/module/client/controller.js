@@ -5,6 +5,14 @@ const list = () => {
   return db.list(table);
 };
 
+const list_inactive = () => {
+  return db.list_inactive(table);
+};  
+
+const reactivated = (id) => {
+  return db.reactivated(table, id);
+};
+
 const search = (id) => {
   return db.search(table, id);
 };
@@ -28,6 +36,8 @@ const login = (data) => {
 module.exports = {
   list,
   search,
+  list_inactive,
+  reactivated,
   add,
   delet,
   update,
