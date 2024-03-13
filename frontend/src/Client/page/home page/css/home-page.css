@@ -6,7 +6,8 @@
   --bgcolor3: rgba(236, 181, 78, 0.74);
   --input: rgba(80, 78, 99, 0.87);
   --color: wheat;
-  --color-title: rgba(177, 176, 221, 0.952);
+  --title: whitesmoke;
+  --color-title: rgba(253, 253, 253, 0.952);
   --icon: black;
   --font: "Comfortaa", sans-serif;
 }
@@ -56,7 +57,7 @@ i {
 
 .container-menu2 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--bgcolor2);
   padding: 12px;
@@ -78,10 +79,40 @@ i {
   font-size: 30px;
 }
 
+.container-btn-nav {
+  perspective: 1000px; /* Necesario para el efecto 3D */
+}
+
+.btn-nav {
+  background-color: var(--input); /* Color de fondo del botón */
+  border: none; /* Sin bordes */
+  color: var(--color-title); /* Color del texto */
+  padding: 12px; /* Espaciado alrededor del texto */
+  text-align: center; /* Centrar el texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Hacer que los botones estén uno al lado del otro */
+  font-size: 14px; /* Tamaño del texto */
+  margin: 4px 2px; /* Espaciado alrededor de los botones */
+  transition: background-color 0.5s, transform 0.5s; /* Tiempo de transición para el efecto hover y cambio de color */
+  cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
+  border-radius: 8px;
+}
+
+.btn-nav:hover {
+  background-color: var(
+    --bgcolor3
+  ); /* Cambiar el color de fondo cuando se pasa el cursor por encima */
+  transform: scale(
+    1.1
+  ); /* Aumentar el tamaño del botón cuando se pasa el cursor por encima */
+  margin: 5px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
 .input-feild .inpu {
-  width: 320px;
-  padding: 15px;
-  font-size: 15px;
+  width: 250px;
+  padding: 14px;
+  font-size: 12px;
   border: none;
   border-radius: 0px 12px 12px 0px;
   color: black;
@@ -97,9 +128,9 @@ i {
 
 .input-feild .icon-input1 {
   position: absolute;
-  bottom: -1px;
-  left: -105px;
-  padding: 15px;
+  top: -1px;
+  right: 260px;
+  padding: 12px;
   color: whitesmoke;
   font-size: 15px;
   background-color: var(--bgcolor3);
@@ -169,7 +200,7 @@ p {
   font-size: 15px;
   margin-bottom: 25px;
   font-family: var(--font);
-  color: whitesmoke;
+  color: var(--title);
 }
 
 .location {
@@ -202,53 +233,68 @@ p {
   background-color: var(--bgcolor2);
   padding: 12px;
   width: 120px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.btn{
+.btn {
   color: var(--bgcolor3);
   text-align: center;
   font-size: 14px;
 }
 
-.container-view{
+.btn-location:hover {
+  background-color: #242427;
+  box-shadow: 5px 5px 30px #777779;
+  color: wheat;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container-view {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.promo-view-hr{
+.promo-view-hr {
   margin: 10px;
   padding: 12px;
-
 }
 
-.promo-title{
+.promo-title {
+  text-align: center;
+  color: var(--title);
+}
+
+.promo-text {
   text-align: center;
   color: var(--bgcolor3);
 }
 
-.promo-text{
-  text-align: center;
-  color: var(--color-title);
-}
 /* ! container right */
 .h-img {
-  background-image: url("../components/assets/image-2.jpeg");
-  background-position: center;
-  background-size: 720px 720px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(152, 151, 156, 0.329) 0%,
+      /* Reducida la opacidad a 0.4 */ rgba(20, 20, 39, 0.644) 35%,
+      /* Reducida la opacidad a 0.3 */ rgba(127, 133, 133, 0.342) 100%
+        /* Reducida la opacidad a 0.2 */
+    ),
+    url("../components/assets/image-12.jpg");
+  background-position: right;
+  background-size: 710px 750px;
   background-repeat: no-repeat;
   height: 550px;
-  width: 560px;
-  border:  8px solid rgb(53, 50, 50);
+  width: 520px;
+  border: 6px solid rgba(97, 93, 93, 0.897);
   border-radius: 60% 60% 0px 0px;
-  box-shadow: 10px 10px 40px rgba(144, 139, 150, 0.664);
+  box-shadow: 20px 10px 70px rgba(129, 126, 129, 0.712);
 }
 
 .h-circule .cr-1 {
   position: absolute;
-  top: 135px;
-  left: 230px;
+  top: 150px;
+  left: 160px;
   width: 90px;
   height: 90px;
   z-index: 1;
@@ -256,7 +302,7 @@ p {
   box-shadow: 1px 10px 40px rgba(150, 107, 29, 0.747);
   padding: 40px;
   border-radius: 50%;
-  filter: blur(3px); 
+  filter: blur(3px);
 }
 
 /* .h-circule .cr-2 {
@@ -285,13 +331,5 @@ p {
   text-align: center;
   color: whitesmoke;
   background-color: rgba(27, 13, 77, 0.685);
-  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.btn-compra .btn:hover {
-  background-color: #8183d1;
-  box-shadow: 5px 5px 30px #8183d1;
-  color: wheat;
-  transform: scale(1.1);
-  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

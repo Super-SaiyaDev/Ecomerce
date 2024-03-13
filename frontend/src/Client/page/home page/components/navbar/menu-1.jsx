@@ -77,7 +77,7 @@ const Navbar = () => {
                 <span>
                   <i>ico</i>
                   <a href="http://" target="_blank" rel="noopener noreferrer">
-                    sigin
+                    ayuda
                   </a>
                 </span>
               </li>

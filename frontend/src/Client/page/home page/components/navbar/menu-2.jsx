@@ -1,7 +1,5 @@
 import React from "react";
 import "../../css/home-page.css";
-import { FaWhatsapp } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { BsFillHouseHeartFill } from "react-icons/bs";
 const Navbar2 = () => {
@@ -18,13 +16,20 @@ const Navbar2 = () => {
         <div className="container-input">
           <div className="input-feild">
             <span className="icon-input1">Categoria</span>
-            <input type="text" placeholder="Search"
-            className="inpu" />
-            <i ><CiSearch className="search" /></i>
+            <input type="text" placeholder="Search" className="inpu" />
+            <i>
+              <CiSearch className="search" />
+            </i>
           </div>
         </div>
 
-          {/* <div className="contanctos">
+        <div className="container-btn-nav">
+          <button className="btn-nav">Register</button>
+          <button className="btn-nav">Login</button>
+          <button className="btn-nav">Agregar Ubucacion</button>
+        </div>
+
+        {/* <div className="contanctos">
             <div className="contactos-items whasapp">
               <i>
                 <FaWhatsapp className="icons" />

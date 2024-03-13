@@ -37,7 +37,7 @@ const Header = () => {
 
             <div className="btn-location">
               <Link className="btn" to={"/"}>
-                Hola mundo
+                Search
               </Link>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Header = () => {
 
         <div className="container-hright">
           <div className="content-img ">
-            <img src="../assets/image-4.jpg" className="h-img" />
+            <img src="../assets/image-12.jpg" className="h-img" />
           </div>
         </div>
       </div>
