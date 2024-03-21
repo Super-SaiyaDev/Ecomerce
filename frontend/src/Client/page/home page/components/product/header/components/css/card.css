@@ -1,0 +1,46 @@
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.678);
+
+}
+
+
+.title h4{
+    text-align: left;
+    position: relative;
+    font-size: 20px;
+    width: 140px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #333;
+    background-color: #ffffff  ;
+    z-index: 1;
+
+}
+
+.img-card{
+    position: relative;
+    right: 8px;
+    bottom: 35px;
+    background-image: url('../../../../assets/image-12.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 295px; 
+    height: 150px;
+}
+

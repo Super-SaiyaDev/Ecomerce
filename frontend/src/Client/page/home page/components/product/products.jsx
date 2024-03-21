@@ -1,15 +1,17 @@
-import React from 'react'
-import ProductsNav from './nav-products/products-nav'
+import React from "react";
+// import ProductsNav from "./nav-products/products-nav";
+import HeaderProducts from "./header/header-products";
 
 const Products = () => {
   return (
     <>
-    <>
-        <ProductsNav></ProductsNav>
-    </>
-    
-    </>
-  )
-}
+      {/* <ProductsNav>
 
-export default Products
+      </ProductsNav> */}
+
+      <HeaderProducts />
+    </>
+  );
+};
+
+export default Products;
