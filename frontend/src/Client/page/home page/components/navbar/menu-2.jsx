@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/home-page.css";
 import { CiSearch } from "react-icons/ci";
 import { BsFillHouseHeartFill } from "react-icons/bs";
+import { FaUser } from "react-icons/fa";
 const Navbar2 = () => {
   return (
     <>
@@ -13,20 +14,10 @@ const Navbar2 = () => {
           <h1>Json House</h1>
         </div>
 
-        <div className="container-input">
-          <div className="input-feild">
-            <span className="icon-input1">Categoria</span>
-            <input type="text" placeholder="Search" className="inpu" />
-            <i>
-              <CiSearch className="search" />
-            </i>
-          </div>
-        </div>
-
         <div className="container-btn-nav">
           <button className="btn-nav">Register</button>
-          <button className="btn-nav">Login</button>
-          <button className="btn-nav">Agregar Ubucacion</button>
+          <button className="btn-nav"><FaUser /> Login</button>
+          <button className="btn-nav">Agregar Ubicacion</button>
         </div>
 
         {/* <div className="contanctos">
