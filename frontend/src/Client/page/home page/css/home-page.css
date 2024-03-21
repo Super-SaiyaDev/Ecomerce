@@ -40,6 +40,7 @@ li {
   color: var(--color);
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .right ul li select option {
@@ -91,14 +92,14 @@ i {
 
 .btn-nav {
   background-color: transparent; /* Color de fondo del botón */
-  border: none ; /* Sin bordes */
+  border: 1px solid transparent;
   color: var(--color-title); /* Color del texto */
+  margin: 12px;
   padding: 12px; /* Espaciado alrededor del texto */
   text-align: center; /* Centrar el texto */
   text-decoration: none; /* Sin subrayado */
   display: inline-block; /* Hacer que los botones estén uno al lado del otro */
   font-size: 14px; /* Tamaño del texto */
-  margin: 4px 20px; /* Espaciado alrededor de los botones */
   transition: background-color 0.5s, transform 0.5s; /* Tiempo de transición para el efecto hover y cambio de color */
   cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
   border-radius: 2px;
@@ -106,7 +107,8 @@ i {
 
 .btn-nav:hover {
   color: var(--bgcolor3);
-  border:1px solid var(--bgcolor3);
+  border: 1px solid var(--bgcolor3);
+  
 }
 
 .input-feild .inpu {
