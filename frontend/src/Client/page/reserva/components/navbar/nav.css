@@ -1,0 +1,136 @@
+.horizontal{
+    height: 35px;
+    width: 1px;
+    background-color: rgb(218, 218, 218);
+    margin: 0px 6px 0 6px;
+}
+
+.lateral{
+    height: 1px;
+    width: 100%;
+    background-color: rgb(218, 218, 218) ;
+    margin: 20px 0px 20px 0px;
+}
+
+.lateralp{
+    background-color: rgb(218, 218, 218);
+    height: 1px;
+    width: 85%;
+}
+
+.barra{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    box-shadow: -20px -10px 20px 5px gray;
+}
+
+.logo{
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    display: flex;
+}
+
+.funt{
+    display: flex;
+    margin-left: 60px;
+}
+
+.buscr{
+    display: flex;
+    margin: 10px;
+    padding: 10px 10px 10px 14px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 100px;
+    height: 30px;
+    align-items: center;
+}
+
+.boton{
+    border-radius: 100px;
+    font-size: 17px;
+    border: none;
+    width: 140px;
+    height: 50px;
+    background: none;
+}
+
+.boton:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+
+.lup{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    align-items: center;
+    margin-left: 8px;
+    border: none;
+}
+
+.lup:hover{
+    background-color: red;
+}
+
+.lup > img{
+    width: 20px;
+    height: 20px;
+}
+
+.log{
+    display: flex;
+    align-items: center;
+}
+
+.sub {
+    font-size: 17px;
+    width: 230px;
+    background: none;
+    border: none;
+}
+
+.int{
+    border: none;
+    border-radius: 100%;
+    background: none;
+    width: 30px;
+    height: 30px;
+    margin: 0px 12px 0px 4px;
+}
+
+.int > img{
+    width: 30px;
+    height: 30px;
+}
+
+.logi{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 100px;
+    height: 30px;
+    width: 100px;
+}
+
+.lup2{
+    background: none;
+    border: none;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+}
+
+.men{
+    width: 30px;
+    height: 30px;
+}
+
+.user{
+    width: 40px;
+    height: 40px;
+}

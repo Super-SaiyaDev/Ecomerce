@@ -1,0 +1,101 @@
+
+
+.lin{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.lin > h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.informacion{
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+}
+
+.enlaces{
+    display: flex;
+    justify-content: space-between;
+}
+
+.part1{
+    display: flex;
+}
+
+.part1 > p{
+    margin: 0px 8px 0px 8px
+}
+
+.part1 > a{
+    color: rgb(0, 0, 0);
+}
+
+.part2{
+    display: flex;
+}
+
+.com{
+    align-items: center;
+    display: flex;
+    margin-right: 20px;
+}
+
+.com > a{
+    color: rgb(0, 0, 0);
+}
+
+.guar{
+    align-items: center;
+    display: flex;
+    margin-right: 20px;    
+}
+
+.guar > a{
+    color: rgb(0, 0, 0);
+}
+
+.com > img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.guar > img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.imag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imgReserva{
+    background-image: url(./assets/img-1.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.btn-viweImage{
+    bottom: 402px;
+    position: absolute;
+}
+
+.imag > button{
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    width: 160px;
+}
+
+.imag > button:hover{
+    border: 2px solid;
+    background-color: rgb(224, 224, 224);
+}
+

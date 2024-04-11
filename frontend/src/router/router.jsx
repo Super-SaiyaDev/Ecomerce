@@ -9,6 +9,8 @@ import Register from "../Client/logins/register/register";
 import Create  from "../system/dashboard/components/table/components/create/create"
 import Update from "../system/dashboard/components/table/components/update/update";
 import History from "../system/dashboard/components/table/components/historial";
+import Nav from "../Client/page/reserva/components/navbar/nav";
+import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
 const Path = () => {
   return (
     <Router>
@@ -22,6 +24,8 @@ const Path = () => {
         <Route path="/login-clie" element={<LoginClie />} />
         <Route path="/history" element={<History />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/nav" element={<Nav />} />
+        <Route path="/hero" element={<HeroReserva />} />
         <Route
           path="*"
           element={
