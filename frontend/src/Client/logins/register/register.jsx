@@ -56,13 +56,12 @@ const Register = () => {
 
             <div className="register-link">
               <span className="Forgot-span">
-                Forgot
-                <Link to="/" className="forgot">
-                  you password ?
+                I have
+                <Link to="/login-clie" className="forgot">
+                  an account?
                 </Link>
               </span>
             </div>
-
 
             <div className="input-feild">
               <Input

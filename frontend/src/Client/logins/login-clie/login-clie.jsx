@@ -57,9 +57,9 @@ const LoginClie = () => {
 
             <div className="register-link">
               <span className="Forgot-span">
-                Forgot
-                <Link to="/" className="forgot">
-                  you password ?
+              You do not have 
+                <Link to="/register" className="forgot">
+                an account ?
                 </Link>
               </span>
             </div>

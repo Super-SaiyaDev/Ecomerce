@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../css/home-page.css";
-import { CiSearch } from "react-icons/ci";
 import { BsFillHouseHeartFill } from "react-icons/bs";
-import { FaUser } from "react-icons/fa";
+
 const Navbar2 = () => {
   return (
     <>
@@ -15,9 +15,21 @@ const Navbar2 = () => {
         </div>
 
         <div className="container-btn-nav">
-          <button className="btn-nav">Register</button>
-          <button className="btn-nav"><FaUser /> Login</button>
-          <button className="btn-nav">Agregar Ubicacion</button>
+          <button className="btn-nav">
+            <Link className="lnk-nav" to={"/register"}>
+              Register
+            </Link>
+          </button>
+          <button className="btn-nav">
+            <Link className="lnk-nav" to={"/login-clie"}>
+              Login
+            </Link>
+          </button>
+          <button className="btn-nav">
+            <Link className="lnk-nav" to={"/"}>
+              Agregar Ubicacion
+            </Link>
+          </button>
         </div>
 
         {/* <div className="contanctos">
