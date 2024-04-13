@@ -1,27 +1,36 @@
 import React from "react";
 import "./css/card.css";
-const CardProducto = () => {
+import { PiStarThin } from "react-icons/pi";
+const CardProducto = ({  image,  location,  distance,  date,  price,  valoracion,}) => {
+
   return (
-    <>
-      <div className="card">
-        <div className="title">
-          <h4>favorito de los clientes</h4>
-        </div>
-        <div className="img-card">
-          <img src="../../../assets/image-12.jp" alt="" />
-        </div>
-        <div className="info">
-          <span>
-            Lorem ipsum dolor <br /> ubicacion <br /> 1.5 km <br /> fecha 231/313/13
+    <div className="card">
+      <img className="img-card" src={image} alt="" />
+      <div className="info">
+        <div className="tex-card">
+          <span className="txt-card location">
+            <strong>
+              {location} <br />{" "}
+            </strong>
           </span>
-          <hr />
-          <div className="price">
-            <span>DOP $13.4
-            </span>
-          </div>
+          <span className="txt-card distance">
+            esta a {distance} km <br />
+          </span>
+          <span className="txt-card date">
+            {date} <br />
+          </span>
+          <span className="txt-card price">
+            <strong> {price} DOP </strong> night
+          </span>
+        </div>
+
+        <div className="valoracion">
+          <span>
+            <PiStarThin /> {valoracion}
+          </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

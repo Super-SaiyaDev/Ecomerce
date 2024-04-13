@@ -14,10 +14,6 @@
 
 /*! Menu 1 */
 
-.container-menu {
-  display: flex;
-  justify-content: center;
-}
 
 .menu-superior {
   display: flex;
@@ -79,6 +75,7 @@ i {
 .container-logo h1 {
   color: white;
   font-size: 30px;
+
 }
 
 .container-logo .icon {
@@ -87,28 +84,27 @@ i {
 }
 
 .container-btn-nav {
-  perspective: 1000px; /* Necesario para el efecto 3D */
+  background-color: none; /* Necesario para el efecto 3D */
 }
 
 .btn-nav {
   background-color: transparent; /* Color de fondo del botón */
-  border: 1px solid transparent;
+  border: none;
   color: var(--color-title); /* Color del texto */
   margin: 12px;
   padding: 12px; /* Espaciado alrededor del texto */
   text-align: center; /* Centrar el texto */
-  text-decoration: none; /* Sin subrayado */
-  display: inline-block; /* Hacer que los botones estén uno al lado del otro */
-  font-size: 14px; /* Tamaño del texto */
   transition: background-color 0.5s, transform 0.5s; /* Tiempo de transición para el efecto hover y cambio de color */
   cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
-  border-radius: 2px;
 }
 
-.btn-nav:hover {
+.lnk-nav {
+  text-decoration: none; /* Quitar subrayado del texto */
+  color: var(--color-title); /* Color del texto */
+}
+
+.lnk-nav:hover {
   color: var(--bgcolor3);
-  border: 1px solid var(--bgcolor3);
-  
 }
 
 .input-feild .inpu {
@@ -175,7 +171,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
   background-color: var(--bgcolor2);
 }
 
@@ -189,12 +184,16 @@ p {
   margin-right: 40px;
 }
 
+.header-title{
+  z-index: 10;
+}
+
 .header-title .hr-title {
   text-align: left;
   font-size: 50px;
   margin: 0px 40px 20px 0px;
   color: var(--color-title);
-  z-index: 2;
+
 }
 
 .header-title .hr-text {
@@ -290,6 +289,7 @@ p {
   background-repeat: no-repeat;
   height: 550px;
   width: 520px;
+  margin-bottom: 50px;
   border: 6px solid rgba(97, 93, 93, 0.897);
   border-radius: 60% 60% 0px 0px;
   box-shadow: 20px 10px 70px rgba(129, 126, 129, 0.712);
@@ -297,16 +297,16 @@ p {
 
 .h-circule .cr-1 {
   position: absolute;
-  top: 170px;
-  left: 340px;
+  top: 160px;
+  left: 150px;
   width: 90px;
   height: 90px;
   z-index: 1;
-  background-color: rgba(156, 108, 5, 0.671);
-  box-shadow: 1px 10px 40px rgba(150, 107, 29, 0.747);
+  background-color: rgba(110, 109, 103, 0.89);
+  box-shadow: 1px 10px 80px rgba(187, 183, 179, 0.863);
   padding: 40px;
   border-radius: 50%;
-  filter: blur(5px);
+  filter: blur(4px);
 }
 
 /* .h-circule .cr-2 {
@@ -339,4 +339,5 @@ p {
 }
 
 
-.conatiner-list {}
+ /* ! i'am doing the responsive page */
+
