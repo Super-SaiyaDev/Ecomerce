@@ -8,11 +8,21 @@ const router = express.Router();
 router.post("/login", async (req, res) => {
   try {
     console.log(req.body);
-    const items = await controlador.login(req.body);
-      respuesta.handleLogin(req, res, items);
-      return;
+    const items = await controlador.login(req.body)
+      .catch(err => {
+        console.error(err);
+        respuesta.handleLogin(req, res, "Database error", []);
+        throw err; // Esto interrumpe la ejecución de la función
+      });
+
+    if (items) {
+      respuesta.handleLogin(req, res, "login successful", items);
+    } else {
+      respuesta.handleLogin(req, res, "No items found", []);
+    }
   } catch (err) {
-    respuesta.error(req, res, err,500);
+    console.error(err);
+    respuesta.handleLogin(req, res, "Internal server error", []);
   }
 });
 

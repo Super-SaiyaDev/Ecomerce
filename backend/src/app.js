@@ -25,10 +25,9 @@ app.use(
     credentials: true,
   })
 );
-app.use(cookie())
 
 //? Rutas
 app.use("/api/clientes", clientes);
-app.use("/api/users", login);
+app.use("/api/user", login);
 
 module.exports = app;

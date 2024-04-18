@@ -8,18 +8,16 @@ exports.success = (req, res, mesnsaje = "", status = 200) => {
 
 exports.error = (req, res, mesnsaje, status = 500) => {
   res.status(status).send({
-    error: false,
+    error: true,
     status: status,
     body: mesnsaje,
   });
 };
 
-exports.handleLogin  = (req, res , items) => {
-  if(items.length > 0){
-    res.json({status: `Success` })
+exports.handleLogin = (req, res, mensaje, items) => {
+  if (items.length > 0) {
+    res.json({ status: `Success ${mensaje}` });
   } else {
-    res.json({Error: `Error` })
+    res.json({ Error: `Error ${mensaje}` });
   }
-
-}
-
+};

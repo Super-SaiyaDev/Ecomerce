@@ -94,7 +94,7 @@ const delet = (table, id) => {
 const login = (table, data) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `SELECT * FROM ${table} WHERE user = "${data.user}" and clave = "${data.clave}"`,
+      `SELECT * FROM ${table} WHERE usuario = '${data.user}' and clave = '${data.clave}' `,
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
