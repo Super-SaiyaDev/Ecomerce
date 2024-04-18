@@ -27,7 +27,7 @@ Database.on("error", (err) => {
 const list = (table) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `SELECT * FROM ${table} WHERE activo = 'activo'`,
+      `SELECT * FROM ${table} WHERE estado = 'activo'`,
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
@@ -38,7 +38,7 @@ const list = (table) => {
 const list_inactive = (table) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `SELECT * FROM ${table} WHERE activo = 'inactivo'`,
+      `SELECT * FROM ${table} WHERE estado = 'inactivo'`,
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
@@ -49,7 +49,7 @@ const list_inactive = (table) => {
 const reactivated = (table, id) => {
   return new Promise((resolve, reject) => {
     Database.query(
-      `update ${table} set activo = 'activo' WHERE id = ${id};`,
+      `update ${table} set estado = 'activo' WHERE id_usuario = ${id};`,
       (err, res) => {
         err ? reject(err) : resolve(res);
       }
@@ -59,7 +59,7 @@ const reactivated = (table, id) => {
 
 const search = (table, id) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table} WHERE id = ${id}`, (err, res) => {
+    Database.query(`SELECT * FROM ${table} WHERE id_usuario = ${id}`, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
@@ -75,7 +75,7 @@ const add = (table, data) => {
 
 const update = (table, data, id) => {
   return new Promise((resolve, reject) => {
-    const sql = `UPDATE ${table} SET ? where id = ${id};`;
+    const sql = `UPDATE ${table} SET ? where id_usuario = ${id};`;
     Database.query(sql, [data], (err, res) => {
       err ? reject(err) : resolve(res);
     });

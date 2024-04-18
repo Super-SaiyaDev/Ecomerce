@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   respuesta.success(req, res, items, 200);
 });
 
-//! listar inactivos
+//! list inactived
 router.get("/reactivar", async (req, res) => {
   const items = await controlador.list_inactive();
   respuesta.success(req, res, items, 200);
@@ -57,6 +57,8 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+
+//! reactivar
 router.put('/reactivar/:id', async (req, res) => {
   try {
     const items = await controlador.reactivated(req.params.id);
