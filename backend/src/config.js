@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
     app: {
-        port: process.env.PORT || 3000,
+        Port: process.env.puerto,
     },
     mysql :  {
         host: process.env.mysqlHost || "localhost",
