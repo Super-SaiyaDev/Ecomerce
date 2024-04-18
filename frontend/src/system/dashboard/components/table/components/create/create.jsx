@@ -10,7 +10,7 @@ const Create = () => {
     nombre: "",
     usuario: "",
     clave: "",
-    rol_id: "",
+    id_rol: 1,
   });
 
   const handlerSubmit = (e) => {
@@ -41,6 +41,7 @@ const Create = () => {
               <input
                 className="input-cr"
                 type="text"
+                required
                 onChange={(e) =>
                   setValues({ ...values, nombre: e.target.value })
                 }
@@ -54,6 +55,7 @@ const Create = () => {
               <input
                 className="inputs"
                 type="text"
+                requerid
                 onChange={(e) =>
                   setValues({ ...values, usuario: e.target.value })
                 }
@@ -80,8 +82,15 @@ const Create = () => {
               <select
                 className="inputs"
                 name="rol"
+                defaultValue="1"
                 onChange={(e) => {
-                  setValues({ ...values, rol_id: e.target.value });
+                  // const selectedText =
+                  //   e.target.options[e.target.selectedIndex].text;
+                  setValues({
+                    ...values,
+                    id_rol: e.target.value
+                    // rol_text: selectedText,
+                  });
                 }}
               >
                 <option value="1">Admin</option>
@@ -91,7 +100,7 @@ const Create = () => {
             </div>
 
             <div className="btn-create">
-              <button>create</button>
+              <button type="submit">create</button>
               <button className="btn-redirect">
                 <Link className="lnk-redirect" to={"/table"}>
                   Atras

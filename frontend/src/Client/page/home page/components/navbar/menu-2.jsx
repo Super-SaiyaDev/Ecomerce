@@ -1,9 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../css/home-page.css";
-import { FaWhatsapp } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { CiSearch } from "react-icons/ci";
 import { BsFillHouseHeartFill } from "react-icons/bs";
+
 const Navbar2 = () => {
   return (
     <>
@@ -15,16 +14,25 @@ const Navbar2 = () => {
           <h1>Json House</h1>
         </div>
 
-        <div className="container-input">
-          <div className="input-feild">
-            <span className="icon-input1">Categoria</span>
-            <input type="text" placeholder="Search"
-            className="inpu" />
-            <i ><CiSearch className="search" /></i>
-          </div>
+        <div className="container-btn-nav">
+          <button className="btn-nav">
+            <Link className="lnk-nav" to={"/register"}>
+              Register
+            </Link>
+          </button>
+          <button className="btn-nav">
+            <Link className="lnk-nav" to={"/login-clie"}>
+              Login
+            </Link>
+          </button>
+          <button className="btn-nav">
+            <Link className="lnk-nav" to={"/"}>
+              Agregar Ubicacion
+            </Link>
+          </button>
         </div>
 
-          <div className="contanctos">
+        {/* <div className="contanctos">
             <div className="contactos-items whasapp">
               <i>
                 <FaWhatsapp className="icons" />
@@ -40,7 +48,7 @@ const Navbar2 = () => {
               <h4 className="title">Instagram</h4>
               <p className="paragraph">447-433-5690</p>
             </div>
-          </div>
+          </div> */}
       </nav>
     </>
   );

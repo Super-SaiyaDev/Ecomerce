@@ -7,6 +7,7 @@ import axios from "axios";
 const Update = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
+    id: "",
     nombre: "",
     usuario: "",
     clave: "",
@@ -24,10 +25,11 @@ const Update = () => {
         console.log(data);
         setValues({
           ...values,
+          id: data.id,
           nombre: data.nombre,
           usuario: data.usuario,
           clave: data.clave,
-          activo: data.estado,
+          activo: data.activo,
         });
       } catch (error) {
         console.log(error);
@@ -40,7 +42,7 @@ const Update = () => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3000/api/clientes/" + id, values)
+      .put("http://localhost:3000/api/clientes/" + id, values )
       .then((data) => {
         console.log(data);
         navigate("/table");
@@ -48,6 +50,7 @@ const Update = () => {
       .catch((err) => {
         console.log(err);
       });
+      
   };
 
   return (
@@ -55,6 +58,19 @@ const Update = () => {
       <div className="container">
         <form onSubmit={handlerSubmit} action="">
           <div className="input-groupt">
+          <div className="input-feild">
+              <label htmlFor="">id</label>
+              <input
+                className="inputs"
+                type="text"
+                value={values.id}
+                onChange={(e) =>
+                  setValues({ ...values, id: e.target.value })
+                }
+                required
+              />
+            </div>
+
             <div className="input-feild">
               <label htmlFor="">nombre</label>
               <input
@@ -64,6 +80,7 @@ const Update = () => {
                 onChange={(e) =>
                   setValues({ ...values, nombre: e.target.value })
                 }
+                required
               />
             </div>
 
@@ -76,6 +93,7 @@ const Update = () => {
                 onChange={(e) =>
                   setValues({ ...values, usuario: e.target.value })
                 }
+                required
               />
             </div>
 
@@ -88,6 +106,7 @@ const Update = () => {
                 onChange={(e) =>
                   setValues({ ...values, clave: e.target.value })
                 }
+                required
               />
             </div>
 
@@ -100,10 +119,11 @@ const Update = () => {
                 onChange={(e) =>
                   setValues({ ...values, activo: e.target.value })
                 }
+                required
               />
             </div>
 
-            <div className="btn-create">
+            <div className="btn-create-updt">
               <button>update</button>
               <Link to={"/table"}>Atras</Link>
             </div>
