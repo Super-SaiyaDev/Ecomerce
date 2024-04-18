@@ -13,7 +13,7 @@ const login = require("./module/system/login/router");
 const app = express();
 
 //? config
-app.set("port", config.app.port);
+app.set("port", config.app.Port || 3000);
 
 //? middlwares
 app.use(morgan("dev"));
