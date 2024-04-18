@@ -36,7 +36,7 @@ const ProductsNavbar = () => {
           {slide.map((_, index) => (
             <SwiperSlide key={index}>
               <button className="btn-nv-pr">
-                <Link className="lnk-pr" to={`/products/${index + 1}`}><BsHouseDoorFill /></Link>
+                <Link className="lnk-pr lnk-cate"  to={`/products/${index + 1}`}><BsHouseDoorFill /></Link>
               </button>
             </SwiperSlide>
           ))}
@@ -59,9 +59,13 @@ const ProductsNavbar = () => {
           </button>
         </div>
 
-        <div className="btn-nav-opc">
-          <i></i>
-          <button className="btn-opc btn-pr">opcion</button>
+        <div className="btn-nav-filter">
+          <button className="btn-filter btn-pr">
+            <i>
+              <IoFilterSharp />
+            </i>{" "}
+            <span>Filtros</span>
+          </button>
         </div>
       </div>
     </div>

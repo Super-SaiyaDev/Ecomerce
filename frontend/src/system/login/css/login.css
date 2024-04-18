@@ -19,31 +19,30 @@
   width: 380px;
   padding: 30px 25px 30px;
   padding: 20px;
-  border: 1px solid #ddd;
   border: none;
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 10px 10px 50px #8baeee;
+  background-color: #ffffffb7;
+  box-shadow: 10px 10px 50px #4a5c6a;
   transition: all 0.5s ease-in;
 }
 
 .frm:hover {
-  box-shadow: -8px -5px 40px #8baeee;
+  box-shadow: -8px -5px 40px #4a5c6a;
 }
 
 .input-group .icon {
   text-transform: uppercase;
-  color: brown;
+  color: black;
   font-size: 25px;
 }
 
 .icon .logo-name {
   font-size: 25px;
-  color: brown;
+  color: #4a5c6a;
 }
 
 .input-group h1 {
-  color: #8baeee;
+  color: rgba(155, 119, 19, 0.699);
   text-shadow: 2px 5px 20px #76b9a8;
   font-size: 15px;
   font-weight: 650;
@@ -77,8 +76,6 @@ hr {
   left: 130px;
 }
 
-
-
 .other-logins {
   display: flex;
   flex-wrap: wrap;
@@ -98,30 +95,25 @@ hr {
 }
 
 .other-logins .facebook {
-  background-color: rgb(44, 34, 178);
-  color: whitesmoke;
+  background-color: #4a4f6a;
+  color: rgba(16, 16, 212, 0.705);
 }
 
 .other-logins .google {
   color: whitesmoke;
-  background-color: rgba(243, 61, 61, 0.74);
+  background-color: #4a4f6a;
 }
 
 .other-logins .instagram {
   color: whitesmoke;
-  background: rgb(36, 66, 154);
-  background: linear-gradient(
-    90deg,
-    rgba(36, 66, 154, 1) 0%,
-    rgba(99, 9, 121, 1) 35%,
-    rgba(255, 0, 116, 1) 100%
-  );
+  background-color: #4a4f6a;
+
 }
 
 .logo-span {
   margin-left: 12px;
   font-size: 15px;
-  color: beige;
+  color: whitesmoke;
 }
 
 .link-router {
@@ -129,7 +121,6 @@ hr {
   grid-template-columns: repeat(1fr, 1fr);
   margin: 5px 0px 11px 12px;
 }
-
 
 .link-router span {
   color: black;
@@ -141,7 +132,7 @@ hr {
   color: rgb(15, 66, 233);
   font-size: 15px;
   text-align: left;
-} 
+}
 
 .button {
   perspective: 800px;
@@ -149,7 +140,7 @@ hr {
 }
 
 .button .btn-lgn {
-  background-color: #35a8f5; /* Green */
+  background-color: #11212d; /* Green */
   border: none;
   color: white;
   padding: 10px 22px;
@@ -162,11 +153,10 @@ hr {
   display: inline-block;
   font-size: 15px;
   cursor: pointer;
-  transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-
 .button .btn-lgn:hover {
-  transform: scale(1.1);
-  background-color: #227f9e; /* Blue */
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background-color: #4a5c6a; /* Blue */
 }

@@ -1,24 +1,26 @@
 /* Navbar.css */
 .nav-products {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
-  background-color: #f0f0f0;
-  padding: 20px;
-  width: 100%;
+  background-color: #4a5c6a;
+  padding: 8px;
+  border-radius: 50px;
+  margin: 25px;
 }
 
 .swiper {
-  width: 900px;
+  width: 950px;
   margin: 0px;
   padding: 10px;
 }
 
 .swiper-next-button,
 .swiper-prev-button {
-  font-size: 30px;
+  font-size: 35px;
   padding: 12px;
   color: rgb(0, 0, 0);
-  background-color: #f0f0f0;
+  background-color: #4a5c6a;
   position: absolute;
   z-index: 10;
   top: 50%;
@@ -35,21 +37,20 @@
 
 .swiper-prev-button:hover,
 .swiper-next-button:hover {
-  color: rgb(101, 101, 231);
+  color: #ccd0cccf;
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-nv-pr {
   border: none;
+  background-color: transparent;
 }
 
 .lnk-pr{
   color: var(--bgcolor);
   font-size: 25px;
   line-height: 5px;
-
-
 }
 
 .swiper-slide {
@@ -62,10 +63,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin: 0px;
 }
 
 .btn-pr {
-  background-color: #495461;
+  background-color: #253745;
   color: rgba(228, 200, 124, 0.979);
   border: none;
   padding: 10px;
@@ -74,7 +76,7 @@
 }
 
 .btn-pr:hover {
-  background-color: #4e5358ce;
+  background-color: #5a5c617e;
   color: #fff;
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);

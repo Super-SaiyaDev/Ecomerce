@@ -67,7 +67,7 @@ const LoginUser = () => {
 
               <span className="icon">
                 <BiCoffeeTogo />
-                <span className="logo-name">Json Coffe</span>
+                <span className="logo-name">JSON House</span>
               </span>
 
               <h1>Log in in the system</h1>
