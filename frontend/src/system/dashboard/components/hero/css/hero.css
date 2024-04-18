@@ -14,6 +14,8 @@
     padding: 20px;
     background-color: white;
     border-radius: 3px;
+    height: 20vh;
+    width: 15vw;
 }
 
 .content-card .card-title{
@@ -44,4 +46,23 @@
 .card-info .values {
     font-size: 15px;
     color: rgb(82, 82, 82);
+}
+
+.grafics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.content-grafic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 130vh;
+
+
+
 }

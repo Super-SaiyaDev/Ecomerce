@@ -5,9 +5,7 @@
   height: 100%;
   color: #fff;
   padding: 20px;
-  background-color: rgba(71, 75, 122, 0.479);
-  backdrop-filter: blur(12px);
-}
+  background-color: rgb(25, 6, 45);}
 
 .sidebar .ul {
   display: flex;
