@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(25, 6, 45);
+  background-color: rgba(49, 49, 49, 0.576);
   margin: 0px;
 }
 
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 14px;
+  margin: 10px;
 }
 
 .container-nav-logo {
@@ -89,11 +89,13 @@
 .input-nav-search {
   padding: 8px;
   margin: 5px;
-  border: 1px solid rgb(20, 27, 104);
+  width: 300px;
+  border: none;
   border-radius: 12px;
-  background-color: rgba(130, 146, 209, 0.849);
-  box-shadow: 1px 1px 20px rgb(67, 74, 153);
+  background-color: rgb(90, 89, 89);
 }
+
+
 
 .nav-span-search{
     position: absolute;
@@ -115,4 +117,21 @@
 
 .title-user{
     color: white;
+}
+
+.buscar {
+  color: wheat;
+  font-size: 20px;
+}
+
+.profile-user{
+  background-color: rgb(90, 89, 89);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.icon {
+  padding: 5px;
 }
