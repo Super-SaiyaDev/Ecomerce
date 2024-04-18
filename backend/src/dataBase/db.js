@@ -8,8 +8,8 @@ const config = require("../config");
 const Database = db.createConnection({
   host: "localhost",
   user: "root",
-  password: "Edel_Son_1520_Arias",
-  database: "login",
+  password: "",
+  database: "json-house",
 });
 
 Database.connect((err) => {
@@ -102,4 +102,5 @@ module.exports = {
   delet,
   update,
   login,
+  Database
 };
