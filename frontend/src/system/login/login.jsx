@@ -36,11 +36,11 @@ const LoginUser = () => {
 
     //! i'am send the value of the inputs
     axios
-      .post("http://localhost:3000/api/users/login", values)
+      .post("http://localhost:3000/api/user/login", values)
       .then((res) => {
         if (values.clave != "" && values.user != "") {
           console.log(res.data);
-          if (res.data.status === "Success") {
+          if (res.data.status === "Success login successful") {
             navigate("/home");
           } else {
             alert("Contraseña o usuario incorrectos");

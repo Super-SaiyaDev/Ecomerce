@@ -4,9 +4,10 @@
   align-items: center;
   justify-content: space-evenly;
   background-color: #4a5c6a;
+  backdrop-filter: blur(12px);
   padding: 8px;
   border-radius: 50px;
-  margin: 25px;
+  margin: 60px;
 }
 
 .swiper {

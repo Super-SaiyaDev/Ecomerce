@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import '../css/slidervbar.css'
+import React, { useState } from "react";
+import "../css/slidervbar.css";
 
 function Sliderbar() {
   const [activeMenu, setActiveMenu] = useState("Inicio");
@@ -20,48 +20,51 @@ function Sliderbar() {
             Dashboard
           </li>
           <li
-            className={activeMenu === "usuario" ? "active" : ""} 
+            className={activeMenu === "usuario" ? "active" : ""}
             onClick={() => handleMenuClick("usuario")}
           >
             Usuario
           </li>
           <li
-            className={activeMenu === "propiedad" ? "active" : "" }
+            className={activeMenu === "propiedad" ? "active" : ""}
             onClick={() => handleMenuClick("propiedad")}
           >
             Propiedad
           </li>
           <li
-            className={activeMenu === "visitas" ? "active" : "" }
+            className={activeMenu === "visitas" ? "active" : ""}
             onClick={() => handleMenuClick("visitas")}
           >
             visitas
           </li>
           <li
-            className={activeMenu === "ventas" ? "active" : "" }
+            className={activeMenu === "ventas" ? "active" : ""}
             onClick={() => handleMenuClick("ventas")}
           >
             ventas
           </li>
           <li
-            className={activeMenu === "compra" ? "active" : "" }
+            className={activeMenu === "compra" ? "active" : ""}
             onClick={() => handleMenuClick("compra")}
           >
             Compra
           </li>
           <li
-            className={activeMenu === "postventa" ? "active" : "" }
+            className={activeMenu === "postventa" ? "active" : ""}
             onClick={() => handleMenuClick("postventa")}
           >
             Postventa
           </li>
           <li
-            className={activeMenu === "Reportes" ? "active" : "" }
+            className={activeMenu === "Reportes" ? "active" : ""}
             onClick={() => handleMenuClick("Reportes")}
           >
             Reportes
           </li>
         </ul>
+        <div className="content-btn-logout">
+          <button className="btn-logout">Logout</button>
+        </div>
       </div>
     </div>
   );

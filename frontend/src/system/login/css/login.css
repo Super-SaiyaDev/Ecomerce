@@ -21,13 +21,13 @@
   padding: 20px;
   border: none;
   border-radius: 10px;
-  background-color: #ffffffb7;
-  box-shadow: 10px 10px 50px #4a5c6a;
+  background-color: #fff;
+  box-shadow: 10px 10px 50px #7aabd7;
   transition: all 0.5s ease-in;
 }
 
 .frm:hover {
-  box-shadow: -8px -5px 40px #4a5c6a;
+  box-shadow: -8px -5px 40px #5a7a93;
 }
 
 .input-group .icon {

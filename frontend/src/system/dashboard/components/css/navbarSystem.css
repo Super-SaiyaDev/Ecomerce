@@ -39,10 +39,6 @@
   color: wheat;
 }
 
-.input-groupt-nav .input-feild-nav {
-  margin-right: 20px;
-}
-
 .input-feild-nav > * {
   outline: none;
   border: none;
@@ -52,10 +48,6 @@
   color: white;
   padding-left: 20px;
   background-color: transparent;
-}
-
-.input-feild-nav > *:focus {
-  outline: none;
 }
 
 .btn-contact-nav .btn-nav {
@@ -95,36 +87,35 @@
   background-color: rgb(90, 89, 89);
 }
 
-
-
-.nav-span-search{
-    position: absolute;
-    right:  405px;
-    top: 30px;
-    color: white;
-    font-size: 25px;
-
-}   
-
-
-.icon-nav{
-    margin: 12px;
-    font-size: 20px;
-}
-.profile-user{
-    margin: 12px;
+.nav-span-search {
+  position: absolute;
+  right: 15px;
+  top: 30px;
+  color: white;
+  font-size: 25px;
 }
 
-.title-user{
-    color: white;
+.icon-nav {
+  margin: 12px;
+  font-size: 20px;
+}
+.profile-user {
+  margin: 12px;
+}
+
+.title-user {
+  color: white;
 }
 
 .buscar {
   color: wheat;
-  font-size: 20px;
+  font-size: 25px;
+  position: relative;
+  right: 50px;
+  bottom: 1px;
 }
 
-.profile-user{
+.profile-user {
   background-color: rgb(90, 89, 89);
   width: 50px;
   height: 50px;
