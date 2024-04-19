@@ -24,3 +24,27 @@
 .sidebar li.active {
   background-color: cadetblue;
 }
+
+.content-btn-logout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn-logout{
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 40px;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.btn-logout:hover{
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  background-color: #441612b4;
+}

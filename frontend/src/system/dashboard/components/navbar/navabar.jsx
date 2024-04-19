@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/navbarSystem.css";
 import { FaWhatsapp } from "react-icons/fa6";
-import { FaInstagram, FaUserCog,  FaUser } from "react-icons/fa";
+import { FaInstagram, FaUserCog, FaUser } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
+import { IoIosSettings } from "react-icons/io";
 import { BsFillHouseHeartFill } from "react-icons/bs";
 const Navbar2 = () => {
   return (
@@ -18,28 +19,36 @@ const Navbar2 = () => {
           </div>
 
           <div className="input-groupt-nav">
-            <input type="text" className="input-nav-search" placeholder="search"/>    
-            <CiSearch className="buscar"/>    
+            <input
+              type="text"
+              className="input-nav-search"
+              placeholder="search"
+            />
+            <CiSearch className="buscar" />
           </div>
         </div>
 
         <div className="conteiner-nav-left">
-
           <div className="input-felid-nav">
-
-            <span className="nav-span-search">
-            </span>
-            
+            <span className="nav-span-search"></span>
           </div>
 
-          
-          <div className="profile-user">
-            <Link className="ico">
-              <i >
-                <FaUser/>
-              </i>
+          <div className="content-config-profile">
+            <div className="profile-user">
+              <Link>
+                <i className="icon-i">
+                  <FaUser className="icon-profile nav-icon"/>
+                </i>
+              </Link>
+            </div>
 
-            </Link>
+            <div className="profile-user">
+              <Link >
+                <i className="icon-i">
+                  <IoIosSettings className="icon-setting nav-icon"/>
+                </i>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

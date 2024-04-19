@@ -95,17 +95,6 @@
   font-size: 25px;
 }
 
-.icon-nav {
-  margin: 12px;
-  font-size: 20px;
-}
-.profile-user {
-  margin: 12px;
-}
-
-.title-user {
-  color: white;
-}
 
 .buscar {
   color: wheat;
@@ -115,14 +104,29 @@
   bottom: 1px;
 }
 
+.content-config-profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .profile-user {
   background-color: rgb(90, 89, 89);
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  text-align: center;
+  margin: 12px;
+
 }
 
-.icon {
-  padding: 5px;
+.icon-i{
+  position: relative;
+  top: 12px;
+  left: 8px;
+}
+
+.nav-icon{
+  font-size: 25px;
+  color: wheat;
 }
