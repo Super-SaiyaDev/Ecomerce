@@ -4,7 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 const data = [
   {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
   {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
-  {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
+  {name: 'Page C', uv: 5000, pv: 2000, amt: 2290},
+  {name: 'Page D', uv: 2000, pv: 9800, amt: 2290},
+  {name: 'Page E', uv: 5000, pv: 5000, amt: 2290},
   // más datos aquí
 ];
 

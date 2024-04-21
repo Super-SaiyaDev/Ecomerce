@@ -5,7 +5,13 @@ const GraficoLinea = () => {
   const data = [
     {name: 'Page A', uv: 0, pv: 2400, amt: 2400},
     {name: 'Page B', uv: 10000, pv: 200, amt: 4000},
-    {name: 'Page C', uv: 0, pv: 4000,  amt: 34000}
+    {name: 'Page C', uv: 0, pv: 4000,  amt: 34000},
+    {name: 'Page D', uv: 3, pv: 400,  amt: 34000},
+    {name: 'Page E', uv: 400, pv: 4040,  amt: 34000},
+    {name: 'Page F', uv: 6000, pv: 4000,  amt: 34000},
+    {name: 'Page G', uv: 0, pv: 10000,  amt: 34000}
+
+
     // más datos aquí
   ];
 

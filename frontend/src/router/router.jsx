@@ -30,13 +30,14 @@ const Path = () => {
         <Route path="/nav" element={<Nav />} />
         <Route path="/hero" element={<HeroReserva />} />
         <Route
-          path="*"
-          element={
-            <>
-              <h1>not found this path </h1>
-            </>
-          }
-        ></Route>
+            path="*"
+            element={
+              <>
+                <h1 style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center' ,'textAlign': 'center', 'minHeight': '90vh'}}>not found this path </h1>
+               
+              </>
+            }
+          ></Route>
       </Routes>
     </Router>
   );

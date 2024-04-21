@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import "../css/sidebar.css";
 import { IoExitOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Sliderbar() {
+  const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState("Inicio");
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
+  };
+
+  const handleLogout = async () => {
+    try {
+      await axios.get("http://localhost:3000/api/user/logout");
+      console.log("logout success");
+      navigate('/login');
+    } catch (error) {
+      console.log("logout error"), error;
+    }
   };
 
   return (
@@ -80,8 +92,7 @@ function Sliderbar() {
           </li>
         </ul>
         <div className="content-btn-logout">
-          <button className="btn-logout">
-            {" "}
+          <button onClick={handleLogout} className="btn-logout">
             <IoExitOutline /> Logout
           </button>
         </div>
