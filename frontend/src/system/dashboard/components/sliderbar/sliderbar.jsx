@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import "../css/slidervbar.css";
+import "../css/sidebar.css";
+import { IoExitOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Sliderbar() {
   const [activeMenu, setActiveMenu] = useState("Inicio");
@@ -11,59 +13,77 @@ function Sliderbar() {
   return (
     <div className="dashboard">
       <div className="sidebar">
-        <h3>Menú</h3>
         <ul className="ul">
           <li
             className={activeMenu === "Inicio" ? "active" : ""}
             onClick={() => handleMenuClick("Inicio")}
           >
-            Dashboard
+            <Link className="lnk-sidebar" to="/home">
+              Dashboard
+            </Link>
           </li>
           <li
             className={activeMenu === "usuario" ? "active" : ""}
             onClick={() => handleMenuClick("usuario")}
           >
-            Usuario
+            <Link className="lnk-sidebar" to="Reportes">
+              Usuario
+            </Link>
           </li>
           <li
             className={activeMenu === "propiedad" ? "active" : ""}
             onClick={() => handleMenuClick("propiedad")}
           >
-            Propiedad
+            <Link className="lnk-sidebar" to="Reportes">
+              Propiedad
+            </Link>
           </li>
           <li
             className={activeMenu === "visitas" ? "active" : ""}
             onClick={() => handleMenuClick("visitas")}
           >
-            visitas
+            <Link className="lnk-sidebar" to="Reportes">
+              visitas
+            </Link>
           </li>
           <li
             className={activeMenu === "ventas" ? "active" : ""}
             onClick={() => handleMenuClick("ventas")}
           >
-            ventas
+            <Link className="lnk-sidebar" to="Reportes">
+              ventas
+            </Link>
           </li>
           <li
             className={activeMenu === "compra" ? "active" : ""}
             onClick={() => handleMenuClick("compra")}
           >
-            Compra
+            <Link className="lnk-sidebar" to="Reportes">
+              Compras
+            </Link>
           </li>
           <li
             className={activeMenu === "postventa" ? "active" : ""}
             onClick={() => handleMenuClick("postventa")}
           >
-            Postventa
+            <Link className="lnk-sidebar" to="Reportes">
+              Postventa
+            </Link>
           </li>
           <li
             className={activeMenu === "Reportes" ? "active" : ""}
             onClick={() => handleMenuClick("Reportes")}
           >
-            Reportes
+            <Link className="lnk-sidebar" to="Reportes">
+              Reportes
+            </Link>
           </li>
         </ul>
         <div className="content-btn-logout">
-          <button className="btn-logout">Logout</button>
+          <button className="btn-logout">
+            {" "}
+            <IoExitOutline /> Logout
+          </button>
         </div>
       </div>
     </div>

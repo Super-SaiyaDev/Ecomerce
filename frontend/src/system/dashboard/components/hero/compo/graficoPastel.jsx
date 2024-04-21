@@ -4,15 +4,14 @@ import { PieChart, Pie, Tooltip, Cell} from 'recharts';
 const GraficoPastel = () => {
     const data = [
         { name: 'Group A', value: 400 },
-        { name: 'Group B', value: 300 },
-        // más datos aquí
+        { name: 'Group B', value: 200 },
     ];
     return (
         <div>
-            <PieChart width={500} height={400}>
+            <PieChart width={200} height={300}>
                 <Pie
                     dataKey="value"
-                    isAnimationActive={false}
+                    isAnimationActive={true}
                     data={data}
                     cx="50%"
                     cy="50%"
@@ -26,4 +25,4 @@ const GraficoPastel = () => {
     )
 }
 
-export default GraficoPastel
+export default GraficoPastel;

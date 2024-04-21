@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/navbarSystem.css";
-import { FaWhatsapp } from "react-icons/fa6";
-import { FaInstagram, FaUserCog, FaUser } from "react-icons/fa";
+import {  FaUser } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { IoIosSettings } from "react-icons/io";
 import { BsFillHouseHeartFill } from "react-icons/bs";
@@ -29,9 +28,6 @@ const Navbar2 = () => {
         </div>
 
         <div className="conteiner-nav-left">
-          <div className="input-felid-nav">
-            <span className="nav-span-search"></span>
-          </div>
 
           <div className="content-config-profile">
             <div className="profile-user">

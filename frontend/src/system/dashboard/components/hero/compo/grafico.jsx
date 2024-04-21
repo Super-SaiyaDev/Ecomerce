@@ -15,7 +15,7 @@ const ExampleBarChart = () => {
       height={300}
       data={data}
       margin={{
-        top: 5, right: 30, left: 20, bottom: 5,
+        top: 5, right: 5, left: 5, bottom: 5,
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />

@@ -3,14 +3,16 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'r
 
 const GraficoLinea = () => {
   const data = [
-    {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
+    {name: 'Page A', uv: 0, pv: 2400, amt: 2400},
+    {name: 'Page B', uv: 10000, pv: 200, amt: 4000},
+    {name: 'Page C', uv: 0, pv: 4000,  amt: 34000}
     // más datos aquí
   ];
 
   return (
     <div>
       <LineChart
-        width={500}
+        width={600}
         height={300}
         data={data}
         margin={{

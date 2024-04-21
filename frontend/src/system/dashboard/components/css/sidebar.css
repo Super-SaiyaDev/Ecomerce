@@ -1,11 +1,12 @@
 /*? sliderbar */
 .sidebar {
   position: fixed;
-  width: 200px;
+  width: 235px;
   height: 100%;
   color: #fff;
   padding: 20px;
-  background-color: rgb(40, 46, 51);}
+  background-color: rgb(40, 46, 51);
+}
 
 .sidebar .ul {
   display: flex;
@@ -17,22 +18,32 @@
 
 .sidebar li {
   cursor: pointer;
-  padding: 10px;
   border-radius: 5px;
 }
 
+.sidebar li .lnk-sidebar {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  }
+
 .sidebar li.active {
-  background-color: cadetblue;
+  background-color: #767888;
+  padding: 15px;
+  border-radius: 15px 0px 0px 15px;
+  width: 210px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: none;
 }
 
-.content-btn-logout{
+.content-btn-logout {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 20px;
 }
 
-.btn-logout{
+.btn-logout {
   background-color: #f44336;
   color: white;
   padding: 10px 20px;
@@ -40,11 +51,17 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 20px;
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-.btn-logout:hover{
+.btn-logout:hover {
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  background-color: #441612b4;
+  box-shadow: 5px 10px 30px rgb(236, 0, 0);
+}
+
+.btn-logout:hover {
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-color: #441612b4;
 }
