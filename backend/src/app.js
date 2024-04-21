@@ -2,7 +2,8 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
-const cookie = require("cookie-parser");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 //? var entorno
 const config = require("./config");
 
@@ -18,6 +19,8 @@ app.set("port", config.app.Port || 3000);
 //? middlwares
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
