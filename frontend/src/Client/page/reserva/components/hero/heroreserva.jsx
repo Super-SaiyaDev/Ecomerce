@@ -1,7 +1,7 @@
 import React from "react";
 import { CiShare2 } from "react-icons/ci";
 import { RiSaveFill } from "react-icons/ri";
-import img1 from "./assets/img-1.jpg";
+import img1 from "./assets/img1.jpg";
 import "./heroreserva.css";
 
 const HeroReserva = () => {
@@ -30,9 +30,7 @@ const HeroReserva = () => {
 
       <div className="imag">
         <img className="imgReserva" src={img1} alt="" />
-        <div className="btn-viweImage">
           <button>Mostrar imagenes</button>
-        </div>
       </div>
     </div>
   );

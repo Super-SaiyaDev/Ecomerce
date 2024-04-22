@@ -1,0 +1,18 @@
+.paque{
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.letras{
+    margin-left: 10px;
+    font-size: 12px;
+    color: grey;
+}
+
+.tit{
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+}

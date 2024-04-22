@@ -69,9 +69,9 @@
 
 .imag{
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .imgReserva{
@@ -80,14 +80,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-}
-
-.btn-viweImage{
-    bottom: 402px;
-    position: absolute;
+    height: auto;
+    max-height: 600px;
+    border-radius: 30px;
 }
 
 .imag > button{
+    position: absolute;
+    margin: 20px 40px 20px 20px;
     border: none;
     border-radius: 8px;
     height: 30px;
@@ -95,7 +95,7 @@
 }
 
 .imag > button:hover{
-    border: 2px solid;
+    border: 1px solid;
     background-color: rgb(224, 224, 224);
 }
 
