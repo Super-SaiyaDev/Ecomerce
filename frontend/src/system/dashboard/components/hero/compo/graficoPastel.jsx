@@ -5,6 +5,9 @@ const GraficoPastel = () => {
     const data = [
         { name: 'Group A', value: 400 },
         { name: 'Group B', value: 200 },
+        { name: 'Group C', value: 200 },
+        { name: 'Group E', value: 200 },
+        { name: 'Group F', value: 200 },
     ];
     return (
         <div>
