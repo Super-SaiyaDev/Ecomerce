@@ -23,9 +23,11 @@
 
 .sidebar li .lnk-sidebar {
   color: white;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
-  }
+}
+
+
 
 .sidebar li.active {
   background-color: #767888;
@@ -57,11 +59,6 @@
 
 .btn-logout:hover {
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  background-color: #441612b4;
-  box-shadow: 5px 10px 30px rgb(236, 0, 0);
-}
-
-.btn-logout:hover {
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  background-color: #77322cb4;
+  background-color: #c53d3185;
+  box-shadow: 5px 2px 50px rgb(145, 24, 24);
 }
