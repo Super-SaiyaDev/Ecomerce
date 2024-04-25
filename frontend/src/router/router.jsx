@@ -11,6 +11,7 @@ import PageHome from "../Client/page/home page/home-page";
 import Register from "../Client/logins/register/register";
 import Nav from "../Client/page/reserva/components/navbar/nav";
 import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
+import Reserva from "../Client/page/reserva/reserva";
 
 const Path = () => {
   return (
@@ -29,6 +30,7 @@ const Path = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/nav" element={<Nav />} />
         <Route path="/hero" element={<HeroReserva />} />
+        <Route path="/reserva" element={<Reserva />} />
         <Route
             path="*"
             element={

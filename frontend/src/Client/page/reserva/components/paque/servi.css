@@ -1,0 +1,12 @@
+.services{
+    display: flex;
+    margin: 10px;
+    font-size: 23px;
+    align-items: center;
+}
+
+.services > p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,112 @@
+.cuadro{
+    margin: 20px 10px 10px 10px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    height: auto;
+    max-height: 450px;
+}
+
+.prices{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+.price > h1{
+    font-size: 25px;
+}
+
+.horario{
+    display: flex;
+}
+
+.horario > button{
+    background-color: white;
+    width: 50%;
+    height: 60px;
+    border: grey 1px solid;
+    border-bottom: none;
+}
+
+.llegada{
+    border-radius: 10px 0 0 0;
+    border-right: none;
+}
+
+.salida{
+    border-radius: 0 10px 0 0;
+}
+
+.huespe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    border: grey 1px solid;
+}
+
+.reserva{
+    width: 100%;
+    margin: 10px 0 10px 0;
+    height: 40px;
+    background: rgb(102,0,0);
+    background: linear-gradient(90deg, rgba(102,0,0,1) 0%, rgba(65,8,120,1) 50%, rgba(0,11,143,1) 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.reserva:hover{
+    background: rgb(50,0,0);
+    background: linear-gradient(90deg, rgba(50,0,0,1) 0%, rgba(36,4,66,1) 50%, rgba(0,6,82,1) 100%);
+    color: white;
+}
+
+.cargos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cargos > p{
+    color: gray;
+    margin: 10px 0 10px 0;
+    font-size: 13px;
+}
+
+.tarifa1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.tarifa2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.separ{
+    border-top: 1px solid gray;
+    margin: 10px 0 10px 0;
+    width: 95%;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
