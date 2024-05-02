@@ -1,3 +1,15 @@
+:root {
+    --bgcolor: #11212D;
+    --bgcolor2: rgba(24, 24, 26, 0.904);
+    --bgcolor3: rgba(236, 181, 78, 0.74);
+    --input: rgba(80, 78, 99, 0.87);
+    --color: wheat;
+    --title: whitesmoke;
+    --color-title: rgba(253, 253, 253, 0.952);
+    --icon: black;
+    --font: "Comfortaa", sans-serif;
+  }
+
 .cuadro{
     margin: 20px 10px 10px 10px;
     background-color: white;
@@ -5,6 +17,8 @@
     border-radius: 20px;
     height: auto;
     max-height: 450px;
+    background-color: rgba(13, 8, 22, 0.986);
+    box-shadow: 5px 5px 30px rgb(0, 0, 0);
 }
 
 .prices{
@@ -17,10 +31,16 @@
 .price{
     display: flex;
     align-items: center;
+    color: var(--bgcolor3);
 }
 
 .price > h1{
     font-size: 25px;
+    color: var(--bgcolor3);
+}
+
+.prices > a{
+    color: var(--color);
 }
 
 .horario{
@@ -28,11 +48,12 @@
 }
 
 .horario > button{
-    background-color: white;
+    background: none;
     width: 50%;
     height: 60px;
-    border: grey 1px solid;
+    border: var(--bgcolor3) 1px solid;
     border-bottom: none;
+    color: var(--color);
 }
 
 .llegada{
@@ -48,21 +69,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background: none;
     width: 100%;
     height: 50px;
     padding: 10px;
     border-radius: 0 0 10px 10px;
     border-top: none;
-    border: grey 1px solid;
+    border: var(--bgcolor3) 1px solid;
+    color: var(--color);
 }
 
 .reserva{
     width: 100%;
     margin: 10px 0 10px 0;
     height: 40px;
-    background: rgb(102,0,0);
-    background: linear-gradient(90deg, rgba(102,0,0,1) 0%, rgba(65,8,120,1) 50%, rgba(0,11,143,1) 100%);
+    background: rgb(5,88,0);
+    background: linear-gradient(90deg, rgba(5,88,0,1) 0%, rgba(12,152,35,1) 50%, rgba(0,255,111,1) 100%);
     color: white;
     border: none;
     border-radius: 10px;
@@ -70,8 +92,8 @@
 }
 
 .reserva:hover{
-    background: rgb(50,0,0);
-    background: linear-gradient(90deg, rgba(50,0,0,1) 0%, rgba(36,4,66,1) 50%, rgba(0,6,82,1) 100%);
+    background: rgb(3,60,0);
+    background: linear-gradient(90deg, rgba(3,60,0,1) 0%, rgba(10,113,27,1) 50%, rgba(0,185,80,1) 100%);
     color: white;
 }
 
@@ -79,6 +101,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: var(--color);
 }
 
 .cargos > p{
@@ -99,7 +122,7 @@
 }
 
 .separ{
-    border-top: 1px solid gray;
+    border: 1px 0 0 0 solid  grey;
     margin: 10px 0 10px 0;
     width: 95%;
 }
