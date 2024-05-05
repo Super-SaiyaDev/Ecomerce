@@ -141,3 +141,32 @@
     margin: 10px 0 10px 0;
     width: 95%;
 }
+
+.cuadrocama{
+    display: flex;
+    overflow-x: hidden;
+    width: 95%;
+}
+
+.cont_caru{
+    display: flex;
+    margin: 0px 0px;
+}
+
+
+.title_cama{
+    margin: 15px;
+}
+
+.carousel .thumbs-wrapper{
+    margin: 0;
+}
+
+.carousel.carousel-slider{
+    height: 210px;
+}
+
+
+.carousel .control-dots{
+    margin-top: 30px 0px;
+}

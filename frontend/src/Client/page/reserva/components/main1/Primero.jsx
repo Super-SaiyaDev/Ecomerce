@@ -18,7 +18,9 @@ import { MdBalcony } from "react-icons/md";
 import { MdWork } from "react-icons/md";
 import { TbAirConditioning } from "react-icons/tb";
 import img1 from "../main1/img1.jpg";
-
+import Cua from '../carru/Cua';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 
 
@@ -69,11 +71,23 @@ const Primero = () => {
       <div className="separ"></div>
 
       <div className="camas">
-        <h1></h1>
+        <h1 className='title_cama'>Distribucion de camas</h1>
 
-        <div className="cuadrocama">
-
-        </div>
+        <Carousel>
+          <div className="cont_caru">
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          </div>
+          <div className="cont_caru">
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          </div>
+        </Carousel>
+        
       </div>
 
       <div className="separ"></div>

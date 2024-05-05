@@ -1,3 +1,16 @@
+:root {
+    --bgcolor: rgba(18, 17, 20, 0.808);
+    --bgcolor2: rgba(24, 24, 26, 0.904);
+    --bgcolor3: rgba(236, 181, 78, 0.74);
+    --input: rgba(80, 78, 99, 0.87);
+    --color: wheat;
+    --title: whitesmoke;
+    --color-title: rgba(253, 253, 253, 0.952);
+    --icon: black;
+    --font: "Comfortaa", sans-serif;
+  }
+  
+
 .horizontal{
     height: 35px;
     width: 1px;
@@ -19,10 +32,12 @@
 }
 
 .barra{
+    border-radius: 0px 0 10px 10px;
     padding-top: 5px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    box-shadow: -20px -10px 20px 5px gray;
+    box-shadow: 0px 0px 10px 2px gray;
 }
 
 .logo{
@@ -43,7 +58,7 @@
     padding: 10px 10px 10px 14px;
     border: 1px solid rgb(218, 218, 218);
     border-radius: 100px;
-    height: 30px;
+    height: 50px;
     align-items: center;
 }
 
@@ -62,22 +77,20 @@
 
 
 .lup{
-    background-color: black;
+    border: 1px gray solid;
+    text-align: center;
+    background: none;
     width: 40px;
     height: 40px;
     border-radius: 100%;
     align-items: center;
     margin-left: 8px;
-    border: none;
+    font-size: 17px;
 }
 
 .lup:hover{
-    background-color: red;
-}
-
-.lup > img{
-    width: 20px;
-    height: 20px;
+    background-color: black;
+    color: white;
 }
 
 .log{
@@ -87,7 +100,6 @@
 
 .sub {
     font-size: 17px;
-    width: 230px;
     background: none;
     border: none;
 }
@@ -101,9 +113,8 @@
     margin: 0px 12px 0px 4px;
 }
 
-.int > img{
-    width: 30px;
-    height: 30px;
+.int {
+    font-size: 17px;
 }
 
 .logi{
@@ -113,16 +124,18 @@
     padding: 10px;
     border: 1px solid rgb(218, 218, 218);
     border-radius: 100px;
-    height: 30px;
+    height: 50px;
     width: 100px;
+    font-size: 17px;
 }
 
 .lup2{
     background: none;
     border: none;
     border-radius: 100%;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
+    font-size: 17px;
 }
 
 .men{
@@ -133,4 +146,9 @@
 .user{
     width: 40px;
     height: 40px;
+}
+
+.lo{
+    color: var(--bgcolor3);
+    font-size: 30px;
 }

@@ -10,6 +10,9 @@
     --font: "Comfortaa", sans-serif;
   }
 
+nav{
+    width: 100%;
+}
 
 main{
     display: flex;
@@ -35,4 +38,13 @@ header{
     max-width: 90%;
     justify-content: center;
     align-items: center;
+    
+}
+
+footer{
+    width: 100%;
+}
+
+.cont_cuadro{
+    height: 1580px;
 }

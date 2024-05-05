@@ -1,0 +1,20 @@
+.cua_cuadro{
+    border: none;
+    width: 20%;
+    height: 140px;
+    margin: 0% 2% 0% 2%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px 2px grey;
+
+}
+
+.ca_ico{
+    font-size: 50px;
+    padding-top: 10px;
+}
+
+.letr_cama{
+    font-size: 13px;
+    text-align: left;
+    margin: 10px ;
+}

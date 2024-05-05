@@ -3,12 +3,14 @@ import { TfiWorld } from "react-icons/tfi";
 import { IoSearch } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
 import { TfiMenuAlt } from "react-icons/tfi";
+import { BsFillHouseHeartFill } from "react-icons/bs";
 import './nav.css'
 
 const NavReserva = () => {
   return (
     <nav className="barra">
         <div className="logo">
+            <BsFillHouseHeartFill className='lo'/>
             <h1>Json House</h1>
         </div>
         <div className="funt">
@@ -21,7 +23,7 @@ const NavReserva = () => {
                 <button className="lup"><IoSearch /></button>
             </div>
             <div className="log">
-                <button className="sub">Pon tu casa en Json House</button>
+                <button className="sub"> Json House</button>
                 <button className="int"><TfiWorld /></button>
                 <div className="logi">
                     <button className="lup2"><TfiMenuAlt /></button>

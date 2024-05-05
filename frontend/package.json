@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@internationalized/date": "^3.5.3",
+    "@nextui-org/calendar": "^2.0.4",
+    "@nextui-org/react": "^2.3.6",
     "axios": "^1.6.7",
     "chart.js": "^4.4.2",
     "framer-motion": "^11.1.5",
