@@ -24,7 +24,7 @@ const CategoryProducts = () => {
   return (
     <>
       <div className="container">
-        <div style={{"backgroundColor":" #262d32" , "padding": "12px"}}>
+        <div style={{"backgroundColor":" #262d32" , "padding": "12px", "margin-top" : "40px"}}>
           <ProductsNavbar />
         </div>
         <div className="container-card">

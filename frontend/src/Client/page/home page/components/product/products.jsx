@@ -11,12 +11,14 @@ const Products = () => {
       <div className="container-category-product">
         <div className="product-feild">
           <div className="title">
-            <h1>Lujosas</h1>
+            <h1 className="title-category">Casas</h1>
           </div>
           <CategoryProducts />
         </div>
         <div className="product-feild">
-          <h1>Baratas</h1>
+          <div className="title">
+            <h1 className="title-category">Ofertas</h1>
+          </div>
           <CategoryProducts />
         </div>
       </div>
