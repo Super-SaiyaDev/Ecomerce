@@ -7,7 +7,7 @@
   backdrop-filter: blur(12px);
   padding: 8px;
   border-radius: 50px;
-  margin: 60px;
+  margin: 40px 20px 20px 20px;
 }
 
 .swiper {

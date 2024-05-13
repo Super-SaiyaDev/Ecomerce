@@ -13,11 +13,14 @@
   }
 
 .about-section {
+    margin-top: 0px;
     background-color:#ffffffb1;
     backdrop-filter: blur(10px);
-    height: 40vh;
+    height: 400px;
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     font-family: Poppins;
 }

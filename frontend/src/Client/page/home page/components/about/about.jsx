@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutCard from '../product/header/aboutCard'
+import AboutCard from '../about/components/aboutCard'
 import './css/about.css'
 
 const Aboutme = () => {
