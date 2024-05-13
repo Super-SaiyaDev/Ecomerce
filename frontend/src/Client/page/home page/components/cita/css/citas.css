@@ -1,0 +1,22 @@
+.container-cita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7e7e7;
+    padding: 50px;
+}
+
+.cita {
+    background-color: #091a63bd;
+    margin: 30px;
+    width: 50%;
+    height: 35vh;   
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    padding: 40px;
+}

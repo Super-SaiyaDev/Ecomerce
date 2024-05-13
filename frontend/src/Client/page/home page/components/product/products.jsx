@@ -1,16 +1,25 @@
 import React from "react";
-import ProductsNav from "./nav-products/products-nav";
-import HeaderProducts from "./header/header-products";
+import CategoryProducts from "./header/header-products";
+import "./css/products.css";
 
 const Products = () => {
   return (
     <>
-      <nav>
+      {/* <div style={{"backgroundColor":" #262d32" , "padding": "12px"}}>
         <ProductsNav></ProductsNav>
-      </nav>
-      <main>
-        <HeaderProducts />
-      </main>
+      </div> */}
+      <div className="container-category-product">
+        <div className="product-feild">
+          <div className="title">
+            <h1>Lujosas</h1>
+          </div>
+          <CategoryProducts />
+        </div>
+        <div className="product-feild">
+          <h1>Baratas</h1>
+          <CategoryProducts />
+        </div>
+      </div>
     </>
   );
 };

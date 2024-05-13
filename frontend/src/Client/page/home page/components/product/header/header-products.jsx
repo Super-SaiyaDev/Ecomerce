@@ -2,8 +2,10 @@ import React from "react";
 import image from '../../assets/image-1.jpg'
 import image2 from '../../assets/image-12.jpg'
 import CardProducto from "./components/card-products";
-// import axios from "axios";
-const HeaderProducts = () => {
+import ProductsNavbar from "../nav-products/products-nav";
+
+
+const CategoryProducts = () => {
 
 // const [data,setData] = useState({});
 
@@ -22,6 +24,9 @@ const HeaderProducts = () => {
   return (
     <>
       <div className="container">
+        <div style={{"backgroundColor":" #262d32" , "padding": "12px"}}>
+          <ProductsNavbar />
+        </div>
         <div className="container-card">
           <CardProducto
             image={image}
@@ -55,34 +60,11 @@ const HeaderProducts = () => {
             distance={"12"}
             price={"$44,400"}
           />
-          <CardProducto
-            image={"../../assets/image-11.jpg"}
-            location={"Los mina, Santo Domingo"}
-            distance={"12"}
-            price={"$44,400"}
-          />
-          <CardProducto
-            image={"../../assets/image-11.jpg"}
-            location={"Los mina, Santo Domingo"}
-            distance={"12"}
-            price={"$44,400"}
-          />
-          <CardProducto
-            image={"../../assets/image-11.jpg"}
-            location={"Los mina, Santo Domingo"}
-            distance={"12"}
-            price={"$44,400"}
-          />
-          <CardProducto
-            image={"../../assets/image-11.jpg"}
-            location={"Los mina, Santo Domingo"}
-            distance={"12"}
-            price={"$44,400"}
-          />
+          
         </div>
       </div>
     </>
   );
 };
 
-export default HeaderProducts;
+export default CategoryProducts;
