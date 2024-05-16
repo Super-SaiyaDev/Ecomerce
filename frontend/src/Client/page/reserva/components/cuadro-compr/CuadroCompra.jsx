@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './cuadrocompra.css'
 import { GoChevronDown } from "react-icons/go";
 import Modal from 'react-bootstrap/Modal';
+import { IoCloseSharp } from "react-icons/io5";
+import CuadroModal from '../modal 3/CuadroModal';
+
 
 const CuadroCompra = () => {
 
@@ -44,13 +47,12 @@ const CuadroCompra = () => {
 
         <button className='reserva' onClick={comShow}>Reserva</button>
 
-        <Modal show={com} onHide={comClose} centered backdrop={"static"} className='Modal1'>
-          <Modal.Header closeButton>
-            <Modal.Title>Datos del empleado</Modal.Title>
-            <button onClick={comClose}>cerrar</button>
+        <Modal show={com} onHide={comClose} centered backdrop={"static"} className='ModalCOM'>
+          <Modal.Header className='Modalhea'>
+            <button onClick={comClose}><IoCloseSharp/></button>
           </Modal.Header>
           <Modal.Body>             
-            <p>dary</p>
+            <CuadroModal/>
           </Modal.Body>
         </Modal>
 

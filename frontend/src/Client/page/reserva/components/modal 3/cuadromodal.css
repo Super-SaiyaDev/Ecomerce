@@ -1,0 +1,97 @@
+.tarjeta{
+    background-color: rgb(170, 8, 8);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.ttop{
+    display: flex;
+    justify-content: right;
+}
+
+.abaj{
+    display: flex;
+}
+
+.cvc{
+  margin-left: 30%;  
+}
+
+.num{
+    margin-bottom: 10px;
+}
+
+
+.lett{
+    font-size: 11px;
+    margin: 5px;
+}
+
+.ctodd{
+    width: 100%;
+    display: flex;
+}
+
+.comp{
+    width: 45%;
+}
+
+.tarj{
+    width: 45%;
+}
+
+.sepdd{
+    width: 1px;
+    background-color: white;
+    margin: 20px;
+    height: 40vh;
+}
+
+.dt{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.dt > input{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    text-align: center;
+}
+
+.mast{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.in1{
+    width: 58%;
+    height: 30px;
+    display: flex;
+    text-align: center;
+}
+
+.in2{
+    width: 35%;
+    display: flex;
+    text-align: center;
+}
+
+.pag{
+    width: 100%;
+    margin-top: 25px;
+    height: 35px;
+    background-color: rgb(17, 110, 17);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+}
+
+.pag:hover{
+    background-color: rgb(2, 58, 0);
+    cursor: pointer;
+}
