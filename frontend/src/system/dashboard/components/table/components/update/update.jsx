@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 
-const Update = () => {
+const Update = ({setModalIsOpen}) => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     id: "",
@@ -125,7 +125,7 @@ const Update = () => {
 
             <div className="btn-create-updt">
               <button>update</button>
-              <Link to={"/table"}>Atras</Link>
+              <button onClick={() => setModalIsOpen(false)}>Atras</button>
             </div>
           </div>
         </form>

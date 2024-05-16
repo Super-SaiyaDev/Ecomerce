@@ -1,133 +1,207 @@
 /*? table */
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .content .content-table {
-    padding: 10px 40px 40px;
-    background-color: rgba(71, 75, 122, 0.479);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0.4rem 0.8rem #0005;
-  }
-  
-  table {
-    background-color: rgba(149, 194, 231, 0.233);
-    border-collapse: collapse;
-    border-spacing: 12px;
-    border: none;
-    border-radius: 12px;
-    table-layout: fixed;
-  }
-  
-  tr th {
-    text-align: left;
-  }
-  
-  td img {
-    width: 40px;
-    height: 45px;
-    margin-right: 1rem;
-    border-radius: 50%;
-    vertical-align: middle;
-  }
-  
-  table,
-  th,
-  td {
-    padding: 15px;
-  }
-  
-  table tr:nth-child(even) {
-    background-color: #24da8525;
-  }
-  
-  tr:hover td {
-    background-color: rgba(255, 255, 255, 0.363);
-    border-color: #000;
-  }
-  
-  .table-responsive {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
+.datatable {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 270px;
+  min-height: 85vh;
+} 
+
+.container-datatable {
+  padding: 20px;
+  height: 700px;
+  width: 98%;
+  background-color: #11212d;
+  border-radius: 10px;
+  box-shadow: 0 0.4rem 0.8rem #0005;
+}
+.header-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 12px;
+  width: 950px;
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  background-color: #253745;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 12px;
+  border: none;
+  border-radius: 12px;
+  table-layout: fixed;
+}
+
+tr th {
+  text-align: left;
+}
+
+td img {
+  width: 40px;
+  height: 45px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+table,
+th,
+td {
+  padding: 20px;
+}
+
+th {
+  padding: 15px;
+  color: wheat;
+}
+
+td {
+  color: whitesmoke;
+}
+
+table tr:nth-child(even) {
+  background-color: #4a5c6a;
+}
+
+tr:hover td {
+  background-color: #253745;
+  border-color: #000;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive > table {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
   .table-responsive > table {
-    width: 100%;
-    margin-bottom: 0;
+    border: 0;
   }
-  
-  @media screen and (max-width: 767px) {
-    .table-responsive > table {
-      border: 0;
-    }
-  
-    .table-responsive > table > thead > tr > th,
-    .table-responsive > table > tbody > tr > th,
-    .table-responsive > table > tfoot > tr > th,
-    .table-responsive > table > thead > tr > td,
-    .table-responsive > table > tbody > tr > td,
-    .table-responsive > table > tfoot > tr > td {
-      white-space: nowrap;
-    }
-  
-    .table-responsive > table > tbody > tr > td,
-    .table-responsive > table > tfoot > tr > td {
-      border-top: none;
-    }
+
+  .table-responsive > table > thead > tr > th,
+  .table-responsive > table > tbody > tr > th,
+  .table-responsive > table > tfoot > tr > th,
+  .table-responsive > table > thead > tr > td,
+  .table-responsive > table > tbody > tr > td,
+  .table-responsive > table > tfoot > tr > td {
+    white-space: nowrap;
   }
-  
-  .navigate-table {
-    display: flex;
-    justify-content: space-between;
-    margin: 12px 0px 12px 0px;
+
+  .table-responsive > table > tbody > tr > td,
+  .table-responsive > table > tfoot > tr > td {
+    border-top: none;
   }
-  
-  .btn-navigate button {
-    background-color: rgb(56, 207, 81);
-    color: white;
-    font-size: 15px;
-    font-weight: 400;
-    padding: 5px;
-    margin-right: 12px;
-    outline: none;
-    width: 120px;
-    height: 40px;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
-  }
-  
-  .navigate-table button:hover {
-    transform: scale(1.025);
-    background-color: rgba(77, 77, 228, 0.651);
-  }
-  
-  .lbl-search {
-    font-size: 25px;
-    color: black;
-    position: relative;
-    left: 50px;
-    top: 8px;
-    z-index: 12;
-    transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  }
-  
-  .input-search {
-    /* position: absolute;
+}
+
+.navigate-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-navigate button {
+  background-color: rgb(56, 207, 81);
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px;
+  margin-right: 12px;
+  outline: none;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.navigate-table button:hover {
+  transform: scale(1.025);
+  background-color: rgba(77, 77, 228, 0.651);
+}
+
+.lbl-search {
+  font-size: 25px;
+  color: black;
+  position: relative;
+  left: 50px;
+  top: 8px;
+  z-index: 12;
+  transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.input-search {
+  /* position: absolute;
     top: 35px;  
     right: 520px; */
-    border: none;
-    border-radius: 12px;
-    padding: 9px;
-    outline: none;
+  border: none;
+  border-radius: 12px;
+  padding: 9px;
+  outline: none;
+  width: 300px;
+}
+
+.lbl-search.desactived {
+  opacity: 0;
+}
+
+.scrollable-table {
+  max-width: 100%; /* Adjust this value according to your needs */
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+  scrollbar-color: rgb(71, 54, 90) rgb(48, 47, 45); /* Color de la barra de desplazamiento y del track */
+
+  /* Para navegadores Webkit (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
   }
-  
-  .lbl-search.desactived {
-    opacity: 0;
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Color del track */
   }
-  
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255); /* Color de la barra de desplazamiento */
+    border-radius: 20px; /* Radio de la esquina de la barra de desplazamiento */
+    border: 3px solid rgb(255, 255, 255); /* Borde alrededor de la barra de desplazamiento */
+  }
+
+  /* Transición suave al cambiar el tamaño de la ventana */
+  transition: height 0.2s, max-height 0.2s;
+}
+
+.container-btn-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-next {
+  background-color: rgb(56, 207, 81);
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  padding: 10px;
+  margin: 12px;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
