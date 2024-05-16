@@ -14,7 +14,7 @@
 .horizontal{
     height: 35px;
     width: 1px;
-    background-color: rgb(218, 218, 218);
+    background-color: var(--bgcolor3);
     margin: 0px 6px 0 6px;
 }
 
@@ -37,7 +37,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 10px 2px gray;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+    background-color: black;
 }
 
 .logo{
@@ -45,6 +46,7 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     align-items: center;
     display: flex;
+    color: var(--bgcolor3);
 }
 
 .funt{
@@ -56,10 +58,11 @@
     display: flex;
     margin: 10px;
     padding: 10px 10px 10px 14px;
-    border: 1px solid rgb(218, 218, 218);
+    border: 1px solid var(--bgcolor3);
     border-radius: 100px;
     height: 50px;
     align-items: center;
+    color: var(--bgcolor3);
 }
 
 .boton{
@@ -69,23 +72,25 @@
     width: 140px;
     height: 50px;
     background: none;
+    color: var(--color);
 }
 
 .boton:hover{
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(49, 49, 49);
 }
 
 
 .lup{
-    border: 1px gray solid;
+    border: none;
     text-align: center;
     background: none;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     align-items: center;
     margin-left: 8px;
-    font-size: 17px;
+    font-size: 24px;
+    color: var(--bgcolor3);
 }
 
 .lup:hover{
@@ -102,6 +107,7 @@
     font-size: 17px;
     background: none;
     border: none;
+    color: var(--color);
 }
 
 .int{
@@ -111,10 +117,8 @@
     width: 30px;
     height: 30px;
     margin: 0px 12px 0px 4px;
-}
-
-.int {
     font-size: 17px;
+    color: var(--bgcolor3);
 }
 
 .logi{
@@ -122,7 +126,7 @@
     justify-content: space-between;
     display: flex;
     padding: 10px;
-    border: 1px solid rgb(218, 218, 218);
+    border: 1px solid var(--bgcolor3);
     border-radius: 100px;
     height: 50px;
     width: 100px;
@@ -136,6 +140,7 @@
     width: 55px;
     height: 55px;
     font-size: 17px;
+    color: var(--bgcolor3);
 }
 
 .men{

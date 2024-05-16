@@ -1,20 +1,35 @@
+:root {
+    --bgcolor: rgb(255, 255, 255);
+    --bgcolor2: rgba(24, 24, 26, 0.904);
+    --bgcolor3: rgba(236, 181, 78, 0.74);
+    --input: rgba(80, 78, 99, 0.87);
+    --color: wheat;
+    --title: whitesmoke;
+    --color-title: rgba(253, 253, 253, 0.952);
+    --icon: black;
+    --font: "Comfortaa", sans-serif;
+  }
+
 .cua_cuadro{
     border: none;
     width: 20%;
     height: 140px;
     margin: 0% 2% 0% 2%;
     border-radius: 20px;
-    box-shadow: 0px 0px 6px 2px grey;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.582);
+    background-color: rgba(13, 8, 22, 0.986);
 
 }
 
 .ca_ico{
     font-size: 50px;
     padding-top: 10px;
+    color: var(--bgcolor3);
 }
 
 .letr_cama{
     font-size: 13px;
     text-align: left;
     margin: 10px ;
+    color: var(--color);
 }

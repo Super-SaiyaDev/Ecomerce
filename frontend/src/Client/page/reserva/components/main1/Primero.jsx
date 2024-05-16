@@ -22,6 +22,10 @@ import Cua from '../carru/Cua';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Modal from 'react-bootstrap/Modal';
+import ImeModal from '../modal 2/ImeModal';
+import { IoCloseSharp } from "react-icons/io5";
+import ServiModal from '../modal l/ServiModal';
+import DiseñoViaje from '../modal 5/DiseñoViaje';
 
 
 
@@ -33,6 +37,19 @@ const Primero = () => {
 
   const imeClose = () => setIme(false);
   const imeShow = () => setIme(true);
+
+  const [serv, setServ] = useState(false);
+
+  const servClose = () => setServ(false);
+  const servShow = () => setServ(true);
+
+  
+  const [via, setVia] = useState(false);
+
+  const viaClose = () => setVia(false);
+  const viaShow = () => setVia(true);
+
+
 
 
   return (
@@ -75,12 +92,11 @@ const Primero = () => {
           <button className='mos_fts' onClick={imeShow}>Muestra todas las fotos</button>
 
           <Modal show={ime} onHide={imeClose} centered backdrop={"static"} className='Modal1'>
-          <Modal.Header closeButton>
-            <Modal.Title>Datos del empleado</Modal.Title>
-            <button onClick={imeClose}>cerrar</button>
+          <Modal.Header className='Modalhea'>
+            <button onClick={imeClose}><IoCloseSharp/></button>
           </Modal.Header>
           <Modal.Body>             
-            <p>dary</p>
+            <ImeModal/>
           </Modal.Body>
         </Modal>
 
@@ -125,18 +141,16 @@ const Primero = () => {
           <Servi className='servicio' ico={<MdBalcony />} serc="Patio o balcon"/>
           <Servi className='servicio' ico={<LuParkingCircle />} serc="Estacionamiento"/>
         </div>
-        <button>Mostrar servicios</button>
+        <button onClick={servShow}>Mostrar servicios</button>
 
-        <Modal show={ime} onHide={imeClose} centered backdrop={"static"} className='Modal1'>
-          <Modal.Header closeButton>
-            <Modal.Title>Datos del empleado</Modal.Title>
-            <button onClick={imeClose}>cerrar</button>
+        <Modal show={serv} onHide={servClose} centered backdrop={"static"} className='Modal1'>
+          <Modal.Header className='Modalhea'>
+            <button onClick={servClose}><IoCloseSharp/></button>
           </Modal.Header>
           <Modal.Body>             
-            <p>dary</p>
+            <ServiModal/>
           </Modal.Body>
         </Modal>
-
 
       </div>
 
@@ -152,18 +166,16 @@ const Primero = () => {
           <Servi className='servicio' ico={<CgSmartHomeRefrigerator />} serc="Refrigerador lleno"/>
           </div>
           <p className='p2'>¿No encuentras algo que te gustaria pedir?</p>
-          <button>Envia un mensaje al diseñador de viajes</button>
+          <button onClick={viaShow}>Envia un mensaje al diseñador de viajes</button>
 
-          <Modal show={ime} onHide={imeClose} centered backdrop={"static"} className='Modal1'>
-          <Modal.Header closeButton>
-            <Modal.Title>Datos del empleado</Modal.Title>
-            <button onClick={imeClose}>cerrar</button>
+          <Modal show={via} onHide={viaClose} centered backdrop={"static"} className='Modal1'>
+          <Modal.Header className='Modalhea'>
+            <button onClick={viaClose}><IoCloseSharp/></button>
           </Modal.Header>
           <Modal.Body>             
-            <p>dary</p>
+            <DiseñoViaje/>
           </Modal.Body>
         </Modal>
-
 
         </div>
       </div>
