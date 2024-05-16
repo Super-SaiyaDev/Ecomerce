@@ -5,7 +5,7 @@ import {  FaUser } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { IoIosSettings } from "react-icons/io";
 import { BsFillHouseHeartFill } from "react-icons/bs";
-const Navbar2 = () => {
+const NavbarSystem = () => {
   return (
     <>
       <nav className="container-nav-menu2">
@@ -52,4 +52,4 @@ const Navbar2 = () => {
   );
 };
 
-export default Navbar2;
+export default NavbarSystem;

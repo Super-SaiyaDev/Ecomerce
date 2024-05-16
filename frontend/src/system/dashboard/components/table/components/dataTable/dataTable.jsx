@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import { RiEdit2Fill } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
+import Modal from "react-modal";
+import Update from "../update/update";
 
 const handlerDelete = async (id) => {
   try {
-    const response = await axios.delete(`http://localhost:3000/api/users/${id}`);
+    const response = await axios.delete(
+      `http://localhost:3000/api/users/${id}`
+    );
     if (response.status === 200) {
       window.location.reload();
     } else {
@@ -18,6 +22,7 @@ const handlerDelete = async (id) => {
 };
 
 function DataTable({ data, rows, columns }) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const rowsPerPage = 5;
   const [currentTable, setCurrentTable] = useState(0);
 
@@ -34,11 +39,15 @@ function DataTable({ data, rows, columns }) {
         <td key={key}>{item[cell]}</td>
       ))}
       <td>
-        <Link to={`/update/${item.IdUsers}`}>
-          <button>
-            <RiEdit2Fill />
-          </button>
-        </Link>
+        <button onClick={() => setModalIsOpen(true)}>
+          <RiEdit2Fill />
+        </button>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => setModalIsOpen(false)}
+        >
+          <Update setModalIsOpen={setModalIsOpen} />
+        </Modal>
       </td>
       <td>
         <button onClick={() => handlerDelete(item.IdUsers)}>
@@ -53,7 +62,7 @@ function DataTable({ data, rows, columns }) {
       <table>
         <thead>
           <tr>
-            {columns.map((column, key) =>  (
+            {columns.map((column, key) => (
               <th key={key}>{column}</th>
             ))}
             <th>Edit</th>
@@ -65,8 +74,11 @@ function DataTable({ data, rows, columns }) {
             tables[currentTable].map(renderRow)
           ) : (
             <tr>
-              <td style={{ textAlign: "center", color: "white" }} colSpan={columns.length + 2}>
-                No hay datos  
+              <td
+                style={{ textAlign: "center", color: "white" }}
+                colSpan={columns.length + 2}
+              >
+                No hay datos
               </td>
             </tr>
           )}
@@ -74,7 +86,11 @@ function DataTable({ data, rows, columns }) {
       </table>
       <div className="container-btn-next">
         {tables.map((_, index) => (
-          <button className="btn-next" key={index} onClick={() => setCurrentTable(index)}>
+          <button
+            className="btn-next"
+            key={index}
+            onClick={() => setCurrentTable(index)}
+          >
             {index + 1}
           </button>
         ))}

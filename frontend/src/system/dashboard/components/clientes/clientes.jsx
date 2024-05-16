@@ -1,35 +1,44 @@
-import React from 'react'
-import Table from '../table/table'
+import React from "react";
+import Sliderbar from "../sliderbar/sliderbar";
+import Table from "../table/table";
 
 const Clientes = () => {
+  const rows = [
+    "id_cliente",
+    "nombre",
+    "email",
+    "telefono",
+    "direccion",
+    "fecha_registro",
+  ];
 
-    const rows = [
-        "client_id",
-        "email",
-        "name",
-         "phone_number",
-         "address",
-         "date_registered",
-    ]
+  const columns = [
+    "id_cliente",
+    "nombre",
+    "email",
+    "telefono",
+    "direccion",
+    "fecha_registro",
+  ];
 
-    const columns =[
-        "client_id",
-        "email",
-        "name",
-         "phone_number",
-         "address",
-         "date_registered",
-    ]
+  const inputs = [
+    { lblName: "Nombre", type: "text", name: "nombre" },
+    { lblName: "Email", type: "email", name: "email" },
+    { lblName: "Telefono", type: "text", name: "telefono" },
+    { lblName: "Direccion", type: "text", name: "direccion" },
+    { lblName: "fecha_registro", type: "date", name: "fecha_registro" },
+  ];
 
-    const api = {
-        url: "http://localhost:3000/api/clientes",
-    }
+  const api = {
+    url: "http://localhost:3000/api/clientes",
+  };
 
   return (
     <>
-        <Table rows={rows} columns={columns} api={api}/>
+      <Sliderbar />
+      <Table rows={rows} columns={columns} api={api} input={inputs} />
     </>
-  )
-}
+  );
+};
 
-export default Clientes
+export default Clientes;
