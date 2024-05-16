@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../create/css/create.css";
 
-const Create = ({ setModalIsOpen, inputs }) => {
+const Create = ({ api, setModalIsOpen, inputs }) => {
   const navigate = useNavigate();
   const [values, setValues] = useState({});
 
   const handlerSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/api/clientes/", values)
+      .post(api.url, values)
       .then((data) => {
         console.log(data);
         window.location.reload();

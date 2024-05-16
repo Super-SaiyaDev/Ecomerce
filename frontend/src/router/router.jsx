@@ -14,6 +14,7 @@ import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
 import Reserva from "../Client/page/reserva/reserva";
 import Categorys from "../Client/page/home page/components/categorys/categorys";
 import Clientes from "../system/dashboard/components/clientes/clientes";
+import Users from "../system/users/user";
 
 import Proveedores from "../system/proveedores/proveedores";
 
@@ -28,7 +29,7 @@ const Path = () => {
         <Route path="/create" element={<Create />} />
         <Route path="/update/:id" element={<Update />} />
         <Route path="/history" element={<History />} />
-
+        <Route path="/usuario" element={<Users />} />
         <Route path="/Proveedores" element={<Proveedores />} />
 
         <Route path="/cliente" element={<Clientes />} />

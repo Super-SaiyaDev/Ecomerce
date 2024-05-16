@@ -42,7 +42,7 @@ const Table = ({ columns, rows, api, input }) => {
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
               >
-                <Create inputs={input} setModalIsOpen={setModalIsOpen} />
+                <Create api={api} inputs={input} setModalIsOpen={setModalIsOpen} />
               </Modal>
               <button>
                 <Link to="/history">
