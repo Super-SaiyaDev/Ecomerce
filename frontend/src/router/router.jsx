@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Table from "../system/dashboard/components/table/table";
 import LoginUser from "../system/login/login";
 import Principal from "../system/dashboard/dashboard";
@@ -17,7 +17,6 @@ import Clientes from "../system/dashboard/components/clientes/clientes";
 
 import Proveedores from "../system/proveedores/proveedores";
 
-
 const Path = () => {
   return (
     <Router>
@@ -29,10 +28,10 @@ const Path = () => {
         <Route path="/create" element={<Create />} />
         <Route path="/update/:id" element={<Update />} />
         <Route path="/history" element={<History />} />
-        <Route path="/clientes" element={<Clientes />} />
 
         <Route path="/Proveedores" element={<Proveedores />} />
-        
+
+        <Route path="/cliente" element={<Clientes />} />
 
         {/* Estas son las rutas frontend del cliente. */}
         <Route path="/" element={<PageHome />} />
@@ -43,14 +42,23 @@ const Path = () => {
         <Route path="/reserva" element={<Reserva />} />
         <Route path="/categorys" element={<Categorys />} />
         <Route
-            path="*"
-            element={
-              <>
-                <h1 style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center' ,'textAlign': 'center', 'minHeight': '90vh'}}>not found this path </h1>
-               
-              </>
-            }
-          ></Route>
+          path="*"
+          element={
+            <>
+              <h1
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  minHeight: "90vh",
+                }}
+              >
+                not found this path{" "}
+              </h1>
+            </>
+          }
+        ></Route>
       </Routes>
     </Router>
   );
