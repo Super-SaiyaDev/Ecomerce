@@ -1,8 +1,17 @@
-import React from 'react'
+import { useState } from 'react';
 import './cuadrocompra.css'
 import { GoChevronDown } from "react-icons/go";
+import Modal from 'react-bootstrap/Modal';
 
 const CuadroCompra = () => {
+
+    const [com, setCom] = useState(false);
+
+    const comClose = () => setCom(false);
+    const comShow = () => setCom(true)
+
+
+
   return (
     <div className='cuadro'>
         <div className="prices">
@@ -33,7 +42,17 @@ const CuadroCompra = () => {
             </button>
         </div>
 
-        <button className='reserva'>Reserva</button>
+        <button className='reserva' onClick={comShow}>Reserva</button>
+
+        <Modal show={com} onHide={comClose} centered backdrop={"static"} className='Modal1'>
+          <Modal.Header closeButton>
+            <Modal.Title>Datos del empleado</Modal.Title>
+            <button onClick={comClose}>cerrar</button>
+          </Modal.Header>
+          <Modal.Body>             
+            <p>dary</p>
+          </Modal.Body>
+        </Modal>
 
         <div className="cargos">
             <p>No se hara ningun cargo por el momento</p>
