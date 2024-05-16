@@ -1,19 +1,18 @@
 /*? sliderbar */
 .sidebar {
-  position: fixed;
+  position: absolute;
   width: 235px;
   height: 100%;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   background-color: rgb(40, 46, 51);
 }
 
 .sidebar .ul {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   list-style-type: none;
-  padding: 0;
 }
 
 .sidebar li {
@@ -24,14 +23,18 @@
 .sidebar li .lnk-sidebar {
   color: white;
   font-size: 18px;
-  font-weight: 500;
-  }
+  font-weight: 300;
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .sidebar li.active {
   background-color: #767888;
   padding: 15px;
   border-radius: 15px 0px 0px 15px;
-  width: 210px;
+  width: 220px;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   border: none;
 }
@@ -51,17 +54,12 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 220px;
+  margin-top: 190px;
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .btn-logout:hover {
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  background-color: #441612b4;
-  box-shadow: 5px 10px 30px rgb(236, 0, 0);
-}
-
-.btn-logout:hover {
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  background-color: #77322cb4;
+  background-color: #3a0d08dc;
+  box-shadow: 10px 5px 50px rgba(94, 2, 2, 0.897);
 }

@@ -15,13 +15,21 @@
 .about-section {
     margin-top: 0px;
     backdrop-filter: blur(10px);
-    height: 400px;
+    height: 700px;
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Poppins;
+    background-color: rgba(246, 246, 248, 0.842);
+    transition: 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+}
+
+.about:hover{
+    transform: translateY(-40px);
+    transition: 1.5s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .about-groupt-card{
@@ -42,6 +50,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     }
 
 .titulo {
@@ -87,6 +96,5 @@
     margin-top: auto;
     width: 100%;
     height: 5px;
-    background-color: var(--color);
-    border-radius: 0px  0px 12px 12px;  
+    background-color: rgba(143, 90, 11, 0.671);
 }
