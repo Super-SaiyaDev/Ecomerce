@@ -22,7 +22,9 @@ const Proveedores = () => {
     <>
       <NavbarSystem />
       <Table rows={rows} columns={columns} api={api} />
-      <Sliderbar></Sliderbar>
+      <div>
+        <Sliderbar/>
+      </div>
     </>
   );
 };

@@ -72,6 +72,15 @@ function Sliderbar() {
             </Link>
           </li>
           <li
+            className={activeMenu === "Proveedores" ? "active" : ""}
+            onClick={() => handleMenuClick("Proveedores")}
+          >
+            <Link className="lnk-sidebar" to="/Proveedores">
+              <FaHouse />
+              Proveedores
+            </Link>
+          </li>
+          <li
             className={activeMenu === "visitas" ? "active" : ""}
             onClick={() => handleMenuClick("visitas")}
           >
