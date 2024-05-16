@@ -42,6 +42,7 @@ function Sliderbar() {
               Usuario
             </Link>
           </li>
+          
           <li
             className={activeMenu === "propiedad" ? "active" : ""}
             onClick={() => handleMenuClick("propiedad")}
