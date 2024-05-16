@@ -5,7 +5,7 @@ import Table from '../dashboard/components/table/table'
 const Proveedores = () => {
 
     const rows = [
-        "ID_proveedores",
+        "ID_proveedor",
         "Nombre",
         "email",
         "telefono",
@@ -14,7 +14,7 @@ const Proveedores = () => {
 	
 
     const columns = [
-        "ID_proveedores",
+        "Cod. Proveedor",
         "Nombre",
         "email",
         "telefono",

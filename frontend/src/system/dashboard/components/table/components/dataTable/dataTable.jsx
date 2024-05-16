@@ -20,7 +20,7 @@ const handlerDelete = async (id, setData) => {
   }
 };
 
-function DataTable({ data, columns }) {
+function DataTable({ data, columns, rows }) {
   const rowsPerPage = 8; // Cambia esto al número de filas que quieres por tabla
   const [currentTable, setCurrentTable] = useState(0);
   const tables = [];
