@@ -168,7 +168,7 @@ const Primero = () => {
           <p className='p2'>¿No encuentras algo que te gustaria pedir?</p>
           <button onClick={viaShow}>Envia un mensaje al diseñador de viajes</button>
 
-          <Modal show={via} onHide={viaClose} centered backdrop={"static"} className='Modal1'>
+          <Modal show={via} onHide={viaClose} centered backdrop={"static"} className='Modal2'>
           <Modal.Header className='Modalhea'>
             <button onClick={viaClose}><IoCloseSharp/></button>
           </Modal.Header>

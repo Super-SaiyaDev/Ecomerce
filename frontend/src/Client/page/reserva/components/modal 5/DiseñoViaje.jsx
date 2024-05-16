@@ -9,7 +9,14 @@ function DiseñoViaje() {
         <div className="separ"></div>
       </div>
       <div className="cuerpoo">
-        <label htmlFor="correo"></label>
+        <div className='fodi'>
+        <label htmlFor="correo">Correo del diseñador</label>
+        <input type="text" placeholder='Correo del diseñador'/>
+        </div>
+        <div className='fodi2'>
+        <label htmlFor="descripcion">Descripcion</label>
+        <textarea placeholder='Descripcion'/>
+        </div>
       </div>
     </div>
   )
