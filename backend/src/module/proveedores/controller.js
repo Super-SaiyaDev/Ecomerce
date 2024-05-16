@@ -1,37 +1,36 @@
-controller.js 
 const db = require("../../dataBase/DataProveedores");
 const table = "proveedores";
 
 const list = () => {
-  return Dataproveedores.list(table);
+  return db.list(table);
 };
 
 const list_inactive = () => {
-  return Dataproveedores.list_inactive(table);
+  return db.list_inactive(table);
 };  
 
 const reactivated = (id) => {
-  return Dataproveedores.reactivated(table, id);
+  return db.reactivated(table, id);
 };
 
 const search = (id) => {
-  return Dataproveedores.search(table, id);
+  return db.search(table, id);
 };
 
 const add = (data) => {
-  return Dataproveedores.add(table, data);
+  return db.add(table, data);
 };
 
 const delet = (id) => {
-  return Dataproveedores.delet("usuario", id);
+  return db.delet(table, id);
 };
 
 const update = (data, id) => {
-  return Dataproveedores.update(table, data, id);
+  return db.update(table, data, id);
 };
 
 const login = (data) => {
-  return Dataproveedores.login(table, data);
+  return db.login(table, data);
 };
 
 module.exports = {
