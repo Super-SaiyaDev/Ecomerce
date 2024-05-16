@@ -2,6 +2,7 @@
 import React from 'react'
 import Table from '../dashboard/components/table/table'
 
+
 const Proveedores = () => {
 
     const rows = [
