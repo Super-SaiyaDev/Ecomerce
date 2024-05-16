@@ -25,7 +25,7 @@ const Path = () => {
         <Route path="/create" element={<Create />} />
         <Route path="/update/:id" element={<Update />} />
         <Route path="/history" element={<History />} />
-        <Route path="/clientes" element={<Clientes />} />
+        <Route path="/cliente" element={<Clientes />} />
         {/* Estas son las rutas frontend del cliente. */}
         <Route path="/" element={<PageHome />} />
         <Route path="/login-clie" element={<LoginClie />} />

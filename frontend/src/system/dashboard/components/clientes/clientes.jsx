@@ -1,5 +1,6 @@
 import React from "react";
 import Sliderbar from "../sliderbar/sliderbar";
+import NavbarSystem from "../navbar/navabar";
 import Table from "../table/table";
 
 const Clientes = () => {
@@ -35,6 +36,7 @@ const Clientes = () => {
 
   return (
     <>
+    <NavbarSystem />
       <Sliderbar />
       <Table rows={rows} columns={columns} api={api} input={inputs} />
     </>
