@@ -10,7 +10,7 @@
 
 .sidebar .ul {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   list-style-type: none;
 }
@@ -26,8 +26,9 @@
   font-weight: 300;
   margin: 5px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: 12px
+  ;
 }
 
 .sidebar li.active {
@@ -54,7 +55,8 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 190px;
+  margin-top: 120px;
+  margin-left: 15px;
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
