@@ -21,10 +21,10 @@ const Proveedores = () => {
   return (
     <>
       <NavbarSystem />
-      <Table rows={rows} columns={columns} api={api} />
       <div>
         <Sliderbar/>
       </div>
+      <Table rows={rows} columns={columns} api={api} />
     </>
   );
 };
