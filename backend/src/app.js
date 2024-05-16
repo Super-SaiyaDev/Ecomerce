@@ -11,6 +11,12 @@ const config = require("./config");
 const clientes = require("./module/client/router");
 const login = require("./module/system/login/router");
 
+//! modulo proveedores
+const proveedores = require("./module/proveedores/router");
+
+
+
+
 const app = express();
 
 //? config
@@ -32,5 +38,6 @@ app.use(
 //? Rutas
 app.use("/api/clientes", clientes);
 app.use("/api/user", login);
+app.use("/api/proveedores", proveedores);
 
 module.exports = app;
