@@ -20,7 +20,7 @@ const handlerDelete = async (id) => {
   }
 };
 
-function DataTable({ data, columns , rows, modalIsOpen, setModalIsOpen}) {
+function DataTable({ data, columns, rows, modalIsOpen, setModalIsOpen }) {
   const rowsPerPage = 8; // Cambia esto al número de filas que quieres por tabla
   const [currentTable, setCurrentTable] = useState(0);
 
@@ -44,11 +44,23 @@ function DataTable({ data, columns , rows, modalIsOpen, setModalIsOpen}) {
           isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
         >
-          <Update setModalIsOpen={setModalIsOpen} />
+          <Update
+            id={item.id}
+            initialValues={item} // Pasar el objeto item completo como los valores iniciales
+            apiUrl="http://localhost:3000/api/clientes/"
+            fields={[
+              { label: "id", name: "id" },
+              { label: "nombre", name: "nombre" },
+              { label: "usuario", name: "usuario" },
+              { label: "clave", name: "clave" },
+              { label: "activo", name: "activo" },
+            ]}
+            setModalIsOpen={setModalIsOpen}
+          />
         </Modal>
       </td>
       <td>
-        <button onClick={() => handlerDelete(item.IdUsers)}>
+        <button onClick={() => handlerDelete(item.id)}>
           <MdDelete />
         </button>
       </td>

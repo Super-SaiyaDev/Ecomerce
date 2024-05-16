@@ -10,7 +10,6 @@ import Create from "./components/create/create";
 
 const Table = ({ columns, rows, api, input }) => {
 
-
   const [isInputFocused, setInputFocused] = useState(false);
   const [datos, setData] = useState([{}]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -45,7 +44,7 @@ const Table = ({ columns, rows, api, input }) => {
                 <Create inputs={input} setModalIsOpen={setModalIsOpen} />
               </Modal>
               <button>
-                <Link to="/history">
+                <Link to="/home">
                   <IoMdPersonAdd /> Historial
                 </Link>
               </button>
@@ -65,7 +64,7 @@ const Table = ({ columns, rows, api, input }) => {
         </div>
         <div className="content-Table scrollable-table">
           <div className="table-responsive">
-            <DataTable data={datos} columns={columns} rows={rows} />
+            <DataTable data={datos} columns={columns} rows={rows} modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
           </div>
         </div>
       </div>
