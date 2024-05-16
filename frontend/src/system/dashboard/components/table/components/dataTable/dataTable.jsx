@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { RiEdit2Fill } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
@@ -21,9 +20,8 @@ const handlerDelete = async (id) => {
   }
 };
 
-function DataTable({ data, rows, columns }) {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const rowsPerPage = 5;
+function DataTable({ data, columns , rows, modalIsOpen, setModalIsOpen}) {
+  const rowsPerPage = 8; // Cambia esto al número de filas que quieres por tabla
   const [currentTable, setCurrentTable] = useState(0);
 
   // Divide data into pages

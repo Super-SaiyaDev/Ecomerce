@@ -9,5 +9,6 @@ module.exports = {
         user: process.env.mysqlUser || "root",
         password : process.env.mysqlPassword|| "",
         database: process.env.mysqlDb|| "json-house",
+
     }
 }

@@ -9,19 +9,21 @@ import Modal from "react-modal";
 import Create from "./components/create/create";
 
 const Table = ({ columns, rows, api, input }) => {
+
+
   const [isInputFocused, setInputFocused] = useState(false);
   const [datos, setData] = useState([{}]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   
   useEffect(() => {
-    const fetchData = async () => {
+    const fechData = async () => {
       const response = await axios.get(api.url);
       const data = response.data.body;
       console.log(data);
       setData(data);
     };
 
-    fetchData();
+    fechData();
   }, []);
 
   return (
@@ -68,6 +70,7 @@ const Table = ({ columns, rows, api, input }) => {
         </div>
       </div>
     </div>
+
   );
 };
 

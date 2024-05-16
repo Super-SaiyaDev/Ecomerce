@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Table from "../system/dashboard/components/table/table";
 import LoginUser from "../system/login/login";
 import Principal from "../system/dashboard/dashboard";
@@ -14,6 +14,9 @@ import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
 import Reserva from "../Client/page/reserva/reserva";
 import Categorys from "../Client/page/home page/components/categorys/categorys";
 import Clientes from "../system/dashboard/components/clientes/clientes";
+
+import Proveedores from "../system/proveedores/proveedores";
+
 const Path = () => {
   return (
     <Router>
@@ -26,6 +29,9 @@ const Path = () => {
         <Route path="/update/:id" element={<Update />} />
         <Route path="/history" element={<History />} />
         <Route path="/clientes" element={<Clientes />} />
+
+        <Route path="/proveedores" element={<Proveedores />} />
+
         {/* Estas son las rutas frontend del cliente. */}
         <Route path="/" element={<PageHome />} />
         <Route path="/login-clie" element={<LoginClie />} />
@@ -35,14 +41,23 @@ const Path = () => {
         <Route path="/reserva" element={<Reserva />} />
         <Route path="/categorys" element={<Categorys />} />
         <Route
-            path="*"
-            element={
-              <>
-                <h1 style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center' ,'textAlign': 'center', 'minHeight': '90vh'}}>not found this path </h1>
-               
-              </>
-            }
-          ></Route>
+          path="*"
+          element={
+            <>
+              <h1
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  minHeight: "90vh",
+                }}
+              >
+                not found this path{" "}
+              </h1>
+            </>
+          }
+        ></Route>
       </Routes>
     </Router>
   );
