@@ -12,6 +12,7 @@ import Register from "../Client/logins/register/register";
 import Nav from "../Client/page/reserva/components/navbar/nav";
 import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
 import Reserva from "../Client/page/reserva/reserva";
+import Proveedores from "../system/proveedores/proveedores";
 
 const Path = () => {
   return (
@@ -24,6 +25,8 @@ const Path = () => {
         <Route path="/create" element={<Create />} />
         <Route path="/update/:id" element={<Update />} />
         <Route path="/history" element={<History />} />
+        <Route path="/proveedores" element={<Proveedores />} />
+        
         {/* Estas son las rutas frontend del cliente. */}
         <Route path="/" element={<PageHome />} />
         <Route path="/login-clie" element={<LoginClie />} />
