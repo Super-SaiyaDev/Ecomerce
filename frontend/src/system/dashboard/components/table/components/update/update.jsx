@@ -1,25 +1,29 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../create/css/create.css";
 
-const Update = ({ apiUrl, fields, initialValues, setModalIsOpen }) => {
-  const [values, setValues] = useState(initialValues);
+const Update = ({ id, apiUrl, fields, initialValues, setModalIsOpen }) => {
+  const [values, setValues] = useState(...initialValues, id);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const fetchData = async () => {
-    if (!values.id) return; // Si values.id no está definido, no hagas nada
+    if (!values.id) return;
+    setLoading(true);
     try {
-      console.log(values.id);
       const response = await axios.get(apiUrl + values.id);
-      setValues(response.data); // Asegúrate de que estás estableciendo el estado con los datos correctos
+      setValues(response.data);
     } catch (error) {
-      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     fetchData();
-  }, [values.id]); // Cada vez que values.id cambie, fetchData se ejecutará de nuevo
+  }, [values.id]);
 
   const handlerSubmit = (e) => {
     e.preventDefault();
@@ -27,12 +31,15 @@ const Update = ({ apiUrl, fields, initialValues, setModalIsOpen }) => {
       .put(apiUrl + values.id, values)
       .then((data) => {
         console.log(data);
-        navigate("/table");
+        setModalIsOpen(false);
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
+  if (loading) return <div>Cargando...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <>

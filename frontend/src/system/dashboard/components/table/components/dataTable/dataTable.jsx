@@ -21,7 +21,7 @@ const handlerDelete = async (id) => {
 };
 
 function DataTable({ data, columns, rows, modalIsOpen, setModalIsOpen }) {
-  const rowsPerPage = 8; // Cambia esto al número de filas que quieres por tabla
+  const rowsPerPage = 5; // Cambia esto al número de filas que quieres por tabla
   const [currentTable, setCurrentTable] = useState(0);
 
   // Divide data into pages
@@ -37,7 +37,10 @@ function DataTable({ data, columns, rows, modalIsOpen, setModalIsOpen }) {
         <td key={key}>{item[cell]}</td>
       ))}
       <td>
-        <button onClick={() => setModalIsOpen(true)}>
+        <button
+          onClick={() => setModalIsOpen(true)}
+          className="btn-accion editar"
+        >
           <RiEdit2Fill />
         </button>
         <Modal
@@ -60,7 +63,10 @@ function DataTable({ data, columns, rows, modalIsOpen, setModalIsOpen }) {
         </Modal>
       </td>
       <td>
-        <button onClick={() => handlerDelete(item.id)}>
+        <button
+          onClick={() => handlerDelete(item.id)}
+          className="btn-accion eliminar"
+        >
           <MdDelete />
         </button>
       </td>

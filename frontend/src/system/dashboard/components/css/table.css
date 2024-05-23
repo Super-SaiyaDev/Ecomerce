@@ -205,3 +205,18 @@ tr:hover td {
   border-radius: 20px;
   transition: background-color 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
+
+.btn-accion {
+  background-color: rgb(56, 207, 81);
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  padding: 10px;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+  cursor: pointer;
+}

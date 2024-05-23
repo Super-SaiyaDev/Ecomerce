@@ -59,6 +59,7 @@ const CuadroCompra = () => {
         </button>
       </div>
 
+      {/* Primer Modal*/}
       <Modal
         show={cant}
         onHide={cantClose}
@@ -149,14 +150,17 @@ const CuadroCompra = () => {
               />
             </div>
           </form>
-          <button onClick={cantClose}>Guardar</button>
+          <button onClick={cantClose} className="btn-modal">Guardar</button>
         </Modal.Body>
+
+
       </Modal>
 
       <button className="reserva" onClick={comShow}>
         Reserva
       </button>
 
+      {/* este es el otro modal */}
       <Modal
         show={com}
         onHide={comClose}
