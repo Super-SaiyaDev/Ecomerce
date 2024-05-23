@@ -1,5 +1,6 @@
 import React from 'react'
 import './cuadromodal.css'
+import tar from './tar.jpg'
 
 
 function CuadroModal() {
@@ -8,11 +9,10 @@ function CuadroModal() {
         <div className='comp'>
             <h1>Casa</h1>
             <div className='casachar'>
-                <img src="" alt="" />
-                <p>nombre de la casa</p>
+                <img src={tar} alt="" />
+                <p>LUXURY RETREATS</p>
             </div>
-
-            <h1 className='preci'>100,000</h1>
+            <h1 className='preci'>$20,000</h1>
         </div>
 
         <div className="sepdd"></div>

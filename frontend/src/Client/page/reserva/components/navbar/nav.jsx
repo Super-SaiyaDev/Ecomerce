@@ -4,6 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { BsFillHouseHeartFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import './nav.css'
 
 const NavReserva = () => {
@@ -24,10 +25,10 @@ const NavReserva = () => {
             </div>
             <div className="log">
                 <button className="sub"> Json House</button>
-                <button className="int"><TfiWorld /></button>
+                <button className="int"><Link className='lin' to={"/infohause"}><TfiWorld /></Link></button>
                 <div className="logi">
-                    <button className="lup2"><TfiMenuAlt /></button>
-                    <button className="lup2"><FaUserCircle /></button>
+                    <button className="lup2"><Link className='lin' to={"/"}><TfiMenuAlt /></Link></button>
+                    <button className="lup2"><Link className='lin' to={"/login-clie"}><FaUserCircle /></Link></button>
                 </div>
             </div>
         </div>

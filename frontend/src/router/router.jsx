@@ -12,6 +12,7 @@ import Register from "../Client/logins/register/register";
 import Nav from "../Client/page/reserva/components/navbar/nav";
 import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
 import Reserva from "../Client/page/reserva/reserva";
+import InfoHause from "../Client/page/InfoHouse/InfoHause";
 
 const Path = () => {
   return (
@@ -31,6 +32,7 @@ const Path = () => {
         <Route path="/nav" element={<Nav />} />
         <Route path="/hero" element={<HeroReserva />} />
         <Route path="/reserva" element={<Reserva />} />
+        <Route path="/infohause" element={<InfoHause />} />
         <Route
             path="*"
             element={

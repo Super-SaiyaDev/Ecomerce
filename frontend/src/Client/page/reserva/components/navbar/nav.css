@@ -38,7 +38,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
-    background-color: black;
+    background-color: rgba(13, 8, 22, 0.986);
 }
 
 .logo{
@@ -94,7 +94,7 @@
 }
 
 .lup:hover{
-    background-color: black;
+    background-color: rgb(49, 49, 49);
     color: white;
 }
 
@@ -156,4 +156,8 @@
 .lo{
     color: var(--bgcolor3);
     font-size: 30px;
+}
+
+.lin{
+    color: var(--bgcolor3);
 }

@@ -13,6 +13,20 @@ const CuadroCompra = () => {
     const comClose = () => setCom(false);
     const comShow = () => setCom(true)
 
+    const [cant, setCant] = useState(false);
+
+    const cantClose = () => setCant(false);
+    const cantShow = () => setCant(true)
+
+
+
+    const [pers, setPer] = useState(localStorage.getItem('per') || '');
+    const [adss, setAds] = useState(localStorage.getItem('ads') || '');
+    const [niñs, setNiñ] = useState(localStorage.getItem('nño') || '');
+    const [bbss, setBb] = useState(localStorage.getItem('bbs') || '');
+    const [mass, setMas] = useState(localStorage.getItem('mas') || '');
+
+    const total = parseInt(pers) + parseInt(adss) + parseInt(bbss) + parseInt(niñs)  || 0;
 
 
   return (
@@ -29,21 +43,74 @@ const CuadroCompra = () => {
             <div className="horario">
                 <button className='llegada'>
                     <p>llegada</p>
-                    <p>21/2/24</p>
+                    <input type="date" name="" id="" className='inpdate'/>
                 </button>
                 <button className='salida'>
                     <p>salida</p>
-                    <p>1/2/24</p>
+                    <input type="date" name="" id="" className='inpdate'/>
                 </button>
             </div>
             <button className='huespe'>
                 <div className="cantida">
                 <p>HUESPEDES</p>
-                <p>X huesped</p>
+                <p>{total} huespedes {parseInt(mass) || 0} mascotas</p>
                 </div>
-                <GoChevronDown />
+                <button onClick={cantShow} className='hue'><GoChevronDown /></button>
             </button>
         </div>
+
+        <Modal show={cant} onHide={cantClose} centered backdrop={"static"} className='ModalCant'>
+          <Modal.Header className='Modalheas'>
+            <h1>Cantidad de personas</h1>
+            <button onClick={cantClose}><IoCloseSharp/></button>
+          </Modal.Header>
+          <Modal.Body className='ModalHu'>    
+            <form  className="hues">
+                <div className="in">
+                    <label htmlFor="">Adultos</label>
+                    <input type="number" max={14} min={0} name="" id="per" onChange={e => {
+                        setPer(e.target.value);
+                        localStorage.setItem('per', e.target.value);
+                        }} />
+                </div>
+
+                <div className="in">
+                    <label htmlFor="">Adolecentes</label>
+                    <input type="number" max={10} min={0} name="" id="ads" onChange={e => {
+                        setAds(e.target.value);
+                        localStorage.setItem('ads', e.target.value);
+                        }} />
+                </div>
+
+                <div className="in">
+                    <label htmlFor="">Niños</label>
+                    <input type="number" max={7} min={0} name="" id="nño" onChange={e => {
+                        setNiñ(e.target.value);
+                        localStorage.setItem('nño', e.target.value);
+                        }} />
+                    
+                </div>
+
+                <div className="in">
+                    <label htmlFor="">Bebes</label>
+                    <input type="number" max={5} min={0} name="" id="bbs" onChange={e => {
+                        setBb(e.target.value);
+                        localStorage.setItem('bbs', e.target.value);
+                        }} />
+                </div>
+
+                <div className="in">
+                    <label htmlFor="">Mascotas</label>
+                    <input type="number" max={2} min={0} name="" id="mas" onChange={e => {
+                        setMas(e.target.value);
+                        localStorage.setItem('mas', e.target.value);
+                        }} />
+                </div>
+            </form>  
+            <button onClick={cantClose}>Guardar</button>
+          </Modal.Body>
+        </Modal>
+
 
         <button className='reserva' onClick={comShow}>Reserva</button>
 

@@ -97,4 +97,18 @@
     background: linear-gradient(90deg, rgba(3,60,0,1) 0%, rgba(10,113,27,1) 50%, rgba(0,185,80,1) 100%);
     color: white;
     cursor: pointer;
-}                                       
+}     
+
+.comp{
+    padding: 10px;
+}
+
+.asachar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.preci{
+    margin-top: 20px;
+}

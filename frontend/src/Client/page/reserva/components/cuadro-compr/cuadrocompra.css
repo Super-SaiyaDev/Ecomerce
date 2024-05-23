@@ -143,9 +143,107 @@
     transform: translate(-50%, -50%);
     background: rgb(0, 0, 0);
     width: 50%;
-    height: 70vh;
+    height: auto;
     box-shadow: 0 0 10px 10000px rgba(197, 197, 197, 0.397);
     border-radius: 50px;
     padding: 20px;
     color: white;
+}
+
+.inpdate{
+    background: none;
+    color: var(--color);
+    border: none;
+    text-align: center;
+}
+
+.hue{
+    color: var(--color);
+    background: none;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.hue:hover{
+    background: rgb(49, 49, 49);
+}
+
+.ModalCant{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(0, 0, 0);
+    width: 20%;
+    height: auto;
+    box-shadow: 0 0 10px 10000px rgba(197, 197, 197, 0.397);
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hues{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+    width: 90%;
+}
+
+.in{
+    display: flex;
+    flex-direction: column;
+}
+
+.in > input{
+    width: 60%;
+    margin: 10px;
+    height: 25px;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+
+.Modalheas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.Modalheas > h1{
+    color: white;
+    font-size: 20px;
+    position: left;
+}
+
+.Modalheas > button{
+    background: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+}
+
+.ModalHu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModalHu > button{
+    border: none;
+    background-color: rgb(0, 68, 255);
+    width: 40%;
+    margin-top: 20px;
+    height: 25px;
+    border-radius: 10px;
 }
