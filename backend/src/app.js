@@ -15,6 +15,9 @@ const login = require("./module/system/login/router");
 const proveedores = require("./module/proveedores/router");
 const ventas = require("./module/ventas/router");
 
+//! modulo casas
+const casa = require("./module/casa/router");
+
 
 
 
@@ -41,5 +44,6 @@ app.use("/api/clientes", clientes);
 app.use("/api/user", login);
 app.use("/api/proveedores", proveedores);
 app.use("/api/ventas", ventas);
+app.use("/api/casas", casa);
 
 module.exports = app;

@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState} from "react";
 import "./cuadrocompra.css";
 import { GoChevronDown } from "react-icons/go";
 import Modal from "react-bootstrap/Modal";
 import { IoCloseSharp } from "react-icons/io5";
 import CuadroModal from "../modal 3/CuadroModal";
 
+
 const CuadroCompra = () => {
+
   const [com, setCom] = useState(false);
 
   const comClose = () => setCom(false);
