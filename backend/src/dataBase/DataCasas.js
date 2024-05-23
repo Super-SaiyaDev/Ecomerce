@@ -49,7 +49,7 @@ const delet = (table, id) => {
 
 const list = (table) => {
   return new Promise((resolve, reject) => {
-    Database.query(`SELECT * FROM ${table} `, (err, res) => {
+    Database.query(`SELECT * FROM ${table} WHERE reserva = 'no' `, (err, res) => {
       err ? reject(err) : resolve(res);
     });
   });

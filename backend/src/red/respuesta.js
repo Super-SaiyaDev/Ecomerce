@@ -1,6 +1,6 @@
 exports.success = (req, res, mesnsaje = "", status = 200) => {
   res.status(status).send({
-    error: false,
+    success: false,
     status: status,
     body: mesnsaje,
   });
