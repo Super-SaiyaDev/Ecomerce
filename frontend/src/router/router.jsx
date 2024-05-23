@@ -12,11 +12,7 @@ import Register from "../Client/logins/register/register";
 import Nav from "../Client/page/reserva/components/navbar/nav";
 import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
 import Reserva from "../Client/page/reserva/reserva";
-import Categorys from "../Client/page/home page/components/categorys/categorys";
-import Clientes from "../system/dashboard/components/clientes/clientes";
-import Users from "../system/users/user";
 
-import Proveedores from "../system/proveedores/proveedores";
 
 const Path = () => {
   return (
@@ -41,7 +37,6 @@ const Path = () => {
         <Route path="/nav" element={<Nav />} />
         <Route path="/hero" element={<HeroReserva />} />
         <Route path="/reserva" element={<Reserva />} />
-        <Route path="/categorys" element={<Categorys />} />
         <Route
           path="*"
           element={

@@ -1,0 +1,31 @@
+.fodi{
+    width: 95%;
+    margin-top: 30px;
+}
+
+.fodi > label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fodi > input{
+    width: 100%;
+    height: 40px;
+}
+
+.fodi2{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.fodi2 > textarea{
+    width: 95%;
+    height: 150px;
+    align-items: start;
+}
+
+.fodi2 > label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
