@@ -1,5 +1,4 @@
 
-
 .lin{
     margin-top: 20px;
     cursor: pointer;
@@ -8,6 +7,7 @@
 .lin > h1{
     font-size: 40px;
     margin-bottom: 10px;
+    color: white;
 }
 
 .informacion{
@@ -26,11 +26,12 @@
 }
 
 .part1 > p{
-    margin: 0px 8px 0px 8px
+    margin: 0px 8px 0px 8px;
+    color: white;
 }
 
 .part1 > a{
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 .part2{
@@ -41,20 +42,23 @@
     align-items: center;
     display: flex;
     margin-right: 20px;
+    color: white;
 }
 
 .com > a{
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 .guar{
     align-items: center;
     display: flex;
-    margin-right: 20px;    
+    margin-right: 20px;  
+    color: white; 
+
 }
 
 .guar > a{
-    color: rgb(0, 0, 0);
+   color: white;
 }
 
 .com > img{

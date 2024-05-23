@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react';
 import Peque from '../paque/peque'
 import './primero.css'
 import Servi from '../paque/servi';
@@ -18,13 +18,40 @@ import { MdBalcony } from "react-icons/md";
 import { MdWork } from "react-icons/md";
 import { TbAirConditioning } from "react-icons/tb";
 import img1 from "../main1/img1.jpg";
-
+import Cua from '../carru/Cua';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import Modal from 'react-bootstrap/Modal';
+import ImeModal from '../modal 2/ImeModal';
+import { IoCloseSharp } from "react-icons/io5";
+import ServiModal from '../modal l/ServiModal';
+import DiseñoViaje from '../modal 5/DiseñoViaje';
 
 
 
 var punto = ".";
 
 const Primero = () => {
+
+  const [ime, setIme] = useState(false);
+
+  const imeClose = () => setIme(false);
+  const imeShow = () => setIme(true);
+
+  const [serv, setServ] = useState(false);
+
+  const servClose = () => setServ(false);
+  const servShow = () => setServ(true);
+
+  
+  const [via, setVia] = useState(false);
+
+  const viaClose = () => setVia(false);
+  const viaShow = () => setVia(true);
+
+
+
+
   return (
     <div className="info">
       <div className="nombre_casa">
@@ -62,18 +89,40 @@ const Primero = () => {
             <img className='im5' src={img1} alt="" />
           </div>
 
-          <button className='mos_fts'>Muestra todas las fotos</button>
+          <button className='mos_fts' onClick={imeShow}>Muestra todas las fotos</button>
+
+          <Modal show={ime} onHide={imeClose} centered backdrop={"static"} className='Modal1'>
+          <Modal.Header className='Modalhea'>
+            <button onClick={imeClose}><IoCloseSharp/></button>
+          </Modal.Header>
+          <Modal.Body>             
+            <ImeModal/>
+          </Modal.Body>
+        </Modal>
+
         </div>
       </div>
 
       <div className="separ"></div>
 
       <div className="camas">
-        <h1></h1>
+        <h1 className='title_cama'>Distribucion de camas</h1>
 
-        <div className="cuadrocama">
-
-        </div>
+        <Carousel>
+          <div className="cont_caru">
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          </div>
+          <div className="cont_caru">
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          <Cua/>
+          </div>
+        </Carousel>
+        
       </div>
 
       <div className="separ"></div>
@@ -92,7 +141,17 @@ const Primero = () => {
           <Servi className='servicio' ico={<MdBalcony />} serc="Patio o balcon"/>
           <Servi className='servicio' ico={<LuParkingCircle />} serc="Estacionamiento"/>
         </div>
-        <button>Mostrar servicios</button>
+        <button onClick={servShow}>Mostrar servicios</button>
+
+        <Modal show={serv} onHide={servClose} centered backdrop={"static"} className='Modal1'>
+          <Modal.Header className='Modalhea'>
+            <button onClick={servClose}><IoCloseSharp/></button>
+          </Modal.Header>
+          <Modal.Body>             
+            <ServiModal/>
+          </Modal.Body>
+        </Modal>
+
       </div>
 
       <div className="separ"></div>
@@ -107,7 +166,17 @@ const Primero = () => {
           <Servi className='servicio' ico={<CgSmartHomeRefrigerator />} serc="Refrigerador lleno"/>
           </div>
           <p className='p2'>¿No encuentras algo que te gustaria pedir?</p>
-          <button>Envia un mensaje al diseñador de viajes</button>
+          <button onClick={viaShow}>Envia un mensaje al diseñador de viajes</button>
+
+          <Modal show={via} onHide={viaClose} centered backdrop={"static"} className='Modal2'>
+          <Modal.Header className='Modalhea'>
+            <button onClick={viaClose}><IoCloseSharp/></button>
+          </Modal.Header>
+          <Modal.Body>             
+            <DiseñoViaje/>
+          </Modal.Body>
+        </Modal>
+
         </div>
       </div>
 
