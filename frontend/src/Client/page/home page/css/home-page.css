@@ -15,10 +15,11 @@
 /*! Menu 1 */
 
 
-.menu-superior {
+
+.menu-container-menu {
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--bgcolor);
+  background-color:  rgba(18, 17, 20, 0.808);
   width: 100%;
   padding: 10px;
 }

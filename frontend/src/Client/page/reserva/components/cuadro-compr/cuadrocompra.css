@@ -175,19 +175,22 @@
 
 .ModalCant{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgb(0, 0, 0);
-    width: 20%;
+    background: rgb(10, 12, 27);
+    width: 800px;
     height: auto;
     box-shadow: 0 0 10px 10000px rgba(197, 197, 197, 0.397);
-    border-radius: 50px;
-    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 20px 40px 60px ;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 80vh;
+
 }
 
 .hues{

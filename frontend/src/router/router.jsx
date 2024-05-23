@@ -15,6 +15,7 @@ import Reserva from "../Client/page/reserva/reserva";
 import Clientes from "../system/dashboard/components/clientes/clientes";
 import Users from "../system/users/user";
 import Ventas from "../system/ventas/ventas";
+import Proveedores from "../system/proveedores/proveedores";
 
 const Path = () => {
   return (

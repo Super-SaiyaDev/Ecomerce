@@ -1,15 +1,16 @@
 // React Component
-import React, { useState } from "react";
+import React from "react";
 import "../../css/home-page.css";
 import { Link } from "react-router-dom";
 import { MdFavorite } from "react-icons/md";
 import { FaUserCog, FaCalendarAlt } from "react-icons/fa";
 import { FiHelpCircle } from "react-icons/fi";
+
 const Navbar = () => {
   return (
     <>
-      <nav className="container-menu">
-        <div className="menu-superior">
+      <nav className="container-navbar">
+        <div className="menu-container-menu">
           <div className="container-list right">
             <ul>
               <li>
