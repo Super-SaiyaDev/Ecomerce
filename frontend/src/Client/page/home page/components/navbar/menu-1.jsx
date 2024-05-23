@@ -1,9 +1,9 @@
 // React Component
 import React, { useState } from "react";
 import "../../css/home-page.css";
-import { LiaFlagUsaSolid } from "react-icons/lia";
+import { Link } from "react-router-dom";
 import { MdFavorite } from "react-icons/md";
-import { FaUserCog, FaCalendarAlt} from "react-icons/fa";
+import { FaUserCog, FaCalendarAlt } from "react-icons/fa";
 import { FiHelpCircle } from "react-icons/fi";
 const Navbar = () => {
   return (
@@ -34,9 +34,7 @@ const Navbar = () => {
                     <i>icon</i>España
                   </option>
                   <option value="USA">
-                    <i>
-                      icon
-                    </i>
+                    <i>icon</i>
                     Estados Unidos
                   </option>
                 </select>
@@ -49,7 +47,7 @@ const Navbar = () => {
               <li>
                 <span>
                   <i>
-                    <FaUserCog className="icono-color"/>
+                    <FaUserCog className="icono-color" />
                   </i>
                   <a href="http://" target="_blank" rel="noopener noreferrer">
                     perfil
@@ -59,7 +57,7 @@ const Navbar = () => {
               <li>
                 <span>
                   <i>
-                    <MdFavorite className="icono-color"/>
+                    <MdFavorite className="icono-color" />
                   </i>
                   <a href="http://" target="_blank" rel="noopener noreferrer">
                     favoritos
@@ -68,15 +66,13 @@ const Navbar = () => {
               </li>
               <li>
                 <span>
-                <FaCalendarAlt className="icono-color"/>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
-                    reserva
-                  </a>
+                  <FaCalendarAlt className="icono-color" />
+                  <Link to={'/reserva'}>Reserva</Link>
                 </span>
               </li>
               <li>
                 <span>
-                <FiHelpCircle className="icono-color"/>
+                  <FiHelpCircle className="icono-color" />
                   <a href="http://" target="_blank" rel="noopener noreferrer">
                     ayuda
                   </a>

@@ -1,5 +1,5 @@
 .footer {
-  background-color: #333;
+  background-color: #18171b;
   color: #fff;
   padding: 20px 0;
   display: flex;
@@ -27,10 +27,11 @@
 }
 
 .footer .footer-content .footer-section p {
-  color: #ccc;
+   color: #ccc;
 }
 
 .footer .footer-content .footer-section .socials a {
+ 
   color: #fff;
   margin-right: 10px;
 }

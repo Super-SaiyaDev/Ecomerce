@@ -74,7 +74,10 @@ i {
 
 .container-logo h1 {
   color: white;
-  font-size: 30px;
+  font-size: 29px;
+  font-family: var(--font);
+  font-weight: 200;
+  text-transform: uppercase;
 
 }
 
@@ -101,10 +104,13 @@ i {
 .lnk-nav {
   text-decoration: none; /* Quitar subrayado del texto */
   color: var(--color-title); /* Color del texto */
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .lnk-nav:hover {
   color: var(--bgcolor3);
+  text-shadow: var(--bgcolor3) 0px 0px 10px; /* Sombra del texto */
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .input-feild .inpu {
@@ -172,7 +178,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: var(--bgcolor2);
-  height: 90vh;
+  height: 850px;
 
 }
 
@@ -273,6 +279,8 @@ p {
 .promo-text {
   text-align: center;
   color: var(--bgcolor3);
+  text-transform: uppercase;
+  text-shadow: #c7963cb6 1px 1px 10px ;
 }
 
 /* ! container right */
@@ -298,10 +306,10 @@ p {
 
 .h-circule .cr-1 {
   position: absolute;
-  top: 160px;
-  left: 150px;
-  width: 90px;
-  height: 90px;
+  top: 240px;
+  left: 310px;
+  width: 100px;
+  height: 100px;
   z-index: 1;
   background-color: rgba(110, 109, 103, 0.89);
   box-shadow: 1px 10px 80px rgba(187, 183, 179, 0.863);
@@ -326,7 +334,7 @@ p {
 .container-h-left .btn-compra .btn {
   position: absolute;
   left: 180px;
-  bottom: 100px;
+  bottom: 120px;
   width: 140px;
   padding: 20px;
   border: none;

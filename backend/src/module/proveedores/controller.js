@@ -1,5 +1,5 @@
-const db = require("../../dataBase/Dataclientes");
-const table = "cliente";
+const db = require("../../dataBase/DataProveedores");
+const table = "proveedores";
 
 const list = () => {
   return db.list(table);
@@ -22,7 +22,7 @@ const add = (data) => {
 };
 
 const delet = (id) => {
-  return db.delet("usuario", id);
+  return db.delet(table, id);
 };
 
 const update = (data, id) => {
