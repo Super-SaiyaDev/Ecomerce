@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { RiEdit2Fill } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
+import Modal from "react-modal";
+import Update from "../update/update";
 
-const handlerDelete = async (id, setData) => {
+const handlerDelete = async (id) => {
   try {
     const response = await axios.delete(
-      `http://localhost:3000/api/clientes/${id}`
+      `http://localhost:3000/api/users/${id}`
     );
     if (response.status === 200) {
-      location.reload();na
-      console.log(response);
+      window.location.reload();
     } else {
       console.log(response.data);
     }
@@ -20,13 +20,52 @@ const handlerDelete = async (id, setData) => {
   }
 };
 
-function DataTable({ data, columns }) {
+function DataTable({ data, columns, rows, modalIsOpen, setModalIsOpen }) {
   const rowsPerPage = 8; // Cambia esto al número de filas que quieres por tabla
   const [currentTable, setCurrentTable] = useState(0);
+
+  // Divide data into pages
   const tables = [];
   for (let i = 0; i < data.length; i += rowsPerPage) {
     tables.push(data.slice(i, i + rowsPerPage));
   }
+
+  // Render a row for a data item
+  const renderRow = (item, key) => (
+    <tr key={key}>
+      {rows.map((cell, key) => (
+        <td key={key}>{item[cell]}</td>
+      ))}
+      <td>
+        <button onClick={() => setModalIsOpen(true)}>
+          <RiEdit2Fill />
+        </button>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => setModalIsOpen(false)}
+        >
+          <Update
+            id={item.id}
+            initialValues={item} // Pasar el objeto item completo como los valores iniciales
+            apiUrl="http://localhost:3000/api/clientes/"
+            fields={[
+              { label: "id", name: "id" },
+              { label: "nombre", name: "nombre" },
+              { label: "usuario", name: "usuario" },
+              { label: "clave", name: "clave" },
+              { label: "activo", name: "activo" },
+            ]}
+            setModalIsOpen={setModalIsOpen}
+          />
+        </Modal>
+      </td>
+      <td>
+        <button onClick={() => handlerDelete(item.id)}>
+          <MdDelete />
+        </button>
+      </td>
+    </tr>
+  );
 
   return (
     <div>
@@ -41,42 +80,30 @@ function DataTable({ data, columns }) {
           </tr>
         </thead>
         <tbody>
-          {data.length > 0 ? (
-            tables[currentTable].map((item, key) => (
-              <tr key={key}>
-                {columns.map((column, key) => (
-                  <td key={key}>{item[column.toLowerCase()]}</td>
-                ))}
-                <td>
-                  <Link to={`/update/${item.id}`}>
-                    <button>
-                      <RiEdit2Fill />
-                    </button>
-                  </Link>
-                </td>
-                <td>
-                  <button onClick={() => handlerDelete(item.id)}>
-                    <MdDelete />
-                  </button>
-                </td>
-              </tr>
-            ))
+          {tables[currentTable]?.length > 0 ? (
+            tables[currentTable].map(renderRow)
           ) : (
             <tr>
-              <td style={{ textAlign: "center" }} colSpan={columns.length + 2}>
-                No data
+              <td
+                style={{ textAlign: "center", color: "white" }}
+                colSpan={columns.length + 2}
+              >
+                No hay datos
               </td>
             </tr>
           )}
         </tbody>
       </table>
-      <div>
-        {data.length > 0 &&
-          tables.map((_, index) => (
-            <button key={index} onClick={() => setCurrentTable(index)}>
-              {index + 1}
-            </button>
-          ))}
+      <div className="container-btn-next">
+        {tables.map((_, index) => (
+          <button
+            className="btn-next"
+            key={index}
+            onClick={() => setCurrentTable(index)}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
     </div>
   );

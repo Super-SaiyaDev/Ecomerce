@@ -1,48 +1,30 @@
 import React from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import "../create/css/create.css";
 
-const Update = () => {
-  const navigate = useNavigate();
-  const [values, setValues] = useState({
-    id: "",
-    nombre: "",
-    usuario: "",
-    clave: "",
-    activo: "",
-  });
-  const { id } = useParams();
+const Update = ({ apiUrl, fields, initialValues, setModalIsOpen }) => {
+  const [values, setValues] = useState(initialValues);
+
+  const fetchData = async () => {
+    if (!values.id) return; // Si values.id no está definido, no hagas nada
+    try {
+      console.log(values.id);
+      const response = await axios.get(apiUrl + values.id);
+      setValues(response.data); // Asegúrate de que estás estableciendo el estado con los datos correctos
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:3000/api/clientes/" + id
-        );
-        const data = response.data.body[0];
-        console.log(data);
-        setValues({
-          ...values,
-          id: data.id,
-          nombre: data.nombre,
-          usuario: data.usuario,
-          clave: data.clave,
-          activo: data.activo,
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
     fetchData();
-  }, []);
+  }, [values.id]); // Cada vez que values.id cambie, fetchData se ejecutará de nuevo
 
   const handlerSubmit = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3000/api/clientes/" + id, values )
+      .put(apiUrl + values.id, values)
       .then((data) => {
         console.log(data);
         navigate("/table");
@@ -50,82 +32,41 @@ const Update = () => {
       .catch((err) => {
         console.log(err);
       });
-      
   };
 
   return (
     <>
-      <div className="container">
-        <form onSubmit={handlerSubmit} action="">
-          <div className="input-groupt">
-          <div className="input-feild">
-              <label htmlFor="">id</label>
-              <input
-                className="inputs"
-                type="text"
-                value={values.id}
-                onChange={(e) =>
-                  setValues({ ...values, id: e.target.value })
-                }
-                required
-              />
-            </div>
-
-            <div className="input-feild">
-              <label htmlFor="">nombre</label>
-              <input
-                className="inputs"
-                type="text"
-                value={values.nombre}
-                onChange={(e) =>
-                  setValues({ ...values, nombre: e.target.value })
-                }
-                required
-              />
-            </div>
-
-            <div className="input-feild">
-              <label htmlFor="">usuario</label>
-              <input
-                className="inputs"
-                type="text"
-                value={values.usuario}
-                onChange={(e) =>
-                  setValues({ ...values, usuario: e.target.value })
-                }
-                required
-              />
-            </div>
-
-            <div className="input-feild">
-              <label htmlFor="">clave</label>
-              <input
-                className="inputs"
-                type="text"
-                value={values.clave}
-                onChange={(e) =>
-                  setValues({ ...values, clave: e.target.value })
-                }
-                required
-              />
-            </div>
-
-            <div className="input-feild">
-              <label htmlFor="">activo</label>
-              <input
-                className="inputs"
-                type="text"
-                value={values.activo}
-                onChange={(e) =>
-                  setValues({ ...values, activo: e.target.value })
-                }
-                required
-              />
-            </div>
-
-            <div className="btn-create-updt">
-              <button>update</button>
-              <Link to={"/table"}>Atras</Link>
+      <div className="container-frm-create">
+        <form onSubmit={handlerSubmit}>
+          <div className="title-create">
+            <h1>Actualizar usuario</h1>
+          </div>
+          <div className="input-groupt-cr">
+            {fields.map((field, index) => (
+              <div className="input-feild-cr" key={index}>
+                <label className="label-cr">{field.label}</label>
+                <input
+                  className="input-cr"
+                  type="text"
+                  value={values[field.name]}
+                  onChange={(e) =>
+                    setValues({ ...values, [field.name]: e.target.value })
+                  }
+                  required
+                />
+              </div>
+            ))}
+            <div className="btn-cr">
+              <button className="btn-create" type="submit">
+                Actualizar
+              </button>
+              <button
+                className="btn-redirect"
+                type="button"
+                onClick={() => setModalIsOpen(false)}
+              >
+                Cancelar
+              </button>
             </div>
           </div>
         </form>

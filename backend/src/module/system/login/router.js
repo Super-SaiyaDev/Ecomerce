@@ -29,7 +29,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.get("/check", (req, res) => {
-  if (req.cookies.user) {
+  if (req.cookies.Users) {
     res.send("Cookie exists");
   } else {
     res.send("Cookie does not exist");
