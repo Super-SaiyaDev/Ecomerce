@@ -12,11 +12,9 @@ import Register from "../Client/logins/register/register";
 import Nav from "../Client/page/reserva/components/navbar/nav";
 import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
 import Reserva from "../Client/page/reserva/reserva";
- import Clientes from "../system/dashboard/components/clientes/clientes";
+import Clientes from "../system/dashboard/components/clientes/clientes";
 import Users from "../system/users/user";
 import Ventas from "../system/ventas/ventas";
-
-
 
 const Path = () => {
   return (
