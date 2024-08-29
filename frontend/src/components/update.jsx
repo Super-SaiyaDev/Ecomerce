@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //? no lo estoy usando  import { useParams } from "react-router-dom";
 import axios from "axios";
-import "../create/css/create.css";
+import "../css/create.css";
 
 const Update = ({ id, apiUrl, fields, initialValues, setModalIsOpen }) => {
   const [values, setValues] = useState(...initialValues, id);

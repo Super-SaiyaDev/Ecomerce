@@ -1,6 +1,6 @@
 // React Component
 import React from "react";
-import "../../css/home-page.css";
+import "../css/home-page.css";
 import { Link } from "react-router-dom";
 import { MdFavorite } from "react-icons/md";
 import { FaUserCog, FaCalendarAlt } from "react-icons/fa";

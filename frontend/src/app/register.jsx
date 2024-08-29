@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import "./css/register.css";
+import "../css/register.css";
 import Input from "../components/input-feild1";
 import { Link } from "react-router-dom";
 

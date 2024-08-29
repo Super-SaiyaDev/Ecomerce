@@ -1,7 +1,6 @@
-
 import React from 'react'
-import NavbarSystem from '../app/navabar'
-import Sliderbar from '../app/sliderbar'
+import NavbarSystem from '../components/navabar'
+import Sliderbar from '../components/sliderbar'
 import Table from '../app/table'
 
 const Users = () => {

@@ -1,9 +1,9 @@
 import React from "react";
-import "./css/hero.css";
-import Panel from "./compo/Panel";
-import ExampleBarChart from "./compo/grafico";
-import GraficoLinea from "./compo/grafico_linea";
-import GraficoPastel from "./compo/graficoPastel";
+import "../css/hero.css";
+import Panel from "../components/Panel";
+// import ExampleBarChart from "./compo/grafico";
+// import GraficoLinea from "./compo/grafico_linea";
+// import GraficoPastel from "./compo/graficoPastel";
 
 const HeroSystem = () => {
   return (
@@ -43,12 +43,12 @@ const HeroSystem = () => {
       <div className="content-grafic">
         <div className="grafic-group">
           <div className="grafic-feild">
-            <GraficoLinea />
+            {/* <GraficoLinea /> */}
           </div>
 
           <div className="grafic-feild">
-            <ExampleBarChart />
-            <GraficoPastel />
+            {/* <ExampleBarChart />
+            <GraficoPastel /> */}
           </div>
         </div>
       </div>

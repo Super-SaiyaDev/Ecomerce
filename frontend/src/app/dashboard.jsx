@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Sliderbar from "./sliderbar";
-import NavbarSystem from "./navabar";
-import HeroSystem from "../system/dashboard/components/hero/hero";
+import Sliderbar from "../components/sliderbar";
+import NavbarSystem from "../components/navabar";
+import HeroSystem from "../components/hero";
 
 const Principal = () => {
   const navigate = useNavigate();

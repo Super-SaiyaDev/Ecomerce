@@ -1,5 +1,5 @@
 import { useState} from "react";
-import "./cuadrocompra.css";
+import "../../../css/cuadrocompra.css";
 import { GoChevronDown } from "react-icons/go";
 import Modal from "react-bootstrap/Modal";
 import { IoCloseSharp } from "react-icons/io5";

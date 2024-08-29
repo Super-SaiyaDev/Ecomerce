@@ -5,7 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { BsFillHouseHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import './nav.css'
+import '../../../css/nav.css'
 
 const NavReserva = () => {
   return (

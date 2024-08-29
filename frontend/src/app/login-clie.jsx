@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import "./css/login-clie.css";
+import "../css/login-clie.css";
 import Input from "../components/input-feild";
 import { Link } from "react-router-dom";
 

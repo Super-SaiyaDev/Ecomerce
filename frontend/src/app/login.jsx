@@ -9,7 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { BiCoffeeTogo } from "react-icons/bi";
 //? to import components and styles
 import UserInput from "../components/input";
-import "./css/login.css";
+import "../css/login.css";
 
 //! Create the Login that is the component principal
 const LoginUser = () => {

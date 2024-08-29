@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../app/table";
-import NavbarSystem from "../app/navabar";
-import Sliderbar from "../app/sliderbar";
+import NavbarSystem from "../components/navabar";
+import Sliderbar from "../components/sliderbar";
 
 const Proveedores = () => {
   const rows = ["ID_proveedor", "nombre", "email", "telefono", "direccion"];

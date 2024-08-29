@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Peque from '../paque/peque'
-import './primero.css'
+import '../../../css/primero.css'
 import Servi from '../paque/servi';
 import { FaPencilRuler } from "react-icons/fa";
 import { IoBookSharp } from "react-icons/io5";
@@ -17,7 +17,7 @@ import { TbBathFilled } from "react-icons/tb";
 import { MdBalcony } from "react-icons/md";
 import { MdWork } from "react-icons/md";
 import { TbAirConditioning } from "react-icons/tb";
-import img1 from "./img1.jpg";
+import img1 from '../../../assets/img1.jpg';
 import Cua from '../carru/Cua';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader

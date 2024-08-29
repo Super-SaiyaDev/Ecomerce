@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutCard from '../about/components/aboutCard'
+import AboutCard from '../components/components/about/components/aboutCard'
 import { PiHandshakeBold } from "react-icons/pi";
 import { TbEyeSearch } from "react-icons/tb";
 import { FaInfoCircle } from "react-icons/fa";

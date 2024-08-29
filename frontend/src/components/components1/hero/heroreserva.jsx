@@ -1,8 +1,8 @@
 import React from "react";
 import { CiShare2 } from "react-icons/ci";
 import { RiSaveFill } from "react-icons/ri";
-import img1 from "./assets/img1.jpg";
-import "./heroreserva.css";
+import img1 from "../../../assets/img1.jpg";
+import "../css/heroreserva.css";
 
 const HeroReserva = () => {
   return (

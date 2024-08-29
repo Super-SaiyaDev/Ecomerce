@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import DataTable from "../table/components/dataTable/dataTable";
+import DataTable from "../components/datatable";
 import "../css/table.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdPersonAdd } from "react-icons/io";

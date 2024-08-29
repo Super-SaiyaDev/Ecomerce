@@ -9,9 +9,9 @@ import History from "../components/historial";
 import LoginClie from "../app/login-clie";
 import PageHome from "../app/home-page";
 import Register from "../app/register";
-import Nav from "../app/navabar";
-import HeroReserva from "../components/components1/hero/heroreserva";
-import Reserva from "../app/reserva";
+// import Nav from "../components/navabar";
+// import HeroReserva from "../components/components1/hero/heroreserva";
+// import Reserva from "../app/reserva";
 // import Clientes from "../components/components/";
 import Users from "../components/user";
 import Ventas from "../components/ventas";
@@ -38,9 +38,9 @@ const Path = () => {
         <Route path="/" element={<PageHome />} />
         <Route path="/login-clie" element={<LoginClie />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/nav" element={<Nav />} />
-        <Route path="/hero" element={<HeroReserva />} />
-        <Route path="/reserva" element={<Reserva />} />
+        {/* <Route path="/nav" element={<Nav />} /> */}
+        {/* <Route path="/hero" element={<HeroReserva />} /> */}
+        {/* <Route path="/reserva" element={<Reserva />} /> */}
         <Route
           path="*"
           element={

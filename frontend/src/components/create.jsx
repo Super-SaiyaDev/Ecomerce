@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../create/css/create.css";
+import "../css/create.css";
 
 const Create = ({ api, setModalIsOpen, inputs }) => {
   const navigate = useNavigate();
