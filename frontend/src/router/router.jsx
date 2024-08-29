@@ -1,21 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Table from "../system/dashboard/components/table/table";
-import LoginUser from "../system/login/login";
-import Principal from "../system/dashboard/dashboard";
-import Create from "../system/dashboard/components/table/components/create/create";
-import Update from "../system/dashboard/components/table/components/update/update";
-import History from "../system/dashboard/components/table/components/historial";
-import LoginClie from "../Client/logins/login-clie/login-clie";
-import PageHome from "../Client/page/home page/home-page";
-import Register from "../Client/logins/register/register";
-import Nav from "../Client/page/reserva/components/navbar/nav";
-import HeroReserva from "../Client/page/reserva/components/hero/heroreserva";
-import Reserva from "../Client/page/reserva/reserva";
-import Clientes from "../system/dashboard/components/clientes/clientes";
-import Users from "../system/users/user";
-import Ventas from "../system/ventas/ventas";
-import Proveedores from "../system/proveedores/proveedores";
+import Table from "../app/table";
+import LoginUser from "../app/login";
+import Principal from "../app/dashboard";
+import Create from "../components/create";
+import Update from "../components/update";
+import History from "../components/historial";
+import LoginClie from "../app/login-clie";
+import PageHome from "../app/home-page";
+import Register from "../app/register";
+import Nav from "../app/navabar";
+import HeroReserva from "../components/components1/hero/heroreserva";
+import Reserva from "../app/reserva";
+// import Clientes from "../components/components/";
+import Users from "../components/user";
+import Ventas from "../components/ventas";
+import Proveedores from "../components/proveedores";
 
 const Path = () => {
   return (
@@ -32,7 +32,7 @@ const Path = () => {
         <Route path="/Proveedores" element={<Proveedores />} />
         <Route path="/ventas" element={<Ventas />} />
 
-        <Route path="/cliente" element={<Clientes />} />
+        {/* <Route path="/cliente" element={<Clientes />} /> */}
 
         {/* Estas son las rutas frontend del cliente. */}
         <Route path="/" element={<PageHome />} />

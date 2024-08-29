@@ -1,0 +1,66 @@
+.input-feild .input {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #adcbe7;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.685);
+  color: black;
+}
+
+.input-feild .label {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  background-color: #fff;
+  padding: 5px;
+  color: #3a3636;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.input-feild .input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.input-feild .input:focus + .label {
+  transform: translateY(-30px);
+  width: 90px;
+  color: #9ecaed;
+}
+
+
+/* login register 
+
+
+.input-feild .inputs-register {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 50px;
+  border: 1px solid #ada9a3;
+  border-radius: 10px;
+  background-color: rgba(42, 50, 58, 0.603);
+  transition: background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: black;
+}
+
+.input-feild .labels-register {
+  position: absolute;
+  top: -40px;
+  left: 12px;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+  font-size: 17px;
+  margin-top: 12px;
+}
+
+.input-feild .inputs-register:focus {
+  outline: none;
+  border-color: #5b99cc;
+  box-shadow: 0 0 10px #88e1fc;
+  background-color: whitesmoke;
+  transition: background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+} */
