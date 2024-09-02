@@ -1,5 +1,5 @@
 import React from 'react'
-import './diseñoviaje.css'
+import '../../../css/diseñoviaje.css'
 
 function DiseñoViaje() {
   return (

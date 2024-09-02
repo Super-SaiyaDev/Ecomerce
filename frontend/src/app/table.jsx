@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import DataTable from "../components/datatable";
+import DataTable from "../components/dataTable"
 import "../css/table.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdPersonAdd } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
-import Create from "./components/create/create";
+import Create from "../components/create";
 
 const Table = ({ columns, rows, api, input }) => {
 

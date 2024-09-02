@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/header.css";
+import "../css/home-page.css";
 import { IoLocationSharp } from "react-icons/io5";
 
 const Header = () => {

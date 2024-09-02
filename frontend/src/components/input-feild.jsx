@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/input.css";
+import "../css/inputs.css";
 
 const Input = ({ onChange, type, lblName, name }) => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/inputs.css";
+// import "../css/inputs.css";
 
 const UserInput = ({ onChange, type, lblName, name,value }) => {
   return (

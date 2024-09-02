@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "../components/menu-1";
 import Navbar2 from "../components/menu-2";
 import Header from "../components/header";
-// import Aboutme from "../components/components/about/about";
-// import Products from "../components/components/product/products";
+import Aboutme from "../components/components/about/components/aboutCard";
+import Products from "../app/products";
 import Footer from "../components/footer";
 import "../css/home-page.css";
 const PageHome = () => {
@@ -18,8 +18,8 @@ const PageHome = () => {
         <Header></Header>
       </header>
       <section>
-        {/* <Aboutme></Aboutme> */}
-        {/* <Products></Products> */}
+        <Aboutme></Aboutme>
+        <Products></Products>
       </section>
       <footer>
         <Footer></Footer>

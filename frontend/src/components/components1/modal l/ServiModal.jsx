@@ -1,6 +1,6 @@
 import React from 'react'
 import Servi from '../paque/servi'
-import './servimodal.css'
+import '../../../css/servimodal.css'
 import { LiaUmbrellaBeachSolid } from "react-icons/lia";
 import { IoWifiSharp } from "react-icons/io5";
 import { LuParkingCircle } from "react-icons/lu";

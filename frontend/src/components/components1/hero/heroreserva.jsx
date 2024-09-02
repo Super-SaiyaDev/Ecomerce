@@ -1,8 +1,8 @@
 import React from "react";
 import { CiShare2 } from "react-icons/ci";
 import { RiSaveFill } from "react-icons/ri";
-import img1 from "../../../assets/img1.jpg";
-import "../css/heroreserva.css";
+import img1 from "../../../assets/image-12.jpg";
+import "../../../css/heroreserva.css";
 
 const HeroReserva = () => {
   return (
@@ -28,9 +28,34 @@ const HeroReserva = () => {
         </div>
       </div>
 
-      <div className="imag">
-        <img className="imgReserva" src={img1} alt="" />
-          <button>Mostrar imagenes</button>
+      <div className="content-img">
+        <div className="imag">
+          <img className="imgReserva" src={img1} alt="" />
+          <div className="btn-most-img">
+            <button className="btn-img"> Mostrar imagenes</button>
+          </div>
+        </div>
+
+        <div className="imag">
+          <img className="imgReserva" src={img1} alt="" />
+          <div className="btn-most-img">
+            <button className="btn-img"> Mostrar imagenes</button>
+          </div>
+        </div>
+
+        <div className="imag">
+          <img className="imgReserva" src={img1} alt="" />
+          <div className="btn-most-img">
+            <button className="btn-img"> Mostrar imagenes</button>
+          </div>
+        </div>
+
+        <div className="imag">
+          <img className="imgReserva" src={img1} alt="" />
+          <div className="btn-most-img">
+            <button className="btn-img"> Mostrar imagenes</button>
+          </div>
+        </div>
       </div>
     </div>
   );

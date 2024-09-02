@@ -1,5 +1,5 @@
 import React from 'react'
-import './cua.css'
+import '../../../css/cua.css'
 import { MdOutlineBed } from "react-icons/md";
 
 function Cua() {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../css/home-page.css";
+import "../css/home-page.css";
 import { BsFillHouseHeartFill } from "react-icons/bs";
 
 const Navbar2 = () => {

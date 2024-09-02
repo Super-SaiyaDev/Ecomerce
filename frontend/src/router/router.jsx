@@ -11,7 +11,7 @@ import PageHome from "../app/home-page";
 import Register from "../app/register";
 // import Nav from "../components/navabar";
 // import HeroReserva from "../components/components1/hero/heroreserva";
-// import Reserva from "../app/reserva";
+import Reserva from "../app/reserva";
 // import Clientes from "../components/components/";
 import Users from "../components/user";
 import Ventas from "../components/ventas";
@@ -21,7 +21,8 @@ const Path = () => {
   return (
     <Router>
       <Routes>
-        {/* Estas son las rutas frontend del dashboard. */}
+        {/* //?  Estas son las rutas frontend del dashboard. */}
+
         <Route path="/home" element={<Principal />} />
         <Route path="/login" element={<LoginUser />} />
         <Route path="/table" element={<Table />} />
@@ -32,15 +33,18 @@ const Path = () => {
         <Route path="/Proveedores" element={<Proveedores />} />
         <Route path="/ventas" element={<Ventas />} />
 
-        {/* <Route path="/cliente" element={<Clientes />} /> */}
+        {/* //! este modulo aun no funciona <Route path="/cliente" element={<Clientes />} /> */}
 
-        {/* Estas son las rutas frontend del cliente. */}
+        {/* //? Estas son las rutas frontend del cliente. */}
+
         <Route path="/" element={<PageHome />} />
         <Route path="/login-clie" element={<LoginClie />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="/nav" element={<Nav />} /> */}
-        {/* <Route path="/hero" element={<HeroReserva />} /> */}
-        {/* <Route path="/reserva" element={<Reserva />} /> */}
+
+        {/* //! <Route path="/nav" element={<Nav />} />  no se para aun que hace*/}
+        {/* //! <Route path="/hero" element={<HeroReserva />} /> parece que dari lo puso para probarlo*/}
+
+        <Route path="/reserva" element={<Reserva />} />
         <Route
           path="*"
           element={

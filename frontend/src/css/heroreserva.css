@@ -1,105 +1,115 @@
-
-.lin{
-    margin-top: 20px;
-    cursor: pointer;
+.lin {
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-.lin > h1{
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: white;
+.lin > h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: white;
 }
 
-.informacion{
-    justify-content: center;
-    align-items: center;
-    width: 86%;
+.informacion {
+  justify-content: center;
+  align-items: center;
+  width: 86%;
 }
 
-.enlaces{
-    display: flex;
-    justify-content: space-between;
+.enlaces {
+  display: flex;
+  justify-content: space-between;
 }
 
-.part1{
-    display: flex;
+.part1 {
+  display: flex;
 }
 
-.part1 > p{
-    margin: 0px 8px 0px 8px;
-    color: white;
+.part1 > p {
+  margin: 0px 8px 0px 8px;
+  color: white;
 }
 
-.part1 > a{
-    color: white;
+.part1 > a {
+  color: white;
 }
 
-.part2{
-    display: flex;
+.part2 {
+  display: flex;
 }
 
-.com{
-    align-items: center;
-    display: flex;
-    margin-right: 20px;
-    color: white;
+.com {
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
+  color: white;
 }
 
-.com > a{
-    color: white;
+.com > a {
+  color: white;
 }
 
-.guar{
-    align-items: center;
-    display: flex;
-    margin-right: 20px;  
-    color: white; 
+.guar {
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
+  color: white;
+}
+
+.guar > a {
+  color: white;
+}
+
+.com > img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.guar > img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.content-img {
+  display: flex;
+  justify-content: center;
+}
+
+.imag {
+  display: flex;
+  margin: 20px;
+}
+
+.imgReserva {
+  background-image: url(../assets/image-10.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: auto;
+  max-height: 600px;
+  border-radius: 30px;
+}
+
+.btn-img {
+  position: relative;
+  top: 12px;
 
 }
 
-.guar > a{
-   color: white;
+.btn-most-img .btn-img {
+  border: none;
+  border-radius: 8px;
+  height: 30px;
+  width: 160px;
 }
 
-.com > img{
-    width: 20px;
-    margin-right: 5px;
+.btn-most-img .btn-img:hover {
+  position: absolute;
+  margin: 20px 40px 20px 20px;
+  border: none;
+  border-radius: 8px;
+  height: 30px;
+  width: 160px;
+  border: 1px solid;
+  background-color: rgb(224, 224, 224);
 }
-
-.guar > img{
-    width: 20px;
-    margin-right: 5px;
-}
-
-.imag{
-    display: flex;
-    margin-top: 20px;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.imgReserva{
-    background-image: url(./assets/img-1.jpg) ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    border-radius: 30px;
-}
-
-.imag > button{
-    position: absolute;
-    margin: 20px 40px 20px 20px;
-    border: none;
-    border-radius: 8px;
-    height: 30px;
-    width: 160px;
-}
-
-.imag > button:hover{
-    border: 1px solid;
-    background-color: rgb(224, 224, 224);
-}
-

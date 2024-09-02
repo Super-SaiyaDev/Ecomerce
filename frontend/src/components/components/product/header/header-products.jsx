@@ -1,7 +1,7 @@
 import React from "react";
-import image from "../../assets/image-1.jpg";
-import image2 from "../../assets/image-12.jpg";
-import CardProducto from "./components/card-products";
+import image from "../../../../assets/image-1.jpg";
+import image2 from "../../../../assets/image-12.jpg";
+import CardProducto from "../../product/header/components/card-products";
 import ProductsNavbar from "../nav-products/products-nav";
 
 const CategoryProducts = () => {

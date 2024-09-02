@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/card.css";
+import "../../../../../css/card.css";
 import { PiStarThin } from "react-icons/pi";
 const CardProducto = ({  image,  location,  distance,  date,  price,  valoracion,}) => {
 

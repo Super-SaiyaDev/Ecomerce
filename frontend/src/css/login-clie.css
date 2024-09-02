@@ -1,30 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
 
-.container-login{
+.container-login {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 
-/* .container-img {
-  display: flex;
-  justify-content: space-evenly;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
-    url("../../../assets/R.jpeg");
-  background-position: center;
-  background-size: 720px, 680px;
-  background-repeat: no-repeat;
-  height: 540px;
-  width: 600px;
-} */
-
-.container-img  {
+.container-img {
   display: flex;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.582)),
-    url("../components/R.jpeg");
+    url("../assets/R1.jpeg");
   background-position: center;
   background-size: 720px, 680px;
   background-repeat: no-repeat;
@@ -32,7 +20,7 @@
   width: 680px;
   box-shadow: -10px 10px 60px rgb(0, 0, 0);
   border-radius: 10px 0 0 10px;
-} 
+}
 
 .content-text {
   display: flex;
@@ -62,15 +50,13 @@
   left: -20px;
 }
 
-.btn-img{
+.btn-img {
   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 
 .social-icon .btn-img:hover {
   transform: scale(1.3);
   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
 }
 
 .social-icon .img {
@@ -122,8 +108,6 @@
   background-color: #00b5ec;
 }
 
-/* ! [ Form of the singin ] */
-
 .input-groupt {
   box-shadow: 10px 10px 60px rgb(0, 0, 0);
   background-color: rgba(100, 97, 94, 0.815);
@@ -133,7 +117,6 @@
   width: 495px;
 }
 
-/* ? Title of form */
 .input-groupt h1 {
   font-family: "Lobster";
   color: wheat;
@@ -142,7 +125,6 @@
   font-weight: 900;
 }
 
-/*? links to register */
 .register-link {
   margin: 10px 0px 40px 15px;
 }
@@ -169,22 +151,18 @@
   color: wheat;
 }
 
-/*? Links to remenber and forget password */
-
 .remenber {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
 }
 
-
-
 .remenber .ramen {
   color: whitesmoke;
   padding-left: 12px;
 }
 
-.remenber.remenber-1 input[type="checkbox"]{
+.remenber.remenber-1 input[type="checkbox"] {
   border: none;
   border-radius: 12px;
   background-color: red;
@@ -195,8 +173,6 @@
   padding: 12px;
   margin: 12px;
 }
-
-/* ? btn to login with router */
 
 .lnk-login {
   position: absolute;

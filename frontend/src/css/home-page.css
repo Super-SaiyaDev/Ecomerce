@@ -293,7 +293,7 @@ p {
       /* Reducida la opacidad a 0.3 */ rgba(127, 133, 133, 0.342) 100%
         /* Reducida la opacidad a 0.2 */
     ),
-    url("../components/assets/image-12.jpg");
+    url("../assets/image-12.jpg");
   background-position: right;
   background-size: 710px 750px;
   background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 import React from 'react'
-import './cuadromodal.css'
-import tar from './tar.jpg'
+import '../../../css/cuadromodal.css'
+import tar from '../../../assets/tar.jpg'
 
 
 function CuadroModal() {

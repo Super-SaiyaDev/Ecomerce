@@ -1,6 +1,6 @@
 import React from 'react'
-import img1 from './img1.jpg'
-import './imemodal.css'
+import img1 from '../../../assets/img1.jpg'
+import '../../../css/imemodal.css'
 
 function ImeModal() {
   return (

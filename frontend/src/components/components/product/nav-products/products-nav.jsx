@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Navigation} from "swiper/modules";
 import "swiper/swiper-bundle.css";
-import "./css/swiper.css";
+import "../../../../css/swiper.css";
 // !
 import {
   MdOutlineArrowCircleRight,
