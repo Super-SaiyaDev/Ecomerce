@@ -6,6 +6,7 @@ import NavReserva from "../components/components1/navbar/nav";
 import Navbar from "../components/menu-1";
 import "../css/reserva.css"; 
 import Footer from "../components/footer";
+import Map from "../components/map";
 
 const Reserva = () => {
   return (
@@ -27,6 +28,7 @@ const Reserva = () => {
         </main>
       </div>
       <footer>
+        <Map></Map>
         <Footer/>
       </footer>
     </div>

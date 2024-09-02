@@ -1,0 +1,20 @@
+/* mapa.css */
+.map-container {
+  height: 400px; /* Ajusta la altura según tus necesidades */
+  margin: 12px;
+  width: 60%; /* Ajusta el ancho según tus necesidades */
+  margin: 0 auto; /* Centra el mapa horizontalmente */
+  border: 2px solid #494844; /* Añade un borde llamativo */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #000; /* Fondo negro */
+  box-shadow: 0 0 10px rgba(29, 29, 28, 0.5); /* Sombra amarilla */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+}
+
+.map{
+    width: 100%;
+}

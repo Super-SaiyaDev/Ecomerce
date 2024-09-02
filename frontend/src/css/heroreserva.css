@@ -61,12 +61,12 @@
 
 .com > img {
   width: 20px;
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .guar > img {
   width: 20px;
-  margin-right: 5px;
+  margin-right: 3px;
 }
 
 .content-img {
@@ -76,7 +76,8 @@
 
 .imag {
   display: flex;
-  margin: 20px;
+  margin: 12px;
+  width: 100%;
 }
 
 .imgReserva {
@@ -84,28 +85,27 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 500px;
+  width: 450px;
   height: auto;
-  max-height: 600px;
+  max-height: 500px;
   border-radius: 30px;
-}
-
-.btn-img {
-  position: relative;
-  top: 12px;
-
+  margin: 15px;
 }
 
 .btn-most-img .btn-img {
+  position: absolute;
+  top: 25%;
+  left: 56%;
   border: none;
-  border-radius: 8px;
-  height: 30px;
-  width: 160px;
+  border-radius: 6px;
+  padding: 9px;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: poppins;
+  background-color: whitesmoke;
 }
 
 .btn-most-img .btn-img:hover {
-  position: absolute;
-  margin: 20px 40px 20px 20px;
   border: none;
   border-radius: 8px;
   height: 30px;
@@ -113,3 +113,18 @@
   border: 1px solid;
   background-color: rgb(224, 224, 224);
 }
+
+.swiper-next-button {
+  background-color: transparent;
+  color: white;
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.swiper-prev-button {
+  background-color: transparent;
+  color: white;
+  font-size: 50px;
+  margin-right: 10px;
+}
+
